@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Platform used by several power system actors to exchange information for different proposes. Three types of data (real-time, scheduled and structural data) can be exchanged through this platform. The operational/control data are not included in real-time type. The exchange of information related with the markets are included in the scheduled data.&lt;br/&gt;The platform is a data-agnostic ICT infrastructure that enables a secure and reliable information exchange for different purposes (long-term planning, operational planning, contingencies, &amp;#8230;) and within different time scales.</description>
+      <mRID>41fe759a-eccc-4e9c-8d5a-427a3550e8e1</mRID>
+      <name>Data exchange platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>The Network Operation function includes business activity directly involved with monitoring and operating the power grid as a whole system. &lt;br/&gt;&lt;ul&gt;&lt;li&gt;The phrase &amp;#8216;directly involved&amp;#8217; indicates that the covered activities are limited to a hands-on focus on keeping the power grid running successfully, and more indirect influences on grid operation, such as energy markets, will be covered by other business functions.&lt;/li&gt;&lt;li&gt;The phrase &amp;#8216;as a whole system&amp;#8217; indicates that local activity, such as operating a generating plant or substation, is excluded, and here the concern is a system perspective, such as is typical in transmission or distribution control centres.&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;In the presented SUCs, the Network Operation function can refer to either the analysis tools used by TSOs or DSOs.</description>
+      <mRID>395198ac-5a33-430c-b38b-5c94bb593604</mRID>
+      <name>Network Operation</name>
+      <type>System</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>cfc15468-f054-4281-83e7-3b00de9d1c6c</mRID>
+      <name>Distribution Management</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>8e522a25-0f4c-4f7a-b9b1-9f0fb7451e69</mRID>
+      <name>Users</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>08386c32-05d0-42d8-88ae-4d89a0cd2800</mRID>
+      <name>Distribution System</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>275148e0-e9f0-41c8-a1c1-0078f97f6732</mRID>
+      <name>Real-Time Operation</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>5e831afb-6a55-4eb5-a385-d3eb3e058cd6</mRID>
+      <name>Transmission System</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>00081321-0896-48b9-89e0-dc47027b1f48</mRID>
+      <name>Energy systems</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>cfc15468-f054-4281-83e7-3b00de9d1c6c</mRID>
+      </Area>
+      <Area>
+        <mRID>8e522a25-0f4c-4f7a-b9b1-9f0fb7451e69</mRID>
+      </Area>
+      <Area>
+        <mRID>08386c32-05d0-42d8-88ae-4d89a0cd2800</mRID>
+      </Area>
+      <Area>
+        <mRID>275148e0-e9f0-41c8-a1c1-0078f97f6732</mRID>
+      </Area>
+      <description />
+      <mRID>b635e521-2249-4e62-a385-0976c89944df</mRID>
+      <name>Control of SGU connected in the DSO networks</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>5e831afb-6a55-4eb5-a385-d3eb3e058cd6</mRID>
+      </Area>
+      <Area>
+        <mRID>275148e0-e9f0-41c8-a1c1-0078f97f6732</mRID>
+      </Area>
+      <Area>
+        <mRID>00081321-0896-48b9-89e0-dc47027b1f48</mRID>
+      </Area>
+      <Area>
+        <mRID>08386c32-05d0-42d8-88ae-4d89a0cd2800</mRID>
+      </Area>
+      <Area>
+        <mRID>8e522a25-0f4c-4f7a-b9b1-9f0fb7451e69</mRID>
+      </Area>
+      <description />
+      <mRID>93e3ef2a-2bd4-435b-a589-234beccc08a8</mRID>
+      <name>Real-time supervision and control through better coordination (TSO, DSO and SGUs).</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description>The request of information can be done in two different ways:&lt;br/&gt;1: &lt;br/&gt;Observability area ID&lt;br/&gt;Time (not defined means the last one)  (day; hour; minutes; seconds)&lt;br/&gt;&lt;br/&gt;2:&lt;br/&gt;Bus ID&lt;br/&gt;Line ID&lt;br/&gt;Power Transformer ID&lt;br/&gt;SGU ID&lt;br/&gt;Time (not defined means the last one)  (day; hour; minutes; seconds)</description>
+      <identifier>Info1</identifier>
+      <mRID>fe8283d0-3bde-4b21-8111-06a651699053</mRID>
+      <name>Request measurements in the observability area</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Send the measurements in the observability area to the data exchange platform.&lt;br/&gt;&lt;br/&gt;Observability area ID&lt;br/&gt;Time (day; hour; minutes; seconds)&lt;br/&gt;Bus ID&lt;br/&gt;P(MW)&lt;br/&gt;Q(MVAr)&lt;br/&gt;U(kV)&lt;br/&gt;Voltage Angle (°)&lt;br/&gt;&lt;br/&gt;Observability area ID&lt;br/&gt;Time (day; hour; minutes; seconds)&lt;br/&gt;Line ID&lt;br/&gt;P(MW)&lt;br/&gt;Q(MVAr)&lt;br/&gt;&lt;br/&gt;Observability area ID&lt;br/&gt;Time (day; hour; minutes; seconds)&lt;br/&gt;Power Transformer ID&lt;br/&gt;P(MW)&lt;br/&gt;Q(MVAr)&lt;br/&gt;U1(kV)&lt;br/&gt;U2(kV)&lt;br/&gt;OLTC&lt;br/&gt;&lt;br/&gt;Observability area ID&lt;br/&gt;Time (day; hour; minutes; seconds)&lt;br/&gt;SGU ID&lt;br/&gt;P(MW)&lt;br/&gt;Q(MW)</description>
+      <identifier>Info2</identifier>
+      <mRID>72c603c9-727f-476f-a60b-66d58c6964f3</mRID>
+      <name>Send measurements in the observability area</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary />
+  <UseCaseLibrary>
+    <UseCase>
+      <identifier />
+      <mRID>ecaa3f43-fc46-4e0c-ae3b-74d9a95ab3b7</mRID>
+      <name>Information exchange using a collaborative platform</name>
+      <nature>SUC</nature>
+    </UseCase>
+    <UseCase>
+      <identifier>10</identifier>
+      <mRID>45f1db00-6691-479d-b2d3-e7951635afe5</mRID>
+      <name>Improve system real-time supervision and control through better coordination (TSO and DSO)</name>
+      <nature>BUC</nature>
+    </UseCase>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>41fe759a-eccc-4e9c-8d5a-427a3550e8e1</mRID>
+          </Actor>
+          <Actor>
+            <mRID>395198ac-5a33-430c-b38b-5c94bb593604</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>00ee5679-c04b-41cb-9e91-3d234f75ecbf</mRID>
+        <name>TSO and DSO degree of cooperation includes having a certain level of observability over each other networks.</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>20747159-4071-47ac-911c-ca9642c3db2b</mRID>
+        <name>In some systems, the SGU measurements (production, storage charge/discharge,..) information can also be exchanged.</name>
+        <number>2</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>b635e521-2249-4e62-a385-0976c89944df</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>93e3ef2a-2bd4-435b-a589-234beccc08a8</mRID>
+      </BusinessCase>
+      <classification>Generic</classification>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>83c8e150-6e32-478c-a7f8-ed05bea92fbd</mRID>
+        <name>Real-time supervision</name>
+        <URI type="UMLDiagram">Real-time supervision\Image3.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>ef7105cb-b501-432c-928c-3a395e32f592</mRID>
+        <name>Real-time supervision</name>
+        <URI type="UMLDiagram">Real-time supervision\Image4.png</URI>
+      </Drawing>
+      <identifier />
+      <KeyPerformanceIndicator>
+        <description />
+        <identifier>1</identifier>
+        <mRID>d9e2aa42-8489-44b1-a391-a34c9f91019b</mRID>
+        <name>TSO’s state estimator accuracy (%)</name>
+        <Objective>
+          <mRID>d2fe406c-96f7-4d01-a8ed-72037a66d16b</mRID>
+        </Objective>
+        <Objective>
+          <mRID>553a6680-12e7-44a9-9bc8-b38fddc07f06</mRID>
+        </Objective>
+      </KeyPerformanceIndicator>
+      <keywords>Real-time operation,   TSO-DSO information exchange, Observability area</keywords>
+      <levelOfDepth />
+      <mRID>7bc335ff-ecca-4858-9cf7-36b76504f65d</mRID>
+      <name>Real-time supervision</name>
+      <Narrative>
+        <completeDescription>The exchange of real-time information between TSO and DSO is essential to real-time control and supervision of the power system. Although it is a usual practice between transmission and distribution operators, it should be revised and improved given the importance that has in the operation of both grids.&lt;br/&gt;&lt;br/&gt;The definition of the standardized method to request and send measurements along with setting up a methodology to define the right observability areas of both TSO and DSO at each other networks and by expanding the set of signals (measurements, states &amp;#8230;) exchanged are some of the enhancements that this SUC provides.&lt;br/&gt;&lt;br/&gt;In the case of Portuguese field test, the exchange of real-time information will use Inter-Control center Communication Protocol (ICCP)  in order to allow the communication between TSO and DSO SCADAs. However, other solutions can be adopted.</completeDescription>
+        <mRID>72e0139d-7ce5-4fb8-aec5-4c0a9ed77fb9</mRID>
+        <shortDescription>This SUC describes the process to define the exchange of signal/information (measurements, states, ... ) between the TSOs and DSOs. Two scenarios are described: one to send the real-time information and another to request the real-time information.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>c19feb5f-e9fb-4ec4-8876-1fb74d0e7057</mRID>
+        <name>TSO records information on the state of operation of the transmission network (measurements, state of operation of the equipment, etc…).</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>a7f46c41-3d02-4ab4-830a-e134966773b2</mRID>
+        <name>Communication link for real time data exchange between TSO and DSO is in place</name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>76be2dd8-b141-482e-93d4-ad7d9b281a57</mRID>
+        <name>DSO records information on the state of operation of the distribution network (measurements, state of operation of the equipment, etc…).</name>
+        <number>3</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>cfb67c17-4919-439a-bc17-110c57a80a41</mRID>
+        <name>TSO and DSO agreement concerning the information to be exchanged in real-time.</name>
+        <number>4</number>
+      </Prerequisite>
+      <prioritization>High</prioritization>
+      <RelatedObjective>
+        <description />
+        <mRID>d2fe406c-96f7-4d01-a8ed-72037a66d16b</mRID>
+        <name>Increase observability areas of both TSO and DSO on each other networks, expanding the set of signals (measurements, states …) exchanged in real-time, as well as improving data exchange structure/normalization.</name>
+      </RelatedObjective>
+      <RelatedObjective>
+        <description />
+        <mRID>553a6680-12e7-44a9-9bc8-b38fddc07f06</mRID>
+        <name>Enlarge real-time data exchanged between TSO and DSO for improved supervision and control of their own networks.</name>
+      </RelatedObjective>
+      <RelatedUseCase>
+        <mRID>ecaa3f43-fc46-4e0c-ae3b-74d9a95ab3b7</mRID>
+      </RelatedUseCase>
+      <RelatedUseCase>
+        <mRID>45f1db00-6691-479d-b2d3-e7951635afe5</mRID>
+      </RelatedUseCase>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>fe8283d0-3bde-4b21-8111-06a651699053</mRID>
+          </BusinessObject>
+          <description>The SO should request the information in each node in the defined observability area&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>395198ac-5a33-430c-b38b-5c94bb593604</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>41fe759a-eccc-4e9c-8d5a-427a3550e8e1</mRID>
+          </InformationReceiver>
+          <mRID>36951bc8-29a6-494d-a35c-5c107cef3652</mRID>
+          <name>Request Real-Time information in the observability area</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>72c603c9-727f-476f-a60b-66d58c6964f3</mRID>
+          </BusinessObject>
+          <description>The information stored in the data exchange platform should organize all the information in the observability area to send to the SO&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>41fe759a-eccc-4e9c-8d5a-427a3550e8e1</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>395198ac-5a33-430c-b38b-5c94bb593604</mRID>
+          </InformationReceiver>
+          <mRID>4d687717-21c2-43f3-bf88-f2ad0e5c8667</mRID>
+          <name>Organisation of the requested information</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Acknowledge by the SO of the information sent.</description>
+          <event />
+          <InformationProducer>
+            <mRID>395198ac-5a33-430c-b38b-5c94bb593604</mRID>
+          </InformationProducer>
+          <mRID>f9bdd5d0-4cc2-45aa-bc8d-e042ae5f69a4</mRID>
+          <name>Real-time information acknowledge</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <description>In this scenario it's described the main flux of the activities to request real time information from the observability area that is already stored or not in the data exchange platform.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>a11f2f5c-6a2f-429a-89ec-2cfed4929df2</mRID>
+          <name>Request Real-time information</name>
+          <URI type="UMLDiagram">Real-time supervision\Image1.png</URI>
+        </Drawing>
+        <mRID>4d727328-9735-4205-900f-46878c907f6e</mRID>
+        <name>Request Real-time information</name>
+        <number>1</number>
+        <TriggeringEvent>
+          <description />
+          <mRID>b5da6c57-9870-4c93-aaf2-cca9827c4719</mRID>
+          <name>Every 5 seconds (or other value defined between TSO and DSO)</name>
+        </TriggeringEvent>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <description>SO (TSO or DSO) collects real-time data on its own network and aggregates it whenever necessary.</description>
+          <event />
+          <InformationProducer>
+            <mRID>395198ac-5a33-430c-b38b-5c94bb593604</mRID>
+          </InformationProducer>
+          <mRID>3aa4e569-3951-462e-b01e-9636ea309bc1</mRID>
+          <name>Network real-time data collection</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>72c603c9-727f-476f-a60b-66d58c6964f3</mRID>
+          </BusinessObject>
+          <description>SO send real-time information to the data exchange platform, limited to the defined observability.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>395198ac-5a33-430c-b38b-5c94bb593604</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>41fe759a-eccc-4e9c-8d5a-427a3550e8e1</mRID>
+          </InformationReceiver>
+          <mRID>ae879716-bff0-4f62-846d-d3a10c3bfad2</mRID>
+          <name>Real-time information exchange with the DSO</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Real-time information acknowledged by Data Exchange Platform.</description>
+          <event />
+          <InformationProducer>
+            <mRID>41fe759a-eccc-4e9c-8d5a-427a3550e8e1</mRID>
+          </InformationProducer>
+          <mRID>163ff4bb-1cdd-4b7c-a70a-d44433f91b0f</mRID>
+          <name>Real-time measurements acknowledge</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <description>This scenario describes the flux of the main activities to send information from the SO (TSO or DSO) to the data exchange platform</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>419942df-7c4e-4c3f-80eb-282a120af73a</mRID>
+          <name>Send Real-time information</name>
+          <URI type="UMLDiagram">Real-time supervision\Image2.png</URI>
+        </Drawing>
+        <mRID>ea39b0be-7137-4c0b-9be6-590a588c30f3</mRID>
+        <name>Send Real-time information</name>
+        <number>2</number>
+        <TriggeringEvent>
+          <description />
+          <mRID>19f0f87b-fe58-44c0-be23-b7ca7c0cd96d</mRID>
+          <name>Every 5 seconds (or other value defined between TSO and DSO)</name>
+        </TriggeringEvent>
+      </Scenario>
+      <scope>The exchange of real time data/information in the observability area between TSO's and DSO's</scope>
+      <Version>
+        <approvalStatus>Approved Version</approvalStatus>
+        <Author>
+          <mRID>ffde2493-5f09-415d-b2d3-efb1dda3c425</mRID>
+          <name>Francisco Reis &amp; Gonçalo Glória [R&amp;D Nester]</name>
+        </Author>
+        <changes />
+        <date>2018-08-13T00:00:00</date>
+        <mRID>a818caed-11b8-4517-92a0-abf4638ba44b</mRID>
+        <number>1</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

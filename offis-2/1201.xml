@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UseCase>
+    <id>1201</id>
+    <name>Architekturdokumentation und Repository</name>
+    <keywords>Use Case, UCMR, SGAM, Übersicht</keywords>
+    <levelOfDepth>Use Case</levelOfDepth>
+    <namespace></namespace>
+    <prioritisation>Mittel</prioritisation>
+    <scope>&lt;p&gt;&amp;Uuml;bergeordnetes Ziel des Hauptarbeitspakets ist es, die Nutzung vorhandener Standards im Projekt durch Bereitstellung von Methodenwissen und Software-Werkzeugen zu f&amp;ouml;rdern und die Projektergebnisse zur Weiterentwicklung von Standards aufzubereiten.&amp;nbsp; Ein besonderer Schwerpunkt wird dabei auf das Thema Informationssicherheit inkl. IT-Sicherheit und Datensicherheit sowie den Datenschutz gelegt.&lt;/p&gt;
+
+&lt;p&gt;In diesem Use Case geht es zum einen um die einheitliche Darstellung aller Use Cases des Projektes enera mit Hilfe des Use Case Tempates, deren Sammlung, Verkn&amp;uuml;pfung und Konsolidierung untereinander sowie der Bereitstellung f&amp;uuml;r weitere Arbeiten durch ein Use Case Management Repository (UCMR). Zum anderen wird soll aufbauend auf den Use Cases eine Gesamt&amp;uuml;bersicht &amp;uuml;ber das Projekt enera als Architekturdokumentation im Smart Grid Architecture Model (SGAM) entstehen.&lt;/p&gt;
+</scope>
+    <viewPoint></viewPoint>
+    <Domain>alle</Domain>
+    <Zone>alle</Zone>
+    <ActorGrouping>
+        <id>248</id>
+        <name>Personen</name>
+        <description>&lt;p&gt;Personen, die im Projekt enera eine bestimmte Rolle einnehmen. Mehrere Rollen f&amp;uuml;r eine Person sind dabei m&amp;ouml;glich&lt;/p&gt;
+</description>
+        <Actor>
+            <id>2605</id>
+            <name>SGAM Coach</name>
+            <description>&lt;p&gt;Der SGAM Coach ist mit dem Use Case Template und dem UCMR vertraut. Ebenso hat er Erfahrungen mit der Architekturdokumentation im SGAM. Er hat Schreibrechte im UCMR und soll die Use Case Owner bei der Bearbeitung ihrer Use Cases unterst&amp;uuml;tzen und als Ansprechpartner dienen.&lt;/p&gt;
+</description>
+            <furtherInformation></furtherInformation>
+        </Actor>
+        <Actor>
+            <id>2604</id>
+            <name>Use Case Owner</name>
+            <description>&lt;p&gt;Experte zu einem Use Case. Der Use Case Owner hat Schreibrechte auf dem UCMR. Da die Use Cases f&amp;uuml;r das Anforderungsmanagement der SDSP genutz werden, ist er Verantwortlicher und Sponsor f&amp;uuml;r die Integration der ben&amp;ouml;tigten Daten in die SDSP.&lt;/p&gt;
+
+&lt;p&gt;Anforderungen an den Use Case Owner:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Kennt die Gesamtanforderungen des UC f&amp;uuml;r alle am UC beteiligten Partner&lt;/li&gt;
+	&lt;li&gt;Koordiniert die ggfs. AP-&amp;uuml;bergreifende zeitliche und inhaltliche Planung des Use Cases&lt;/li&gt;
+	&lt;li&gt;Koordiniert und kommuniziert die Anforderungen des UC gegen&amp;uuml;ber den betroffenen AS-Verantwortlichen&lt;/li&gt;
+	&lt;li&gt;Stellt die Erfassung des UC in SGAM gemeinsam mit dem SGAM-Coach sicher&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+            <furtherInformation></furtherInformation>
+        </Actor>
+        <Actor>
+            <id>2607</id>
+            <name>UCMR Nutzer</name>
+            <description>&lt;p&gt;Der UCMR Nutzer hat lesenden Zugriff auf das UCMR und die Use Cases darin. Er kann die Use Cases ansehen und die Exportfunktionen des UCMR nutzen, um Informationen zu erhalten.&lt;/p&gt;
+
+&lt;p&gt;Jeder Beteiligte im Projekt enera darf die Rolle des UCMR Nutzers einnehmen.&lt;/p&gt;
+</description>
+            <furtherInformation></furtherInformation>
+        </Actor>
+        <Actor>
+            <id>2606</id>
+            <name>UCMR Admin</name>
+            <description>&lt;p&gt;Der UCMR Admin hat sowohl Zugriff auf das Frontend des UCMR, als auch auf die Datenbank im Backend. Er kann neue Accounts im UCMR erstellen und durch den Datenbankzugriff Informationen aus dem UCMR exportieren.&lt;/p&gt;
+
+&lt;p&gt;Des Weiteren ist er an der Weiterentwicklung des UCMR beteiligt, die der Umsetzung neuer Funktionen dient.&lt;/p&gt;
+</description>
+            <furtherInformation></furtherInformation>
+        </Actor>
+    </ActorGrouping>
+    <ActorGrouping>
+        <id>249</id>
+        <name>Web-Applikationen</name>
+        <description>&lt;p&gt;Web-Aplikationen, die von den Personen genutzt werden&lt;/p&gt;
+</description>
+        <Actor>
+            <id>2603</id>
+            <name>UCMR</name>
+            <description>&lt;p&gt;Das Use Case Management Repository (UCMR) vom OFFIS ist eine Web-Applikation zur Sammlung, Verwaltung und Nutzung von Use Cases.&lt;/p&gt;
+</description>
+            <furtherInformation></furtherInformation>
+        </Actor>
+        <Actor>
+            <id>2609</id>
+            <name>enera Sharepoint</name>
+            <description>&lt;p&gt;Der Sharepoint, der als Dokumentablage f&amp;uuml;r alle Mitarbeiter des Projektes enera gilt.&lt;/p&gt;
+</description>
+            <furtherInformation></furtherInformation>
+        </Actor>
+        <Actor>
+            <id>2610</id>
+            <name>SGAM Visualisierung</name>
+            <description>&lt;p&gt;Eine Web-Applikation zur dreidimensionalen Visualisierung von SGAM-Architekturen&lt;/p&gt;
+</description>
+            <furtherInformation></furtherInformation>
+        </Actor>
+    </ActorGrouping>
+    <Condition>
+        <assumption>&lt;p&gt;Um die Use Cases erfassen und mit Ihnen weiter arbeiten zu k&amp;ouml;nnen, m&amp;uuml;ssen sie identifiziert sein.&lt;/p&gt;
+</assumption>
+        <trigerringEvent></trigerringEvent>
+        <PreCondition>
+            <content>Use Cases identifiziert</content>
+        </PreCondition>
+        <scope></scope>
+    </Condition>
+    <Diagram>
+        <name>SGAM-Würfel</name>
+        <URI>https://sgam.offis.de/</URI>
+        <drawingType>other</drawingType>
+        <description>&lt;p&gt;Dreidimensionaler SGAM-W&amp;uuml;rfel mit der Modellierung von drei beispielhaften Use Cases&lt;/p&gt;
+</description>
+    </Diagram>
+    <Diagram>
+        <name>Use Case mit Word-Template erfassen Sequence</name>
+        <drawingType>other</drawingType>
+    </Diagram>
+    <Diagram>
+        <name>12.01 Overview of actors and information objects</name>
+        <drawingType>other</drawingType>
+    </Diagram>
+    <Diagram>
+        <name>Use Case mit Word-Template erfassen Sequence</name>
+        <drawingType>other</drawingType>
+    </Diagram>
+    <Diagram>
+        <name>Use Case importieren Sequence</name>
+        <drawingType>other</drawingType>
+    </Diagram>
+    <Diagram>
+        <name>Use Case importieren Use-Case</name>
+        <drawingType>other</drawingType>
+    </Diagram>
+    <KeyPerformanceIndicator>
+        <id>896</id>
+        <name>Anzahl Use Cases</name>
+        <description>&lt;p&gt;Anzahl der erfassten Use Cases. Dieser Indikator l&amp;auml;sst sich einfach und pr&amp;auml;sent kommunizieren, sichert jedoch nicht die Erfassung des gesamten Projekts durch Use Cases, dazu dient die Abdeckung durch Use Cases.&lt;/p&gt;
+</description>
+        <target></target>
+        <calculationDescription>&lt;p&gt;Anzahl aller Use Cases&lt;/p&gt;
+
+&lt;p&gt;davon Anzahl detaillierter Use Cases&lt;/p&gt;
+</calculationDescription>
+        <calculationURI></calculationURI>
+        <referenceToMentionedUseCaseObjective>Use Cases erfassen</referenceToMentionedUseCaseObjective>
+    </KeyPerformanceIndicator>
+    <KeyPerformanceIndicator>
+        <id>897</id>
+        <name>Abdeckung Use Cases</name>
+        <description>&lt;p&gt;Die Abdeckung durch Use Cases beschreibt, wie viele Arbeiten im Projekt Use Cases zuordenbar sind und wird in Prozent angegeben. Eine Unterscheidung nach Arbeitspaketen ist m&amp;ouml;glich.&lt;/p&gt;
+</description>
+        <target></target>
+        <calculationDescription></calculationDescription>
+        <calculationURI></calculationURI>
+        <referenceToMentionedUseCaseObjective>Use Cases erfassen</referenceToMentionedUseCaseObjective>
+    </KeyPerformanceIndicator>
+    <KeyPerformanceIndicator>
+        <id>898</id>
+        <name>Aufzählung Verwendungsgebiete</name>
+        <description>&lt;p&gt;Die auf den Use Cases aufbauenden Arbeiten sollen benannt werden. Eine Aufz&amp;auml;hlung ist dabei weitaus aussagekr&amp;auml;ftiger als die reine Anzahl.&lt;/p&gt;
+</description>
+        <target></target>
+        <calculationDescription>&lt;p&gt;&amp;lt;Bezeichnung Verwendungszweck&amp;gt;&lt;/p&gt;
+</calculationDescription>
+        <calculationURI></calculationURI>
+        <referenceToMentionedUseCaseObjective>Bereitstellung Use Cases</referenceToMentionedUseCaseObjective>
+    </KeyPerformanceIndicator>
+    <KeyPerformanceIndicator>
+        <id>899</id>
+        <name>Zyklus Überprüfung</name>
+        <description>&lt;p&gt;Alle Use Cases sollten regelm&amp;auml;&amp;szlig;ig (optimalerweise halbj&amp;auml;hrlich, mindestens j&amp;auml;hrlich) hinsichtlich &amp;Auml;nderungen &amp;uuml;berpr&amp;uuml;ft werden, um &amp;Auml;nderungen im Projekt und neue Erkenntnisse mit aufnehmen zu k&amp;ouml;nnen.&lt;/p&gt;
+</description>
+        <target></target>
+        <calculationDescription>&lt;p&gt;AnzahlMonate(&amp;lt;aktuelles Datum&amp;gt; - &amp;lt;Datum letzte &amp;Uuml;berpr&amp;uuml;fung&amp;gt;)&lt;/p&gt;
+</calculationDescription>
+        <calculationURI></calculationURI>
+        <referenceToMentionedUseCaseObjective>Pflege Use Cases</referenceToMentionedUseCaseObjective>
+    </KeyPerformanceIndicator>
+    <KeyPerformanceIndicator>
+        <id>900</id>
+        <name>Vollständigkeit</name>
+        <description>&lt;p&gt;Indikator, ob alle Use Cases im Zielsystem abgebildet wurden.&lt;/p&gt;
+</description>
+        <target></target>
+        <calculationDescription></calculationDescription>
+        <calculationURI></calculationURI>
+        <referenceToMentionedUseCaseObjective>Erstellung SGAM Gesamtarchitekur</referenceToMentionedUseCaseObjective>
+    </KeyPerformanceIndicator>
+    <Narrative>
+        <completeDescription>&lt;p&gt;Das IEC 62559-2 Use Case Template dient der einheitlichen Beschreibung von Anforderungen an Smart Grid-Systemen. Das Template wird mittlerweile auf andere Systeme wie z.B. Ambient Assisted Living und Electrical Vehicles adaptiert und zeigt damit, dass es auch f&amp;uuml;r andere Systeme ohne gro&amp;szlig;e Anpassungen verwendet werden kann. Basierend auf dem Use Case lassen sich Architekturmodelle (wie z.B. SGAM (Smart Grid Architecture Model) und EMAM (Electric Mobility Architecture Model)) erstellen, die f&amp;uuml;r die weitere Entwicklung eines Systems relevant sind und damit einen Schritt nach der Anforderungsbeschreibung mittels Use Cases darstellen.&lt;/p&gt;
+
+&lt;p&gt;Das Use Case Management Repository (UCMR) ist eine beim OFFIS entwickelte Webapplikation f&amp;uuml;r die Erstellung, das Management und den Austausch von Use Cases sowie weiteren zugeh&amp;ouml;rigen Daten wie Architekturmodelle, Akteurs- und Anforderungsbibliotheken. Zur Strukturierung der Inhalte von Use Cases wird eine Baumstruktur zur Visualisierung angewandt, die derzeit in vier Ordner unterteilt ist: Use Cases, Actors (Akteure), Functions (Funktionen) und Requirements (Anforderungen). Der Use Case Ordner zeigt die Use Cases, die von den Nutzern erstellt wurden. Jeder Use Case kann in einem eigenen Tab ge&amp;ouml;ffnet werden und seine Szenarien und Szenarioschritte werden im Baum angezeigt. Die Elemente des Actors-, Functions- und Requirements-Ordners k&amp;ouml;nnen ebenfalls in Tabs ge&amp;ouml;ffnet werden; Zus&amp;auml;tzlich k&amp;ouml;nnen diese Elemente im Baum sortiert und verlinkt werden. Der Vorteil dieser Ordnerstruktur ist die Wiederverwendung von Elementen, beispielsweise kann ein Akteur einmalig definiert und dann in mehreren Use Cases verwendet werden.&lt;/p&gt;
+
+&lt;p&gt;Das Smart Grid Architektur Modell (SGAM), das im Rahmen der Bearbeitung des EU-Mandats M/490 entwickelt wurde, dient der Konzeptualisierung von Smart Grids. Es erlaubt die Pr&amp;uuml;fung von Smart Grid Anwendungsf&amp;auml;llen und deren Unterst&amp;uuml;tzung durch Standards. So kann die Unterst&amp;uuml;tzung von Anwendungsf&amp;auml;llen durch die SGAM-Methodik verifiziert beziehungsweise L&amp;uuml;cken identifiziert werden. Mit dem Modell kann der aktuelle Stand einer Implementierung im elektrischen Netz dargestellt werden, wobei die Smart Grid Anwendungsf&amp;auml;lle aus architektonischer Sicht betrachtet werden und das SGAM spezifisch und neutral in Hinblick auf Umsetzung und Technologie ist. Dar&amp;uuml;ber hinaus kann die Entwicklung hin zu zuk&amp;uuml;nftigen Smart Grid Szenarios geschildert werden, da das Modell den Prinzipien der Universalit&amp;auml;t, Lokalisierung, Konsistenz, Flexibilit&amp;auml;t, Skalierbarkeit, Erweiterbarkeit und Interoperabilit&amp;auml;t folgt. Das SGAM wird auf drei Achsen beschrieben. Bei der Modellierung wird auf f&amp;uuml;nf Interoperabilit&amp;auml;tsebenen jeweils die Smart Grid Fl&amp;auml;che abgedeckt, die durch die elektrischen Dom&amp;auml;nen mit der klassischen Energieflusskette und die Zonen des Energiemanagements mit der hierarchischen Struktur aufgespannt wird.&lt;/p&gt;
+</completeDescription>
+        <shortDescription>&lt;p&gt;Die konzeptionellen Aktivit&amp;auml;ten in enera werden durch die Erstellung von Anforderungs- und Architekturmodellen zusammengef&amp;uuml;hrt. Dabei werden nationale und internationale Standards und technische Richtlinien (u. a. von DKE, IEC, ISO, IEEE, BSI) und gesetzliche Vorgaben ber&amp;uuml;cksichtigt.&lt;br /&gt;
+Das Ziel dieses Use Cases ist die Architekturdokumentation nach SGAM inkl. eines Repositorys mit den enera Anwendungsf&amp;auml;llen gem&amp;auml;&amp;szlig; IEC 62559. Dies l&amp;auml;sst sich in drei Teile untergliedern:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Erstellung der enera Anwendungsf&amp;auml;lle gem&amp;auml;&amp;szlig; IEC 62559&lt;/li&gt;
+	&lt;li&gt;Sammlung der Anwendungsf&amp;auml;lle in einem Repository&lt;/li&gt;
+	&lt;li&gt;Erstellung der Gesamtarchitektur im SGAM&lt;/li&gt;
+&lt;/ul&gt;
+</shortDescription>
+    </Narrative>
+    <RelatedObjective>
+        <description>&lt;p&gt;Erfassung aller Use Cases des Projektes enera in einem der weiteren Verwendung angemessenen Detailgrad.&lt;/p&gt;
+</description>
+        <id>932</id>
+        <name>Use Cases erfassen</name>
+    </RelatedObjective>
+    <RelatedObjective>
+        <description>&lt;p&gt;Die Use Cases sollen zentral im UCMR gesammelt werden, damit deren Informationen untereinander verkn&amp;uuml;pft werden k&amp;ouml;nnen und sie f&amp;uuml;r weitere Arbeiten zur Verf&amp;uuml;gung stehen.&lt;/p&gt;
+</description>
+        <id>933</id>
+        <name>Use Cases im UCMR sammeln</name>
+    </RelatedObjective>
+    <RelatedObjective>
+        <description>&lt;p&gt;Der Zweck der Use Cases ist es, Informationen aus dem gesamten Projekt f&amp;uuml;r weitere Arbeiten zur Verf&amp;uuml;gung zu stellen, um die Informationssammlung an verschiedenen Stellen durch mehrere Gruppen und somit Mehrfacharbeit zu verhindern. Ebenso sollen auch weitere Arbeiten erm&amp;ouml;glicht werden, die nur kleine Mehrwerte generieren und f&amp;uuml;r die eine eigene Sammlung von Informationen in dem gesamten Projekt zu aufw&amp;auml;ndig w&amp;auml;re.&lt;/p&gt;
+</description>
+        <id>934</id>
+        <name>Bereitstellung Use Cases</name>
+    </RelatedObjective>
+    <RelatedObjective>
+        <description>&lt;p&gt;Die Use Cases k&amp;ouml;nnen sich &amp;uuml;ber den Projektverlauf durch neue Erkenntnisse und fortschreitende Arbeiten ver&amp;auml;ndern/detaillieren, was dokumentiert werden sollte.&lt;/p&gt;
+</description>
+        <id>935</id>
+        <name>Pflege Use Cases</name>
+    </RelatedObjective>
+    <RelatedObjective>
+        <description>&lt;p&gt;Die Komponentenebene des SGAM gibt Aufschluss &amp;uuml;ber die im Projekt involvierten Akteure und deren Verbindungen untereinander.&lt;/p&gt;
+</description>
+        <id>936</id>
+        <name>Erstellung SGAM Komponentenebene</name>
+    </RelatedObjective>
+    <RelatedObjective>
+        <description>&lt;p&gt;Neben der Information der involvierten Akteure beinhalten die restlichen Ebenen des SGAM Informationen zu ausgetauschten Informationen, realisierten Funktionen und zugeh&amp;ouml;rigen Gechs&amp;auml;ftsmodellen und k&amp;ouml;nnen Grundlage f&amp;uuml;r weitere Arbeiten sein.&lt;/p&gt;
+</description>
+        <id>937</id>
+        <name>Erstellung SGAM Gesamtarchitekur</name>
+    </RelatedObjective>
+    <Reference>
+        <description>&lt;p&gt;Use case methodology - Part 2: Definition of the templates for use cases, actor list and requirements list&lt;/p&gt;
+</description>
+        <id>427</id>
+        <impact>hoch</impact>
+        <name>IEC 62559-2:2015</name>
+        <originatorOrganisation>IEC</originatorOrganisation>
+        <status>published</status>
+        <type>International Standard</type>
+        <URI>https://webstore.iec.ch/publication/22349</URI>
+    </Reference>
+    <Reference>
+        <description>&lt;p&gt;Use Case Management Repository (UCMR) des OFFIS&lt;/p&gt;
+</description>
+        <id>428</id>
+        <impact>hoch</impact>
+        <name>OFFIS UCMR</name>
+        <originatorOrganisation>OFFIS</originatorOrganisation>
+        <status></status>
+        <type>Web-application</type>
+        <URI>http://ucmr.offis.de/</URI>
+    </Reference>
+    <Reference>
+        <description>&lt;p&gt;SGAM - Ergebnis des M/490 Mandats&lt;/p&gt;
+</description>
+        <id>429</id>
+        <impact>hoch</impact>
+        <name>First Set of Standards</name>
+        <originatorOrganisation>CEN-CENELEC-ETSI Smart Grid Coordination Group</originatorOrganisation>
+        <status>Published</status>
+        <type>report</type>
+        <URI>ftp://ftp.cen.eu/EN/EuropeanStandardization/HotTopics/SmartGrids/First%20Set%20of%20Standards.pdf</URI>
+    </Reference>
+    <Reference>
+        <description>&lt;p&gt;The Use Case and Smart Grid Architecture Model Approach: The IEC 62559-2 Use Case Template and the SGAM applied in various domains&lt;/p&gt;
+</description>
+        <id>430</id>
+        <impact>hoch</impact>
+        <name>Methodik</name>
+        <originatorOrganisation>Springer International Publishing</originatorOrganisation>
+        <status>Published</status>
+        <type>Buch</type>
+        <URI>http://www.springer.com/de/book/9783319492285</URI>
+    </Reference>
+    <Scenario>
+        <description>&lt;p&gt;Die Beschreibung des Use Cases erfolgt in diesem Szenario manuell durch die Experten in MS Word mit Hilfe der Word Vorlage.&lt;/p&gt;
+
+&lt;p&gt;Der SGAM Coach initiert diesen Prozess und gibt Hilfestellung. Der Use Case kann auch in einem gemeinsamen Treffen von mehreren Experten, darunter u.a. SGAM Coach und Use Case Owner, ausgef&amp;uuml;llt werden. Da jedoch der Use Case Owner f&amp;uuml;r seinen Use Case verantwortlich ist und er nach Rollenbeschreibungt die Gesamtanforderungen des UC kennt, wird er als der Prim&amp;auml;re Akteur beim Ausf&amp;uuml;llen des Use Cases angesehen.&lt;/p&gt;
+</description>
+        <id>593</id>
+        <name>Use Case mit Word-Template erfassen</name>
+        <number>01</number>
+        <postCondition>Der Use Case wurde erfasst und beschrieben</postCondition>
+        <preCondition>Alle Experten sind verfügbar und es existiert mindestens eine Möglichkeit um mit MS Word zu arbeiten.</preCondition>
+        <triggeringEvent>Durchführung der Erfassung</triggeringEvent>
+        <PrimaryActor>
+            <id>2604</id>
+            <name>Use Case Owner</name>
+        </PrimaryActor>
+        <Step>
+            <description>&lt;p&gt;Der SGAM Coach bereitet die Erfassung des Use Cases vor. Dabei wird auch das MS Word Dokument f&amp;uuml;r den Use Case mit dem Template erstellt und ggf. erste Felder ausgef&amp;uuml;llt.&lt;/p&gt;
+</description>
+            <event>Durchführung der Erfassung</event>
+            <id>2445</id>
+            <name>Vorbereitung</name>
+            <number>01.01</number>
+            <service>CREATE</service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1718</id>
+                <name>Use Case Word</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der SGAM Coach gibt das Word Template und weitere Hilfestellungen an den Use Case Owner&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2446</id>
+            <name>Weitergabe von Informationen</name>
+            <number>01.02</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2604</id>
+                <name>Use Case Owner</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1718</id>
+                <name>Use Case Word</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der Use Case Owner f&amp;uuml;llt das Template aus. Hierbei k&amp;ouml;nnen weitere Experten f&amp;uuml;r Informationen hinzugezogen werden.&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2447</id>
+            <name>Ausfüllen</name>
+            <number>01.03</number>
+            <service></service>
+            <InformationProducer>
+                <id>2604</id>
+                <name>Use Case Owner</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2604</id>
+                <name>Use Case Owner</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1718</id>
+                <name>Use Case Word</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der Use Case Owner gibt den fertigen Use Case f&amp;uuml;r den SGAM Coach frei.&lt;/p&gt;
+</description>
+            <event>Use Case ausgefüllt</event>
+            <id>2448</id>
+            <name>Versenden</name>
+            <number>01.04</number>
+            <service></service>
+            <InformationProducer>
+                <id>2604</id>
+                <name>Use Case Owner</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1718</id>
+                <name>Use Case Word</name>
+            </InformationObject>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <description>&lt;p&gt;Der in MS Word erfasste Use Case wird ins UCMR importiert. Dazu muss er zun&amp;auml;chst ins html-Format konvertiert werden und kann dann per Import-Funktion im UCMR aufgenommen werden.&lt;/p&gt;
+</description>
+        <id>594</id>
+        <name>Use Case importieren</name>
+        <number>02</number>
+        <postCondition>Der Use Case ist im UCMR importiert</postCondition>
+        <preCondition>Der Use Case liegt im MS Word Template vor</preCondition>
+        <triggeringEvent>Durchführung des Imports</triggeringEvent>
+        <PrimaryActor>
+            <id>2605</id>
+            <name>SGAM Coach</name>
+        </PrimaryActor>
+        <Step>
+            <description>&lt;p&gt;Der SGAM Coach pr&amp;uuml;ft die Syntax im ausgef&amp;uuml;llten MS Word Template hinsichtlich importierbarkeit und passt ihn ggf. an.&lt;/p&gt;
+</description>
+            <event>Durchführung des Imports</event>
+            <id>2449</id>
+            <name>Syntax prüfen</name>
+            <number>02.01</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1718</id>
+                <name>Use Case Word</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der SGAM Coach konvertiert den Use Case aus dem MS Word Dokument in das html-Format.&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2450</id>
+            <name>Konvertierung</name>
+            <number>02.02</number>
+            <service>CREATE</service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1719</id>
+                <name>Use Case html</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der SGAM Coach macht in einer Test-Area im UCMR einen probeweisen Import. Schl&amp;auml;gt dieser fehl, wird der Prozess ab Schritt 1 wiederholt.&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2451</id>
+            <name>Testimport</name>
+            <number>02.03</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1719</id>
+                <name>Use Case html</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der Use Case wird mit der Import-Funktion ins UCMR importiert&lt;/p&gt;
+</description>
+            <event>Testimport erfolgreich</event>
+            <id>2452</id>
+            <name>Import</name>
+            <number>02.04</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1719</id>
+                <name>Use Case html</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der Use Case Owner pr&amp;uuml;ft den importierten Use Case und erg&amp;auml;nzt die angedachten Verkn&amp;uuml;pfungen f&amp;uuml;r den Use Case. Hierzu geh&amp;ouml;rt z.B. das Verlinken der Akteure, falls diese bereits im UCMR durch einen anderen Use Case vorliegen.&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2454</id>
+            <name>Nachbereitung</name>
+            <number>02.05</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1721</id>
+                <name>Eingabe UCMR</name>
+            </InformationObject>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <description>&lt;p&gt;Die SGAM Coaches fragen zyklisch &amp;uuml;ber die vierj&amp;auml;hrige Projektlaufzeit den Aktualisierungsbedarf der Use Cases bei den Ownern ab. Wenn sich &amp;Auml;nderungsbedarf ergeben hat, dann Aktualisiert der Use Case Owner seinen Use Case im UCMR. Der SGAM Coach kann dabei Hilfestellungen geben.&lt;/p&gt;
+</description>
+        <id>595</id>
+        <name>Use Case im UCMR aktualisieren</name>
+        <number>03</number>
+        <postCondition>Der Use Case wurde im UCMR aktualisiert</postCondition>
+        <preCondition>Der Use Case liegt im UCMR vor</preCondition>
+        <triggeringEvent>Aktualisierung notwendig</triggeringEvent>
+        <PrimaryActor>
+            <id>2604</id>
+            <name>Use Case Owner</name>
+        </PrimaryActor>
+        <Step>
+            <description>&lt;p&gt;Der Use Case Owner nimmt die Aktualisierung des Use Cases im UCMR vor. Der SGAM Coach gibt dabei ggf. Hilfestellung.&lt;/p&gt;
+</description>
+            <event>Aktualisierung notwendig</event>
+            <id>2455</id>
+            <name>Aktualisierung</name>
+            <number>03.01</number>
+            <service></service>
+            <InformationProducer>
+                <id>2604</id>
+                <name>Use Case Owner</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1721</id>
+                <name>Eingabe UCMR</name>
+            </InformationObject>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <description>&lt;p&gt;Ein Gro&amp;szlig;teil der Informationen, die f&amp;uuml;r die Erstellung der SGAM-Architektur notwendig sind, sind im Use Case Template vorgesehen und k&amp;ouml;nnen durch einen Experten im UCMR erg&amp;auml;nzt werden. Dies kann geb&amp;uuml;ndelt bez&amp;uuml;glich aller zu erg&amp;auml;nzenden Informationen erfolgen, als auch gestaffelt.&lt;/p&gt;
+</description>
+        <id>596</id>
+        <name>SGAM-Informationen im UCMR ergänzen</name>
+        <number>04</number>
+        <postCondition>Die SGAM-relevanten Informationen sind eingepflegt</postCondition>
+        <preCondition>Der Use Case liegt im UCMR vor</preCondition>
+        <triggeringEvent>Durchführung der Ergänzung</triggeringEvent>
+        <PrimaryActor>
+            <id>2605</id>
+            <name>SGAM Coach</name>
+        </PrimaryActor>
+        <Step>
+            <description>&lt;p&gt;Der SGAM Coach erg&amp;auml;nzt die f&amp;uuml;r die SGAM-relevanten Informationen im UCMR an den vorgesehenen Stellen.&lt;/p&gt;
+</description>
+            <event>Durchführung Ergänzung</event>
+            <id>2456</id>
+            <name>Ergänzung</name>
+            <number>04.01</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1721</id>
+                <name>Eingabe UCMR</name>
+            </InformationObject>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <description>&lt;p&gt;Das UCMR stellt Exportfunktionen bereit, um in den Use Cases hinterlegte Informationen f&amp;uuml;r weitere Arbeiten zu erhalten&lt;/p&gt;
+</description>
+        <id>597</id>
+        <name>UCMR Exportfunktionen nutzen</name>
+        <number>05</number>
+        <postCondition>Informationen wurden exportiert</postCondition>
+        <preCondition>Use Cases im UCMR hinterlegt</preCondition>
+        <triggeringEvent>Informationen aus Use Cases für weitere Arbeiten nötig</triggeringEvent>
+        <PrimaryActor>
+            <id>2607</id>
+            <name>UCMR Nutzer</name>
+        </PrimaryActor>
+        <Step>
+            <description>&lt;p&gt;Der Nutzer des UCMRs st&amp;ouml;&amp;szlig;t eine Exportfunktion im UCMR an&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2459</id>
+            <name>Aufruf Export</name>
+            <number>05.01</number>
+            <service></service>
+            <InformationProducer>
+                <id>2607</id>
+                <name>UCMR Nutzer</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1723</id>
+                <name>Abrufinformationen</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Das UCMR exportiert die gew&amp;uuml;nschten Informationen&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2457</id>
+            <name>UCMR Export</name>
+            <number>05.02</number>
+            <service></service>
+            <InformationProducer>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2607</id>
+                <name>UCMR Nutzer</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1722</id>
+                <name>UCMR Export</name>
+            </InformationObject>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <description>&lt;p&gt;F&amp;uuml;r Informationen, die im UCMR hinterlegt sind, f&amp;uuml;r die jedoch (noch) keine Exportfunktion im UCMR vorliegt, kann ein direkter Export aus der Datenbank durchgef&amp;uuml;hrt werden.&lt;/p&gt;
+</description>
+        <id>598</id>
+        <name>UCMR Datenbankexport</name>
+        <number>06</number>
+        <postCondition>Informationen wurden exportiert</postCondition>
+        <preCondition>Use Cases im UCMR hinterlegt</preCondition>
+        <triggeringEvent>Informationen aus Use Cases für weitere Arbeiten nötig</triggeringEvent>
+        <PrimaryActor>
+            <id>2606</id>
+            <name>UCMR Admin</name>
+        </PrimaryActor>
+        <Step>
+            <description>&lt;p&gt;Ein Nutzer des UCMR, der einen Export aus dem UCMR haben m&amp;ouml;chte, f&amp;uuml;r den noch keine Exportfunktion im UCMR umgesetzt ist, gibt eine Beschreibung der gew&amp;uuml;nschten Informationen an den Administrator des UCMRs&lt;/p&gt;
+</description>
+            <event>Informationen aus Use Cases für weitere Arbeiten nötig</event>
+            <id>2458</id>
+            <name>Anfrage Export</name>
+            <number>06.01</number>
+            <service></service>
+            <InformationObject>
+                <id>1723</id>
+                <name>Abrufinformationen</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der Administrator des UCMRs kionfiguriert die Abfrage aus der Datenbank des UCMR und f&amp;uuml;hrt sie durch&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2460</id>
+            <name>Aufruf Export</name>
+            <number>06.02</number>
+            <service></service>
+            <InformationProducer>
+                <id>2606</id>
+                <name>UCMR Admin</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1723</id>
+                <name>Abrufinformationen</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Das UCMR exportiert die gew&amp;uuml;nschten Informationen&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2461</id>
+            <name>UCMR Export</name>
+            <number>06.03</number>
+            <service></service>
+            <InformationProducer>
+                <id>2603</id>
+                <name>UCMR</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2606</id>
+                <name>UCMR Admin</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1722</id>
+                <name>UCMR Export</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der UCMR Admin leitet den Export an den UCMR Nutzer weiter.&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2462</id>
+            <name>Weitergabe Export</name>
+            <number>06.04</number>
+            <service></service>
+            <InformationProducer>
+                <id>2606</id>
+                <name>UCMR Admin</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2607</id>
+                <name>UCMR Nutzer</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1722</id>
+                <name>UCMR Export</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der UCMR Admin l&amp;auml;dt den Datenbankexport f&amp;uuml;r die Verwendung durch andere Nutzer im enera Sharepoint hoch.&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2463</id>
+            <name>Hochladen Export</name>
+            <number>06.05</number>
+            <service></service>
+            <InformationProducer>
+                <id>2606</id>
+                <name>UCMR Admin</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2609</id>
+                <name>enera Sharepoint</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1722</id>
+                <name>UCMR Export</name>
+            </InformationObject>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <description>&lt;p&gt;Erstellung und Aktualisierung der dreidimensionalen SGAM-Architektur. Die meisten der n&amp;ouml;tigen Informationen sind bereits im Use Case Template vorgesehen und k&amp;ouml;nnen via Export aus dem UCMR genutzt werden. F&amp;uuml;r die vollst&amp;auml;ndige SGAM-Dokumentation k&amp;ouml;nnen jedoch weitere Informationen, die noch nicht vorliegen, notwendig werden.&lt;/p&gt;
+</description>
+        <id>599</id>
+        <name>SGAM 3D Architektur</name>
+        <number>07</number>
+        <postCondition>SGAM-Architektur erstellt</postCondition>
+        <preCondition>Informationen liegen vor</preCondition>
+        <triggeringEvent>Durchführung der Dokumentation im SGAM</triggeringEvent>
+        <PrimaryActor>
+            <id>2605</id>
+            <name>SGAM Coach</name>
+        </PrimaryActor>
+        <Step>
+            <description>&lt;p&gt;Der f&amp;uuml;r die SGAM Architekturerstellung Verantwortliche SGAM Coach sammelt die n&amp;ouml;tigen Informationen aus UCMR Exporten&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2464</id>
+            <name>Informationen sammeln </name>
+            <number>07.01</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1722</id>
+                <name>UCMR Export</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Der SGAM Coach verarbeitet die Informationen zu einer CLS-Tabelle, die dem Importformat der 3D Visualisierung entspricht&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2465</id>
+            <name>Informationen aufbereiten</name>
+            <number>07.02</number>
+            <service>CREATE</service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1724</id>
+                <name>SGAM Beschreibung CLS</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Die CLS-Datei wird in der Visualizierung geladen&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2466</id>
+            <name>Modellimport</name>
+            <number>07.03</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2610</id>
+                <name>SGAM Visualisierung</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1724</id>
+                <name>SGAM Beschreibung CLS</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Die Web-Applikation zur 3D Visualisierung generiert aus der CLS-Datei das dreidimensionale Architekturmodell&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2467</id>
+            <name>Erstellung</name>
+            <number>07.04</number>
+            <service>CREATE</service>
+            <InformationProducer>
+                <id>2610</id>
+                <name>SGAM Visualisierung</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2610</id>
+                <name>SGAM Visualisierung</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1725</id>
+                <name>3D Modell</name>
+            </InformationObject>
+        </Step>
+        <Step>
+            <description>&lt;p&gt;Das in der CLS-Datei beschriebene Modell wird auf dem enera Sharepoint zur Wiederverwendung hochgeladen&lt;/p&gt;
+</description>
+            <event></event>
+            <id>2468</id>
+            <name>Hochladen Modell</name>
+            <number>07.05</number>
+            <service></service>
+            <InformationProducer>
+                <id>2605</id>
+                <name>SGAM Coach</name>
+            </InformationProducer>
+            <InformationReceiver>
+                <id>2609</id>
+                <name>enera Sharepoint</name>
+            </InformationReceiver>
+            <InformationObject>
+                <id>1724</id>
+                <name>SGAM Beschreibung CLS</name>
+            </InformationObject>
+        </Step>
+    </Scenario>
+    <VersionInformation>
+        <approvalStatus></approvalStatus>
+        <areaOfExpertise></areaOfExpertise>
+        <changes>&lt;p&gt;Ansprechpartner erg&amp;auml;nzt&lt;/p&gt;
+</changes>
+        <date>2018-06-05T00:00:00.000+02:00</date>
+        <domainExpert>Marie Clausen (marie.clausen@offis.de)</domainExpert>
+        <title></title>
+        <number></number>
+        <authors></authors>
+    </VersionInformation>
+    <VersionInformation>
+        <approvalStatus>erfasst </approvalStatus>
+        <areaOfExpertise></areaOfExpertise>
+        <changes>&lt;p&gt;Ausformulierung, Erstellung der Szenarien&lt;/p&gt;
+</changes>
+        <date>2017-08-05T00:00:00.000+02:00</date>
+        <domainExpert>OFFIS FB-E Gruppe AEI</domainExpert>
+        <title>Ausformuliert</title>
+        <number>2.0</number>
+        <authors>Marie Clausen</authors>
+    </VersionInformation>
+    <VersionInformation>
+        <approvalStatus></approvalStatus>
+        <areaOfExpertise></areaOfExpertise>
+        <changes>&lt;p&gt;initial angelegt&lt;/p&gt;
+</changes>
+        <date>2017-02-02T00:00:00.000+01:00</date>
+        <domainExpert></domainExpert>
+        <title>initial</title>
+        <number>1.0</number>
+        <authors>Marie van Amelsvoort</authors>
+    </VersionInformation>
+    <InformationObjects>
+        <InformationObject>
+            <id>1718</id>
+            <name>Use Case Word</name>
+            <Requirements>
+                <Requirement>
+                    <id>384</id>
+                    <requirementCategoryId>91</requirementCategoryId>
+                </Requirement>
+            </Requirements>
+        </InformationObject>
+        <InformationObject>
+            <id>1719</id>
+            <name>Use Case html</name>
+            <Requirements>
+                <Requirement>
+                    <id>383</id>
+                    <requirementCategoryId>91</requirementCategoryId>
+                </Requirement>
+            </Requirements>
+        </InformationObject>
+        <InformationObject>
+            <id>1721</id>
+            <name>Eingabe UCMR</name>
+            <Requirements>
+                <Requirement>
+                    <id>386</id>
+                    <requirementCategoryId>91</requirementCategoryId>
+                </Requirement>
+            </Requirements>
+        </InformationObject>
+        <InformationObject>
+            <id>1722</id>
+            <name>UCMR Export</name>
+            <Requirements>
+                <Requirement>
+                    <id>387</id>
+                    <requirementCategoryId>91</requirementCategoryId>
+                </Requirement>
+            </Requirements>
+        </InformationObject>
+        <InformationObject>
+            <id>1723</id>
+            <name>Abrufinformationen</name>
+            <Requirements>
+                <Requirement>
+                    <id>388</id>
+                    <requirementCategoryId>91</requirementCategoryId>
+                </Requirement>
+            </Requirements>
+        </InformationObject>
+        <InformationObject>
+            <id>1724</id>
+            <name>SGAM Beschreibung CLS</name>
+            <Requirements>
+                <Requirement>
+                    <id>389</id>
+                    <requirementCategoryId>91</requirementCategoryId>
+                </Requirement>
+            </Requirements>
+        </InformationObject>
+        <InformationObject>
+            <id>1725</id>
+            <name>3D Modell</name>
+            <Requirements>
+                <Requirement>
+                    <id>390</id>
+                    <requirementCategoryId>91</requirementCategoryId>
+                </Requirement>
+            </Requirements>
+        </InformationObject>
+    </InformationObjects>
+</UseCase>

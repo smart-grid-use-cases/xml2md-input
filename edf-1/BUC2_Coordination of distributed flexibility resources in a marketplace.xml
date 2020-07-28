@@ -1,0 +1,1844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xhtml="http://www.w3.org/1999/xhtml" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>The unique power exchange of trades for the actual delivery of energy that receives the bids from the parties that have a contract to bid. The market operator determines the market energy price for the market balance area after applying technical constraints from the system operator. It may also establish the price for the reconciliation within a metering grid area.</description>
+      <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+      <name>Market Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Role which links through contractual agreements (flexibility requests, notices etc.) the role customer and its possibility to provide flexibilities to the roles market and grid; generic role that could be taken by many stakeholders. This entity can activate all or part of the flexibility resources during a period and regarding a specific location or geographical area.</description>
+      <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+      <name>Flexibility Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>A natural or legal person responsible for operating, ensuring the maintenance of and, if necessary, developing the distribution system in a given area and, where applicable, its interconnections with other systems and for ensuring the long term ability of the system to meet reasonable demands for the distribution of electricity or gas. That definition is provided for by art. 2 n. 6 Dir 2007/72/EC with regards to electricity and by art. 2 (6) Dir 2007/73/EC with regards to gas.&lt;br/&gt;&lt;br/&gt;In the electricity sector distribution means the transport of electricity on high-voltage, medium-voltage and low-voltage distribution systems with a view to its delivery to customers, but does not include supply according to art. 2 (5) Dir, 2007/72/EC. Accordingly, distribution in the gas sector means the transport of natural gas through regional pipeline networks with a view to its delivery to customers, but not including supply.&lt;br/&gt;&lt;br/&gt;DSOs have to act according to art. 25, 26, 27 Dir. 2007/72/EC (with regards to electricity) and to art. 25, 26, 27 Dir. 2007/73/EC (with regards to gas). The aforementioned provisions provide the tasks and duties of DSOs.&lt;br/&gt;&lt;br/&gt;One of the main characteristics of the DSO is that it shall be independent at least in terms of its legal form, organisation and decision making from other activities not relating to distribution within a vertically integrated undertaking. Unlike the transmission system operator, the DSO is not affected by ownership unbundling.</description>
+      <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+      <name>Distribution System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>According to the Article 2.4 of the Electricity Directive 2009/72/EC (Directive): &amp;quot;a natural or legal person responsible for operating, ensuring the maintenance of and, if necessary, developing the transmission system in a given area and, where applicable, its interconnections with other systems, and for ensuring the long-term ability of the system to meet reasonable demands for the transmission of electricity&amp;quot;. Moreover, the TSO is responsible for connection of all grid users at the transmission level and connection of the DSOs within the TSO control area.&lt;br/&gt;Source : EU Commission Task Force for Smart Grids, EG3&lt;br/&gt;</description>
+      <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+      <name>Transmission System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>cfc15468-f054-4281-83e7-3b00de9d1c6c</mRID>
+      <name>Distribution Management</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>cf2915fd-ab21-4d40-9efb-3ef04109b015</mRID>
+      <name>Energy Markets</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>5e831afb-6a55-4eb5-a385-d3eb3e058cd6</mRID>
+      <name>Transmission System</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>08386c32-05d0-42d8-88ae-4d89a0cd2800</mRID>
+      <name>Distribution System</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>8e522a25-0f4c-4f7a-b9b1-9f0fb7451e69</mRID>
+      <name>Users</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>c213e065-7fb7-4b05-b995-b4eb99f4fd3e</mRID>
+      <name>Operational planning</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>cfc15468-f054-4281-83e7-3b00de9d1c6c</mRID>
+      </Area>
+      <Area>
+        <mRID>cf2915fd-ab21-4d40-9efb-3ef04109b015</mRID>
+      </Area>
+      <Area>
+        <mRID>5e831afb-6a55-4eb5-a385-d3eb3e058cd6</mRID>
+      </Area>
+      <Area>
+        <mRID>08386c32-05d0-42d8-88ae-4d89a0cd2800</mRID>
+      </Area>
+      <Area>
+        <mRID>8e522a25-0f4c-4f7a-b9b1-9f0fb7451e69</mRID>
+      </Area>
+      <Area>
+        <mRID>c213e065-7fb7-4b05-b995-b4eb99f4fd3e</mRID>
+      </Area>
+      <description />
+      <mRID>3fb63eb0-27f2-425b-8de3-1c530abf508f</mRID>
+      <name>Procurement of distributed flexibility resources in a marketplace with a common pool for different purposes</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>c213e065-7fb7-4b05-b995-b4eb99f4fd3e</mRID>
+      </Area>
+      <Area>
+        <mRID>5e831afb-6a55-4eb5-a385-d3eb3e058cd6</mRID>
+      </Area>
+      <Area>
+        <mRID>08386c32-05d0-42d8-88ae-4d89a0cd2800</mRID>
+      </Area>
+      <Area>
+        <mRID>cf2915fd-ab21-4d40-9efb-3ef04109b015</mRID>
+      </Area>
+      <Area>
+        <mRID>8e522a25-0f4c-4f7a-b9b1-9f0fb7451e69</mRID>
+      </Area>
+      <description />
+      <mRID>31543037-b2af-45f3-9a1c-2c81f4c7532e</mRID>
+      <name>Operational Planning activities</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description>Power (Regulation up)&lt;br/&gt;Power (Regulation down)&lt;br/&gt;Time (Begin)&lt;br/&gt;Time (End)&lt;br/&gt;Time (Minimum duration)&lt;br/&gt;Time (Maximum duration)&lt;br/&gt;Point(s) of activation&lt;br/&gt;Price</description>
+      <identifier>Info1</identifier>
+      <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+      <name>Flexibility Offer</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Margin to activate the regulation up offers for a region (group of nodes HV/MV) and for each period &lt;br/&gt;Margin to activate the regulation down offers for a region (group of nodes HV/MV) and for each period</description>
+      <identifier>Info2</identifier>
+      <mRID>19841afb-643f-4134-9105-03c4449bde7a</mRID>
+      <name>TSO Margins</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Power (Regulation up)&lt;br/&gt;Power (Regulation down)&lt;br/&gt;Time (Begin)&lt;br/&gt;Time (End)&lt;br/&gt;Activation points (group of nodes where the offers can be activated to solve the SO problems)</description>
+      <identifier>Info3</identifier>
+      <mRID>256e57f3-202d-4dec-b9f5-770f1c98782f</mRID>
+      <name>SO flexibility needs</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Redefinition of the flexibilities (or flexibility offers):&lt;br/&gt;Power (Regulation up)&lt;br/&gt;Power (Regulation down)&lt;br/&gt;Time (Begin)&lt;br/&gt;Time (End)&lt;br/&gt;Time (Minimum duration)&lt;br/&gt;Time (Maximum duration)&lt;br/&gt;Point(s) of activation (Only for aggregators)</description>
+      <identifier>Info4</identifier>
+      <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+      <name>Flexibility limitations</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Margin to activate the regulation up offers for each node HV/MV and for each period &lt;br/&gt;Margin to activate the regulation down offers for each node HV/MV and for each period</description>
+      <identifier>Info5</identifier>
+      <mRID>ecb2b9f4-2038-4b12-8a0e-3d5f42575c8f</mRID>
+      <name>DSO Margins</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info6</identifier>
+      <mRID>1552f1d9-c58b-4e4c-b722-e756825e8bc4</mRID>
+      <name>Market Results (Selected Offers)</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Values of forecasted consumption/generation by period and primary substations for the next day</description>
+      <identifier>Info7</identifier>
+      <mRID>3d1a82ff-9138-4140-a2ed-1d2ceb3a9f6c</mRID>
+      <name>Primary Substations use profiles</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Power (Regulation up)&lt;br/&gt;Power (Regulation down)&lt;br/&gt;Time (Begin)&lt;br/&gt;Time (End)&lt;br/&gt;Activation points (group of nodes where the offers can be activated to solve the TSO problems)</description>
+      <identifier>Info8</identifier>
+      <mRID>f47f7cb9-4007-44aa-8266-fd68e9c02fcc</mRID>
+      <name>DSO flexibility needs </name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary />
+  <UseCaseLibrary>
+    <UseCase>
+      <identifier />
+      <mRID>01314521-bbb8-496a-b55b-8405057935eb</mRID>
+      <name>Market Offering</name>
+      <nature>SUC</nature>
+    </UseCase>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </Actor>
+          <Actor>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </Actor>
+          <Actor>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </Actor>
+          <Actor>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>c2fc2079-7156-4a19-b2da-6e05ea22d67d</mRID>
+        <name>In the presented BUC is considered that the markets are performed in day-ahead or in intraday timeframes.</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description>Distributed Flexibility Resources (DFR) can be provided by aggregators or by significant grid users (SGU). The DFR can integrate different type of resources like producers, consumers, storage systems, and electric vehicles. The DSO and the TSO are not able to provide this kind of flexibility.</description>
+        <mRID>657fad1f-5cef-4459-a01d-7e3f23ab86cd</mRID>
+        <name>Distributed Flexibility Resources (DFR) operated by Flexible Operators can be provided by aggregators or by significant grid users (SGU).</name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description>The management of the markets can be done in a national level (Scenario 1, Scenario 3 and Scenario  4) or in local level (Scenario  2 and Scenario 3) providing services to the TSO (Scenario 1, Scenario 3 and Case 4) and for the DSO (Scenario 2, Scenario 3 and Scenario 4). In all cases, the solutions should be validated both for TSO and DSO.</description>
+        <mRID>f9ebcf72-ebc5-4ad7-a952-5d2d5b1c54cd</mRID>
+        <name>The management of the markets can be done in a national level or in local level.</name>
+        <number>3</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>3fb63eb0-27f2-425b-8de3-1c530abf508f</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>31543037-b2af-45f3-9a1c-2c81f4c7532e</mRID>
+      </BusinessCase>
+      <classification>Generic use-case with application in different national contexts considering different scenarios</classification>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>6c2cd32b-17ed-444e-b74b-947e80dfb657</mRID>
+        <name>Coordination of operational planning activities between TSO and DSO</name>
+        <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image7.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>12199dbe-b00a-4aab-a9f8-8db9c7a56093</mRID>
+        <name>Coordination of operational planning activities between TSO and DSO</name>
+        <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image8.png</URI>
+      </Drawing>
+      <identifier />
+      <KeyPerformanceIndicator>
+        <description />
+        <identifier>1</identifier>
+        <mRID>a9f77f4a-9718-4960-a62f-0ad3c5003fdc</mRID>
+        <name>Number of expected constraints solved by flexibilities procurement</name>
+        <Objective>
+          <mRID>95bbcb38-254b-48b6-aa52-027fd4b1b50e</mRID>
+        </Objective>
+        <Objective>
+          <mRID>fa8f1c12-924f-4c09-a309-f9b8a124f1da</mRID>
+        </Objective>
+      </KeyPerformanceIndicator>
+      <KeyPerformanceIndicator>
+        <description>Power of procured offers in the different scenarios</description>
+        <identifier>2</identifier>
+        <mRID>b8ffcaea-4e41-4766-991a-016c83a2ffd0</mRID>
+        <name>Power of procured offers </name>
+        <Objective>
+          <mRID>95bbcb38-254b-48b6-aa52-027fd4b1b50e</mRID>
+        </Objective>
+        <Objective>
+          <mRID>fa8f1c12-924f-4c09-a309-f9b8a124f1da</mRID>
+        </Objective>
+        <Objective>
+          <mRID>8e9a3e46-b179-4fb6-97cd-3e2f0af9f232</mRID>
+        </Objective>
+        <Objective>
+          <mRID>548a4668-ae90-4837-97b5-431d95015c8e</mRID>
+        </Objective>
+      </KeyPerformanceIndicator>
+      <KeyPerformanceIndicator>
+        <description>Evaluation of the number of constraints solved by the markets</description>
+        <identifier>3</identifier>
+        <mRID>c7d7801a-50c4-4770-96ea-45cad06caf09</mRID>
+        <name>Number of procured offers</name>
+        <Objective>
+          <mRID>8e9a3e46-b179-4fb6-97cd-3e2f0af9f232</mRID>
+        </Objective>
+        <Objective>
+          <mRID>548a4668-ae90-4837-97b5-431d95015c8e</mRID>
+        </Objective>
+      </KeyPerformanceIndicator>
+      <KeyPerformanceIndicator>
+        <description>Analysis of the costs of the procured offers in the different markets&lt;br/&gt;</description>
+        <identifier>4</identifier>
+        <mRID>82e273a4-2121-44bb-a5a8-7069f3962c25</mRID>
+        <name>Cost of procured offers for TSO and DSO</name>
+        <Objective>
+          <mRID>8e9a3e46-b179-4fb6-97cd-3e2f0af9f232</mRID>
+        </Objective>
+        <Objective>
+          <mRID>548a4668-ae90-4837-97b5-431d95015c8e</mRID>
+        </Objective>
+      </KeyPerformanceIndicator>
+      <KeyPerformanceIndicator>
+        <description>Quantity of tested scenarios&lt;br/&gt;</description>
+        <identifier>5</identifier>
+        <mRID>f4ab71eb-4cc3-41e2-b843-a9663deeae4f</mRID>
+        <name>Number of tested solutions</name>
+        <Objective>
+          <mRID>44539ba8-65e4-44f9-a551-49aea121280f</mRID>
+        </Objective>
+        <Objective>
+          <mRID>548a4668-ae90-4837-97b5-431d95015c8e</mRID>
+        </Objective>
+      </KeyPerformanceIndicator>
+      <keywords>TSO-DSO coordination, data exchange, operational planning, flexibility markets</keywords>
+      <levelOfDepth>Generic use case</levelOfDepth>
+      <mRID>25f25624-92d5-44af-adcc-fe72d72311a2</mRID>
+      <name>Coordination of distributed flexibility resources in a marketplace</name>
+      <Narrative>
+        <completeDescription>&lt;font color="#0f0f0f"&gt;Flexibility services can be used at the electricity market for the three types of actions: &lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;- portfolio optimisation of market players &lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;- constraints management in transmission and distribution networks (at day-ahead and intraday markets)&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;- balancing to ensure power system security (balancing market). &lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;Enabling flexibility services must not lead to market fragmentation or competition distortion. However, settlement of constraint management and balancing must be clearly separated. DFR providers must be able to sell their services to both TSOs and DSOs. TSO procures flexibility services, from large industrial consumers or aggregators. DSO procures flexibilities also from aggregators and from several types of DERs (distributed generation, demand response, decentralized storage, electric vehicles) connected to the distribution grid with the purpose to maintain quality of service and the security of supply. DSO can procure flexibility services in long and short timescales. In the present BUC, the timeframes day-ahead and intraday are considered. &lt;b&gt;Coordination between TSO and DSO is needed since the same flexibility resources may be activated for balancing (TSO services) and congestion constraints management (TSO and DSO services) purposes. &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color="#0f0f0f"&gt;&lt;b&gt;Scenario 1:&lt;/b&gt; &lt;b&gt;TSO procures the flexibilities and the DSO should validate their activation&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;DFR are procured by TSO for the purpose of balancing or constraint management in the transmission grid. However, the activation of the flexibilities can jeopardizes the security of supply and reduces quality of services due to, for example, power line congestions, voltage constraints or overload the power transformer at TSO/DSO border. Since the DFR are connected to distribution network, DSO should be asked to validate the DFRs procured by the TSO to avoid constraints in the distribution system.&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color="#0f0f0f"&gt;&lt;b&gt;Scenario 2:&lt;/b&gt; &lt;b&gt;DSO procures the flexibilities and provides the forecasted load/generation by primary substation&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;DSO can organises a local procurement of flexibilities to prevent the operation constraints in the distribution network. The constraints can be technical (HV/MV power transformer overload, lines congestion, voltage constraints) but also contractual (agreements between TSO/DSO in the TSO/DSO borders). Since the procurement of the DFR will impact the global system operation, the DSO should include the activation of the flexibility offers in the forecasts (load/generation by primary substation) sent to the TSO in day-ahead.&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color="#0f0f0f"&gt;&lt;b&gt;Scenario 3:&lt;/b&gt; &lt;b&gt;Coordination mechanism between local and national market&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;The Flexible Operators connected in distribution network should place their offer in a local market and the Flexible Operators connected in the transmission network should place their orders in a national market. The clearing mechanism in local market should provide services for the DSO to solve the distribution network constraints. The offers that are not used in the local market should be technically validated by the DSO and be transferred for the National market. After the clearing process both in local and national markets, the TSO should coordinate the activation of the flexibilities connected in the transmission system and the DSO should coordinate the activation of the flexibilities connected in the distribution network&lt;font color="#0f0f0f"&gt;.&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;&lt;b&gt;&lt;br/&gt;&lt;/b&gt;&lt;/font&gt;&lt;font color="#0f0f0f"&gt;&lt;b&gt;Scenario 4:&lt;/b&gt; &lt;b&gt;TSO and DSO procure flexibility in a single flexibility market&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;To ensure the market liquidity, building a level playing field for different service providers in a single marketplace and to joint procurement of services both for TSOs and DSOs a single procurement system is needed [1]. In this single procurement platform (market) the TSO and the DSOs should include their needs to balancing and congestion management (TSO) and for congestion and voltage management (DSO). It is important to mention that some voltage constraints can appear in distribution network even if a good reactive management is implemented.&lt;/font&gt;&lt;br/&gt;&lt;font color="#0f0f0f"&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color="#0f0f0f"&gt;&lt;b&gt;Flexibility platform&lt;/b&gt; enables well-structured and organised exchange of data between TSO, DSO and flexibility service provider. &lt;b&gt;DSO should have visibility of aggregated resources in the distribution grid and information about individual activations.&lt;/b&gt; This information should be available (day ahead or intraday time frames) to ensure that market schedules are not in the conflict with network operation. &lt;/font&gt;</completeDescription>
+        <mRID>84044c86-ca57-4262-ab90-8890ab06284e</mRID>
+        <shortDescription>This use case defines information exchanges between TSO, DSO, Flexibility Operators and Market Operator necessary for procurement of flexibility provided by distributed energy resources. &lt;br/&gt;Flexibility Operator interacts both with TSO and DSO and it is necessary to validate coordination mechanism that will prevent double activation of the same service at the same time. TSO and DSO should also collaborate in order to avoid negative impact of DFR (Distributed Flexibility Resource) activation on their respective networks.&lt;br/&gt;Three main scenarios should be considered:&lt;br/&gt;&lt;ol&gt;&lt;li&gt;The Flexibility Operator provides services for the TSO (national flexibility market) and the DSO should validate, in day-ahead or intraday timeframes, the activation of these flexibilities (for the resources connected in distribution network)&lt;/li&gt;&lt;li&gt;The Flexibility Operator provides services for the DSO (local flexibility market). The DSO should provide, in day-ahead, the forecast load/generation for each primary substation including the activation of the procured flexibilities. The TSO should take into account this information for the balancing and congestion detection proposes.&lt;/li&gt;&lt;li&gt;The Flexibility Operator connected to distribution network provides services for the both for TSO and DSO in a coordinated local and national market mechanism. The offers not accepted in the local market are sent to the national market. At national market the TSO can obtain flexibilities from the Flexibility Operators connected on transmission and distribution networks.&lt;/li&gt;&lt;li&gt;The Flexibility Operator provides services for the both for TSO and DSO in a single procurement platform (single market). The activation of the offers should be agreed both by TSO and DSO.&lt;/li&gt;&lt;/ol&gt;</shortDescription>
+      </Narrative>
+      <nature>BUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>aaf9abb6-252e-4ca2-92ad-fba5f455633d</mRID>
+        <name>The Distributed Flexibility Resources (DFR) operated by Flexible Operators should be already pre-qualified</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>f8b1ff24-b707-4918-81cd-195b35aeaa9a</mRID>
+        <name>The offers should include the location of the activation of the flexibility</name>
+        <number>2</number>
+      </Prerequisite>
+      <prioritization>High level of priority: business need</prioritization>
+      <RelatedObjective>
+        <description />
+        <mRID>95bbcb38-254b-48b6-aa52-027fd4b1b50e</mRID>
+        <name>Improve the system security.</name>
+      </RelatedObjective>
+      <RelatedObjective>
+        <description />
+        <mRID>fa8f1c12-924f-4c09-a309-f9b8a124f1da</mRID>
+        <name>Take advantage of increasing amount of flexibility resources connected in the distribution grid for providing services for the benefits of the overall power.</name>
+      </RelatedObjective>
+      <RelatedObjective>
+        <description />
+        <mRID>8e9a3e46-b179-4fb6-97cd-3e2f0af9f232</mRID>
+        <name>Achieve competitiveness of flexibility resources in a common pool and obtain market liquidity.</name>
+      </RelatedObjective>
+      <RelatedObjective>
+        <description />
+        <mRID>44539ba8-65e4-44f9-a551-49aea121280f</mRID>
+        <name>Test different solutions to validate the flexibility offers both by TSO and DSO.</name>
+      </RelatedObjective>
+      <RelatedObjective>
+        <description />
+        <mRID>548a4668-ae90-4837-97b5-431d95015c8e</mRID>
+        <name>Investigate different strategies for TSO-DSO coordination that will maximise usage of flexibility services.</name>
+      </RelatedObjective>
+      <RelatedUseCase>
+        <mRID>01314521-bbb8-496a-b55b-8405057935eb</mRID>
+      </RelatedUseCase>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator should send the offers to the market&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>64eca0ba-4da7-4687-8639-4cb80ec246a9</mRID>
+          <name>Send the Flexibility offers</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>e8d6ea10-a7d7-4208-86bd-c7fdc4323c37</mRID>
+          <name>Offers acknowledged</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>Market gate closure&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=All the offers received before the Gate Closure&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationReceiver>
+          <mRID>a7420678-1b43-4244-9a61-1e59c269b15b</mRID>
+          <name>Gate Closure</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>19841afb-643f-4134-9105-03c4449bde7a</mRID>
+          </BusinessObject>
+          <BusinessObject>
+            <mRID>256e57f3-202d-4dec-b9f5-770f1c98782f</mRID>
+          </BusinessObject>
+          <description>The TSO should identify the flexibility needs to avoid constraints in transmission network&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=Margin to activatE the regulation up offers for &lt;br/&gt;Margin to activatE the regulation down offers&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>78e4381e-ba56-4390-bcf1-28d00f7c5726</mRID>
+          <name>Determine the needs to assure the operation of transmission system (balancing and congestions)</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+          </BusinessObject>
+          <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>b8a6ff92-c9ca-42d0-9a1c-603a77583ae5</mRID>
+          <name>Offers Validation</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>8b95f7c2-92ce-4368-aefb-f6ee81bcd3a7</mRID>
+          <name>Needs and offers validation acknowledged</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+          </BusinessObject>
+          <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationReceiver>
+          <mRID>5f0bf3fc-59d7-44a7-bf78-1fc4b35f2d39</mRID>
+          <name>Offers Pre-validation</name>
+          <number>1.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>f2583d12-1101-48ed-979f-7b8d65ce637e</mRID>
+          <name>Offers redefinition</name>
+          <number>1.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>40812e8a-f74e-4115-a488-00d1415c1a98</mRID>
+          <name>Offers acknowledged</name>
+          <number>1.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>d0295736-0f2f-4112-96d5-fff27b41d631</mRID>
+          <name>Market Clearance</name>
+          <number>1.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>55d86d97-6f8f-43d2-8eb7-776f994cd138</mRID>
+          <name>Publication of Market Results</name>
+          <number>1.11</number>
+          <service />
+        </Activity>
+        <description>The Flexibility Operator provides services for the TSO (national flexibility market) and the DSO should validate, in day-ahead or intraday timeframes, the activation of these flexibilities (for the resources connected in distribution network)</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>86bf2b87-41d3-484d-9e17-4692b6fa3693</mRID>
+          <name>Scenario1A: The offers are validated before the market clearing</name>
+          <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image1.png</URI>
+        </Drawing>
+        <mRID>b0e797ba-0483-4dc0-9bbc-d6a11e8360eb</mRID>
+        <name>Scenario1A: The offers are validated before the market clearing</name>
+        <number>1</number>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>923b6029-132f-4c5e-9b83-9bba7e5b68f4</mRID>
+          <name>Offers acknowledged</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator should send the offers to the market&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>eabd0d0e-4c12-4ed5-81b6-5afa1d61ee11</mRID>
+          <name>Send the Flexibility offers</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>72a62916-d079-468c-b361-a0e8d7b75fbd</mRID>
+          <name>Offers acknowledged</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Market gate closure</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>5759c0ed-82be-4144-bb3a-2dbc5eb10805</mRID>
+          <name>Gate Closure</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>256e57f3-202d-4dec-b9f5-770f1c98782f</mRID>
+          </BusinessObject>
+          <description>The TSO should identify the flexibility needs to avoid constraints in transmission network&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>cf7907c3-2178-437f-a2d6-4197e6752da7</mRID>
+          <name>Determine the needs to assure the operation of transmission system (balancing and congestions)</name>
+          <number>2.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>611f9f76-e5d4-40d9-824a-5b28c3269b89</mRID>
+          <name>Needs acknowledged</name>
+          <number>2.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=Only the offers accepted in the Market Clearing&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationReceiver>
+          <mRID>5c8864c2-a876-405d-ab8a-dddbdba11fc6</mRID>
+          <name>Market Clearance</name>
+          <number>2.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+          </BusinessObject>
+          <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>928bc175-05ad-4d7a-a0ed-287c2aaa0dc8</mRID>
+          <name>Offers Validation</name>
+          <number>2.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+          </BusinessObject>
+          <description>Based on offers provided by the Flexibility Operators and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationReceiver>
+          <mRID>2fb458c0-92fa-422a-8fbf-e43fa8e43566</mRID>
+          <name>Offers Pre-validation</name>
+          <number>2.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>1d5785f3-4d55-4a3c-9562-7c5639254153</mRID>
+          <name>Offers acknowledged</name>
+          <number>2.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>3c110421-67a5-4021-8d17-80574d4600e1</mRID>
+          <name>Offers redefinition</name>
+          <number>2.11</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>07f4a00c-a7eb-41aa-90cf-b9cc2b754620</mRID>
+          <name>Publication of Market Results</name>
+          <number>2.12</number>
+          <service />
+        </Activity>
+        <description>The Flexibility Operator provides services for the TSO (national flexibility market) and the DSO should validate, in day-ahead or intraday timeframes, the activation of these flexibilities (for the resources connected in distribution network)</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>d89aaf9f-6c6f-4599-b536-4aa5ea000d6d</mRID>
+          <name>Scenario1B: The offers are validated after the market clearing</name>
+          <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image2.png</URI>
+        </Drawing>
+        <mRID>4cc15a45-21ed-40be-8d89-09520237eba8</mRID>
+        <name>Scenario1B: The offers are validated after the market clearing</name>
+        <number>2</number>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator should send the offers to the market&lt;br/&gt;&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>485eaa9e-8ac6-4fb0-8758-5a9ea0ec44b1</mRID>
+          <name>Send the Flexibility offers</name>
+          <number>3.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>5f454c54-727d-460d-ac34-df7d3369d87c</mRID>
+          <name>Offers acknowledged</name>
+          <number>3.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>Market gate closure&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=All the offers received before the Gate Closure&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>236ccee2-44b4-4b7c-86a3-d22d2f150064</mRID>
+          <name>Gate Closure</name>
+          <number>3.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ecb2b9f4-2038-4b12-8a0e-3d5f42575c8f</mRID>
+          </BusinessObject>
+          <BusinessObject>
+            <mRID>256e57f3-202d-4dec-b9f5-770f1c98782f</mRID>
+          </BusinessObject>
+          <description>The DSO should identify the flexibility needs to avoid constraints (congestions and voltage profiles) in distribution network&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>cf0be19d-3cf6-40ba-a7dd-018718c0ae63</mRID>
+          <name>Determine the needs to assure the operation of distribution system and the limits in the offers activation (margins)</name>
+          <number>3.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+          </BusinessObject>
+          <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>53ac93d5-d12f-4ea4-9936-7b21f6cb8246</mRID>
+          <name>Offers Validation</name>
+          <number>3.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>17bc4929-7199-4580-a4f8-2daea49c7e4b</mRID>
+          <name>Needs and margins acknowledged</name>
+          <number>3.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+          </BusinessObject>
+          <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationReceiver>
+          <mRID>d28ee912-e4bc-4ac7-9519-3eb115713115</mRID>
+          <name>Offers Pre-validation</name>
+          <number>3.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>b168edec-b279-418a-8831-5112c4df874e</mRID>
+          <name>Offers redefinition</name>
+          <number>3.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>c998c6e0-670b-4a0a-83db-488826ca2ec4</mRID>
+          <name>Offers acknowledged</name>
+          <number>3.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>3cf5edf0-0b43-48cf-aa73-893d19403d69</mRID>
+          <name>Market Clearance</name>
+          <number>3.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>1552f1d9-c58b-4e4c-b722-e756825e8bc4</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationReceiver>
+          <mRID>04472629-a8fd-4e2f-aa1f-31b04ed5f6b2</mRID>
+          <name>Publication of Market Results</name>
+          <number>3.11</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>3d1a82ff-9138-4140-a2ed-1d2ceb3a9f6c</mRID>
+          </BusinessObject>
+          <description>The DSO should inform the TSO concerning the forecasted consumption and or generation of each primary substation. Beyond the forecasted values the DSO should include the procured flexibility offers.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationReceiver>
+          <mRID>12cee53e-02e7-435f-9d23-a0d579bbe93b</mRID>
+          <name>Definition of the consumption profiles of each primary substation</name>
+          <number>3.12</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationProducer>
+          <mRID>b3e884be-2cb6-48fd-ba51-76788caea913</mRID>
+          <name>Forecasted primary substations use profiles acknowledged</name>
+          <number>3.13</number>
+          <service />
+        </Activity>
+        <description>The Flexibility Operator provides services for the DSO (local flexibility market) and the TSO should validate, in day-ahead or intraday timeframes, the activation of these flexibilities (Consider the impact in the transmission system)</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>0d15c997-0b1d-4f31-9d3f-cf07d7409edf</mRID>
+          <name>Scenario2: Local Market to provide services to the DSO</name>
+          <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image3.png</URI>
+        </Drawing>
+        <mRID>03e0f611-e9d7-441f-9e4d-c32ee50ffbd0</mRID>
+        <name>Scenario2: Local Market to provide services to the DSO</name>
+        <number>3</number>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator connected to transmission network should send the offers to the market&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>f223483b-6391-4394-8d27-fc8dd8795779</mRID>
+          <name>Send flexibility offers</name>
+          <number>4.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>1d7592a2-723b-4ec8-866f-0aa07be9d3ae</mRID>
+          <name>Offers acknowledged</name>
+          <number>4.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Market Gate closure</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>958cd4e5-4c29-400b-8f6c-20282d809d2e</mRID>
+          <name>Local Market Gate Closure</name>
+          <number>4.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>256e57f3-202d-4dec-b9f5-770f1c98782f</mRID>
+          </BusinessObject>
+          <BusinessObject>
+            <mRID>ecb2b9f4-2038-4b12-8a0e-3d5f42575c8f</mRID>
+          </BusinessObject>
+          <description>The DSO should identify the flexibility needs to avoid constraints (congestions and voltage profiles) in distribution network&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>38640f63-6abf-466f-b00b-29bac39496d8</mRID>
+          <name>Determine the needs to assure the operation of distribution system and the limits in the offers activation (margins)</name>
+          <number>4.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>f5d2fca6-f879-4ad3-949e-cb9bb2ab0a36</mRID>
+            </BusinessObject>
+            <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>cfe1f142-105f-4cfc-b785-b0917fb7d244</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>a8abea92-6c29-43a8-8950-56b1930dbc96</mRID>
+            </InformationReceiver>
+            <mRID>06e52a7f-8e70-41b5-bf7d-0f8243906ae2</mRID>
+            <name>Offers Pre-validation</name>
+            <number>4.6.2</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>fc9942cc-6c41-41ef-96e6-00911bc777e5</mRID>
+            </BusinessObject>
+            <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>34add974-8090-4c54-b7bc-f9accca2771f</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>3a18edc9-35f6-4b9c-892f-16c576290ee7</mRID>
+            </InformationReceiver>
+            <mRID>aab68e2f-0c7d-4f76-90f6-977291a3f354</mRID>
+            <name>Offers redefinition</name>
+            <number>4.6.3</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>579df322-9ec5-4878-9346-7aea5b029314</mRID>
+            </InformationProducer>
+            <mRID>00ceafad-0bf4-446f-8bbb-704dc75490ef</mRID>
+            <name>Offers acknowledged</name>
+            <number>4.6.4</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>69cea547-c788-47bc-a498-d1061b88fd7d</mRID>
+            </InformationProducer>
+            <mRID>6700271f-c31d-4d7a-a166-d9fd8c65e05b</mRID>
+            <name>Local Market Clearance</name>
+            <number>4.6.5</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>f9fc904e-5766-497d-b9d8-ef7086eac4f2</mRID>
+            </InformationProducer>
+            <mRID>26b243f3-b4e3-4157-b8e9-71ddbc3a5892</mRID>
+            <name>Publication of Market Results</name>
+            <number>4.6.6</number>
+            <service />
+          </ChildActivity>
+          <description>Local market to solve to provide services for the DSO. The information concerning the cleared offers should be transmitted to DSO. The offers not procured and validated (will not have impact in the distribution system) should be sent to the National market&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=Only the validated offers not procured in the local market&lt;br/&gt;</description>
+          <Drawing>
+            <drawingType>activities flowchart</drawingType>
+            <mRID>{E22EC6A5-D5DB-4836-8BDC-B20085D8F619}</mRID>
+            <name>Local Market</name>
+            <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image5.png</URI>
+          </Drawing>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>ea1da368-b9be-425b-a235-fd41570e4c17</mRID>
+          <name>Local Market</name>
+          <number>4.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>1552f1d9-c58b-4e4c-b722-e756825e8bc4</mRID>
+          </BusinessObject>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>f5d2fca6-f879-4ad3-949e-cb9bb2ab0a36</mRID>
+            </BusinessObject>
+            <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>cfe1f142-105f-4cfc-b785-b0917fb7d244</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>a8abea92-6c29-43a8-8950-56b1930dbc96</mRID>
+            </InformationReceiver>
+            <mRID>06e52a7f-8e70-41b5-bf7d-0f8243906ae2</mRID>
+            <name>Offers Pre-validation</name>
+            <number>4.6.2</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>fc9942cc-6c41-41ef-96e6-00911bc777e5</mRID>
+            </BusinessObject>
+            <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>34add974-8090-4c54-b7bc-f9accca2771f</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>3a18edc9-35f6-4b9c-892f-16c576290ee7</mRID>
+            </InformationReceiver>
+            <mRID>aab68e2f-0c7d-4f76-90f6-977291a3f354</mRID>
+            <name>Offers redefinition</name>
+            <number>4.6.3</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>579df322-9ec5-4878-9346-7aea5b029314</mRID>
+            </InformationProducer>
+            <mRID>00ceafad-0bf4-446f-8bbb-704dc75490ef</mRID>
+            <name>Offers acknowledged</name>
+            <number>4.6.4</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>69cea547-c788-47bc-a498-d1061b88fd7d</mRID>
+            </InformationProducer>
+            <mRID>6700271f-c31d-4d7a-a166-d9fd8c65e05b</mRID>
+            <name>Local Market Clearance</name>
+            <number>4.6.5</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>f9fc904e-5766-497d-b9d8-ef7086eac4f2</mRID>
+            </InformationProducer>
+            <mRID>26b243f3-b4e3-4157-b8e9-71ddbc3a5892</mRID>
+            <name>Publication of Market Results</name>
+            <number>4.6.6</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>f5d2fca6-f879-4ad3-949e-cb9bb2ab0a36</mRID>
+            </BusinessObject>
+            <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>cfe1f142-105f-4cfc-b785-b0917fb7d244</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>a8abea92-6c29-43a8-8950-56b1930dbc96</mRID>
+            </InformationReceiver>
+            <mRID>06e52a7f-8e70-41b5-bf7d-0f8243906ae2</mRID>
+            <name>Offers Pre-validation</name>
+            <number>4.6.2</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>fc9942cc-6c41-41ef-96e6-00911bc777e5</mRID>
+            </BusinessObject>
+            <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>34add974-8090-4c54-b7bc-f9accca2771f</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>3a18edc9-35f6-4b9c-892f-16c576290ee7</mRID>
+            </InformationReceiver>
+            <mRID>aab68e2f-0c7d-4f76-90f6-977291a3f354</mRID>
+            <name>Offers redefinition</name>
+            <number>4.6.3</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>579df322-9ec5-4878-9346-7aea5b029314</mRID>
+            </InformationProducer>
+            <mRID>00ceafad-0bf4-446f-8bbb-704dc75490ef</mRID>
+            <name>Offers acknowledged</name>
+            <number>4.6.4</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>69cea547-c788-47bc-a498-d1061b88fd7d</mRID>
+            </InformationProducer>
+            <mRID>6700271f-c31d-4d7a-a166-d9fd8c65e05b</mRID>
+            <name>Local Market Clearance</name>
+            <number>4.6.5</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>f5d2fca6-f879-4ad3-949e-cb9bb2ab0a36</mRID>
+            </BusinessObject>
+            <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>cfe1f142-105f-4cfc-b785-b0917fb7d244</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>a8abea92-6c29-43a8-8950-56b1930dbc96</mRID>
+            </InformationReceiver>
+            <mRID>06e52a7f-8e70-41b5-bf7d-0f8243906ae2</mRID>
+            <name>Offers Pre-validation</name>
+            <number>4.6.2</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>fc9942cc-6c41-41ef-96e6-00911bc777e5</mRID>
+            </BusinessObject>
+            <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>34add974-8090-4c54-b7bc-f9accca2771f</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>3a18edc9-35f6-4b9c-892f-16c576290ee7</mRID>
+            </InformationReceiver>
+            <mRID>aab68e2f-0c7d-4f76-90f6-977291a3f354</mRID>
+            <name>Offers redefinition</name>
+            <number>4.6.3</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>579df322-9ec5-4878-9346-7aea5b029314</mRID>
+            </InformationProducer>
+            <mRID>00ceafad-0bf4-446f-8bbb-704dc75490ef</mRID>
+            <name>Offers acknowledged</name>
+            <number>4.6.4</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>f5d2fca6-f879-4ad3-949e-cb9bb2ab0a36</mRID>
+            </BusinessObject>
+            <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>cfe1f142-105f-4cfc-b785-b0917fb7d244</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>a8abea92-6c29-43a8-8950-56b1930dbc96</mRID>
+            </InformationReceiver>
+            <mRID>06e52a7f-8e70-41b5-bf7d-0f8243906ae2</mRID>
+            <name>Offers Pre-validation</name>
+            <number>4.6.2</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>fc9942cc-6c41-41ef-96e6-00911bc777e5</mRID>
+            </BusinessObject>
+            <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>34add974-8090-4c54-b7bc-f9accca2771f</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>3a18edc9-35f6-4b9c-892f-16c576290ee7</mRID>
+            </InformationReceiver>
+            <mRID>aab68e2f-0c7d-4f76-90f6-977291a3f354</mRID>
+            <name>Offers redefinition</name>
+            <number>4.6.3</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>f5d2fca6-f879-4ad3-949e-cb9bb2ab0a36</mRID>
+            </BusinessObject>
+            <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>cfe1f142-105f-4cfc-b785-b0917fb7d244</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>a8abea92-6c29-43a8-8950-56b1930dbc96</mRID>
+            </InformationReceiver>
+            <mRID>06e52a7f-8e70-41b5-bf7d-0f8243906ae2</mRID>
+            <name>Offers Pre-validation</name>
+            <number>4.6.2</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>f01f23f5-d9ac-49f0-a51c-687b00027f09</mRID>
+            <name>Needs and margins acknowledged</name>
+            <number>4.6.7</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description>The DSO should perform the load flows taking into account the forecasted operation conditions and the activation of the offers. If the offers activation can originate some constraints in the distribution network, the DSO can refuse the offers or propose some limits in the use of the offers (depends of the market rules)</description>
+            <event />
+            <InformationProducer>
+              <mRID>0118bddd-f390-48e9-ab0b-6f36ccfed4c2</mRID>
+            </InformationProducer>
+            <mRID>199d1907-703a-4f8d-8ecc-ab9428d334c0</mRID>
+            <name>Offers Validation</name>
+            <number>4.6.1</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>f5d2fca6-f879-4ad3-949e-cb9bb2ab0a36</mRID>
+            </BusinessObject>
+            <description>Based on offers provided by the Flexibility Operator and on the validation did by the DSO, the market operator can propose some changes to the Flexibility Operator.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>cfe1f142-105f-4cfc-b785-b0917fb7d244</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>a8abea92-6c29-43a8-8950-56b1930dbc96</mRID>
+            </InformationReceiver>
+            <mRID>06e52a7f-8e70-41b5-bf7d-0f8243906ae2</mRID>
+            <name>Offers Pre-validation</name>
+            <number>4.6.2</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <BusinessObject>
+              <mRID>fc9942cc-6c41-41ef-96e6-00911bc777e5</mRID>
+            </BusinessObject>
+            <description>The Flexibility Operators can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+            <event />
+            <InformationProducer>
+              <mRID>34add974-8090-4c54-b7bc-f9accca2771f</mRID>
+            </InformationProducer>
+            <InformationReceiver>
+              <mRID>3a18edc9-35f6-4b9c-892f-16c576290ee7</mRID>
+            </InformationReceiver>
+            <mRID>aab68e2f-0c7d-4f76-90f6-977291a3f354</mRID>
+            <name>Offers redefinition</name>
+            <number>4.6.3</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>579df322-9ec5-4878-9346-7aea5b029314</mRID>
+            </InformationProducer>
+            <mRID>00ceafad-0bf4-446f-8bbb-704dc75490ef</mRID>
+            <name>Offers acknowledged</name>
+            <number>4.6.4</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>69cea547-c788-47bc-a498-d1061b88fd7d</mRID>
+            </InformationProducer>
+            <mRID>6700271f-c31d-4d7a-a166-d9fd8c65e05b</mRID>
+            <name>Local Market Clearance</name>
+            <number>4.6.5</number>
+            <service />
+          </ChildActivity>
+          <ChildActivity>
+            <description />
+            <event />
+            <InformationProducer>
+              <mRID>f9fc904e-5766-497d-b9d8-ef7086eac4f2</mRID>
+            </InformationProducer>
+            <mRID>26b243f3-b4e3-4157-b8e9-71ddbc3a5892</mRID>
+            <name>Publication of Market Results</name>
+            <number>4.6.6</number>
+            <service />
+          </ChildActivity>
+          <description>Local market to solve to provide services for the DSO. The information concerning the cleared offers should be transmitted to DSO. The offers not procured and validated (will not have impact in the distribution system) should be sent to the National market&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <Drawing>
+            <drawingType>activities flowchart</drawingType>
+            <mRID>{E22EC6A5-D5DB-4836-8BDC-B20085D8F619}</mRID>
+            <name>Local Market</name>
+            <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image5.png</URI>
+          </Drawing>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationReceiver>
+          <mRID>ea1da368-b9be-425b-a235-fd41570e4c17</mRID>
+          <name>Local Market</name>
+          <number>4.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>3d1a82ff-9138-4140-a2ed-1d2ceb3a9f6c</mRID>
+          </BusinessObject>
+          <description>The DSO should inform the TSO concerning the forecasted consumption and or generation of each primary substation. Beyond the forecasted values the DSO should include the procured flexibility offers.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationReceiver>
+          <mRID>2cd6931c-5810-4000-ae50-60e7c43ff726</mRID>
+          <name>Definition of the consumption profiles of each primary substation</name>
+          <number>4.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationProducer>
+          <mRID>66686454-a43e-459d-a298-169fa19b7807</mRID>
+          <name>Forecasted primary substations use profiles and flexibilities acknowledged</name>
+          <number>4.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator connected to distribution network should send the offers to the market&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>ebee4793-006c-4cfe-9c92-7d5c18834c5d</mRID>
+          <name>Send the Flexibility offers</name>
+          <number>4.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>14178525-c809-4cde-b03d-2d3ebab46634</mRID>
+          <name>Offers acknowledged</name>
+          <number>4.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>1a8f886a-3b00-462a-ba94-7700e6c8a9d1</mRID>
+          <name>National Market Gate Closure</name>
+          <number>4.11</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>256e57f3-202d-4dec-b9f5-770f1c98782f</mRID>
+          </BusinessObject>
+          <description>The TSO should identify the flexibility needs to avoid constraints in transmission network&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>ce5ffd08-a0f2-49ac-aac6-13372472b632</mRID>
+          <name>Determine the needs to assure the operation of transmission system (balancing and congestions)</name>
+          <number>4.12</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>b76ddbd8-de30-44cd-a932-273d17a5b403</mRID>
+          <name>National Market Clearance</name>
+          <number>4.13</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>f5d3fcab-07f4-4722-9789-9dfc99c9c115</mRID>
+          <name>Publication of Market Results</name>
+          <number>4.14</number>
+          <service />
+        </Activity>
+        <description>The Flexibility Operators connected in distribution network should place their offer in a local market and the Flexible Operators connected in the transmission network should place their orders in a national market. The clearing mechanism in local market should provide services for the DSO to solve the distribution network constraints. The offers that are not used in the local market should be technically validated by the DSO and be transferred for the National market. After the clearing process both in local and national markets, the TSO should coordinate the activation of the flexibilities connected in the transmission system and the DSO should coordinate the activation of the flexibilities connected in the distribution network</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>f19b4e52-a8bb-497c-aff0-9c8fa0c55118</mRID>
+          <name>Scenario 3: Coordination between National Market and Local Market</name>
+          <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image4.png</URI>
+        </Drawing>
+        <mRID>f5300695-b911-4de2-a460-aff5e4aa1cb2</mRID>
+        <name>Scenario 3: Coordination between National Market and Local Market</name>
+        <number>4</number>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator should send the offers to the market&lt;br/&gt;&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>560422df-a366-49d0-a09a-1da3e3ee4b0c</mRID>
+          <name>Send the Flexibility offers</name>
+          <number>5.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>264efa98-5c42-4008-9a8c-73178e949871</mRID>
+          <name>Offers acknowledged</name>
+          <number>5.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Market gate closure</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>14c49301-70c4-46d8-bb3e-9290bcc981fb</mRID>
+          <name>Gate Closure</name>
+          <number>5.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>256e57f3-202d-4dec-b9f5-770f1c98782f</mRID>
+          </BusinessObject>
+          <BusinessObject>
+            <mRID>19841afb-643f-4134-9105-03c4449bde7a</mRID>
+          </BusinessObject>
+          <description>The TSO should identify the margin of activation of flexibility offers taking into account the impact of these offers in transmission network. The margins can be imposed by the operation of some transmission lines near by their limits. The use of margins should avoid the activation of offers to solve the DSO needs but originating congestions in transmission system.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d37347bb-a6bd-4b2e-a2cf-717ccb064b75</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>a8ded428-4cf4-4b3e-b3cd-83042a3b5b9e</mRID>
+          <name>Determine the needs and the margins by zone (group of nodes HV/MV)</name>
+          <number>5.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>f47f7cb9-4007-44aa-8266-fd68e9c02fcc</mRID>
+          </BusinessObject>
+          <BusinessObject>
+            <mRID>ecb2b9f4-2038-4b12-8a0e-3d5f42575c8f</mRID>
+          </BusinessObject>
+          <description>The DSO should identify the margin of activation of flexibility offers taking into account the impact of these offers in distribution network. The margins can be imposed by the possible congestion in power transformers in primary substations or some lines or even due to some voltage problems. The use of margins should avoid the activation of offers to solve the TSO needs but originating congestions in distribution system.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f508e6d2-a475-4185-917f-c5e7eedcd4fa</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>bcab8c7d-2c9a-41fc-b9c1-fe4624061240</mRID>
+          <name>Determine the needs and the margins in each node HV/MV</name>
+          <number>5.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>d0580ec9-5a30-4419-97ce-b8f779c04c64</mRID>
+          <name>Needs and margins acknowledged</name>
+          <number>5.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c7cf4214-591e-49e8-8995-fb6485f73818</mRID>
+          </BusinessObject>
+          <description>Based on offers provided by the Flexibility Operators and on the margins provided by the TSO and DSO. The market operator should pre-validate the offers and propose some changes to the Flexibility Operators.&lt;br/&gt;The changes can be of 3 types:&lt;br/&gt;- Change the power of the flexibility offers&lt;br/&gt;- Change the timeframe of activation of the offers&lt;br/&gt;- Change the point of activation of the flexibilities (only if the Flexibility Operator was an aggregator)&lt;br/&gt;&lt;br/&gt;The price of the offers should remain the same&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationReceiver>
+          <mRID>a4517949-4cde-4ea8-963b-9d711ec3f9e3</mRID>
+          <name>Offers Pre-validation</name>
+          <number>5.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cf4885b8-d5d1-4873-92c1-d09cb000223a</mRID>
+          </BusinessObject>
+          <description>The Flexibility Operator can change the offer according the market operator demand.&lt;br/&gt;Modsarus Use Case::InstanceName=&lt;br/&gt;Modsarus Use Case::InstanceDescription=The price should remain the same of the initial offer&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d5aa0368-c4fe-4d82-a3d4-6fb36964b4ae</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationReceiver>
+          <mRID>c827d15f-ae14-49a9-a86f-be8a728ca8b8</mRID>
+          <name>Offers redefinition</name>
+          <number>5.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>8df03c12-ba7d-4c65-bd2b-6dfc3342c897</mRID>
+          <name>Offers acknowledged</name>
+          <number>5.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>27c77785-6508-4e77-be58-a510c144b158</mRID>
+          <name>Single Market clearance</name>
+          <number>5.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>faeb9fab-a49a-4a68-bac1-ee06950c645d</mRID>
+          </InformationProducer>
+          <mRID>ea14ab0f-d7cd-4d18-8f49-d72f4bb58291</mRID>
+          <name>Publication of Market Results</name>
+          <number>5.11</number>
+          <service />
+        </Activity>
+        <description>The Flexibility Operator provides services for the both for TSO and DSO in a single procurement platform (single market). The activation of the offers should be agreed both by TSO and DSO</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>50996524-19d1-46f4-8603-3583108b9840</mRID>
+          <name>Scenario4: National market to provide services both for TSO and DSO</name>
+          <URI type="UMLDiagram">Coordination of distributed flexibility resources in a marketplace\Image6.png</URI>
+        </Drawing>
+        <mRID>afb19cde-2efd-4a9b-af81-74bb9715b3b3</mRID>
+        <name>Scenario4: National market to provide services both for TSO and DSO</name>
+        <number>5</number>
+      </Scenario>
+      <scope>- Validation of TSO/DSO coordination mechanism to distributed flexibility resources procurement avoiding double or counter activation of the same flexibility resource by TSO and DSO &lt;br/&gt;- Prevent the negative impact of offers activation in the networks&lt;br/&gt;- Definition of the data that should exchange between the TSO, the DSO and the market operator.</scope>
+      <Version>
+        <approvalStatus>Approved by consortium members</approvalStatus>
+        <Author>
+          <mRID>20f8390a-c2b7-49e0-beaa-0c74ef628404</mRID>
+          <name>Nermin Suljanovic</name>
+        </Author>
+        <Author>
+          <mRID>c260036f-5271-4942-bcf1-960c971b34ae</mRID>
+          <name> Andrej Souvent (EIMV); Hugo Morais</name>
+        </Author>
+        <Author>
+          <mRID>e85deaca-007d-4744-839d-5b9bcbdb05c5</mRID>
+          <name> Belén Goncer</name>
+        </Author>
+        <Author>
+          <mRID>75909ded-dd93-4b87-9a9a-e8b26db7c2b5</mRID>
+          <name> Jérôme Cantenot (EDF)</name>
+        </Author>
+        <changes>Final version</changes>
+        <date>2018-03-15T00:00:00</date>
+        <mRID>9d5795f7-63ca-4b17-9232-85a380b8a889</mRID>
+        <number>1</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

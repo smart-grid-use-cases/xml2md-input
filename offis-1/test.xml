@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<UseCase>
+    <ActorGrouping>
+        <description>Actors in Operation Zone</description>
+        <id>53</id>
+        <name>Operation</name>
+        <Actor>
+            <description>This actor makes it possible to archive on-line data and to perform feedback analysis about
+                system efficiency and reliability.
+            </description>
+            <furtherInformation>In the pilot this actor represents the fact of having already average ratios of outages.
+                One possible way to get these values is to analyse historical outages tickets (normally in the DMS-
+                Distribution Management Systems) where information about the outages are stored (start/end times,
+                equipment that failed, power shortage, number of client affected...)
+            </furtherInformation>
+            <id>523</id>
+            <name>Network Operation Statistics and Reporting</name>
+        </Actor>
+        <Actor>
+            <description>This actor performs network simulations in order to allow facilities to define, prepare and
+                optimise the sequence of operations required for carrying out maintenance work on the system
+                (release/clearance orders) and operational planning.
+            </description>
+            <furtherInformation>In the pilot this actor represents the fact of performing simulations with electrical
+                tools. These analyses consist on evaluating scenarios with different level of automation.
+            </furtherInformation>
+            <id>526</id>
+            <name>Network Operation Simulation</name>
+        </Actor>
+    </ActorGrouping>
+    <ActorGrouping>
+        <description>Actors in Enterprise Zone</description>
+        <id>54</id>
+        <name>Enterprise</name>
+        <Actor>
+            <description>Asset investment planning involves strategy definition and prioritisation, maintenance strategy
+                planning, risk management, programme management and decision-making. It drives the condition,
+                configuration, performance, operating costs, and flexibility of the asset base, with the aim of
+                maximising value.
+            </description>
+            <furtherInformation>In the pilot this actor represents the process of analysing the result of the simulation
+                (a curve of QoS vs Investment)
+            </furtherInformation>
+            <id>511</id>
+            <name>Asset Investment Planning</name>
+        </Actor>
+    </ActorGrouping>
+    <id>DISCERN_IBDR_Leader_B6</id>
+    <keywords>MV automation, QoS indexes</keywords>
+    <levelOfDepth>Primary Use Case</levelOfDepth>
+    <name>Enhanced monitoring and control of MV/LV network – Optimal MV network monitoring and automation</name>
+    <prioritisation>Operational track 1</prioritisation>
+    <scope>Analysis for optimal automation and monitoring of MV/LV networks</scope>
+    <viewPoint>Technical</viewPoint>
+    <Condition>
+        <trigerringEvent>Need for taking a decision about the amount of automation level for certain MV network zone.
+        </trigerringEvent>
+        <PreCondition>
+            <content>Availability of historical records of outages, quality indexes and cost for field operations for
+                the selected MV zone.
+            </content>
+        </PreCondition>
+        <scope>Asset Investment Planning (AM-AIP)</scope>
+    </Condition>
+    <GeneralRemark>
+        <content>The hypotheses/conditions under which the Use Case is developed are the following: The analysed MV
+            network area is divided in small sections. These sub-sections are selected between two consecutive automatic
+            Secondary Substations (SS). A simplified MV network representation is required in PSS/E to simulate each
+            outage scenario (power flow calculations) Average rates of outages are needed to know the network
+            performance of each area to identified critical zones. These values would be for example per SS
+            (outage/100SS/year), underground lines (outages/100km/year) and aerial lines (outages/100km/year).
+            Regulatory values are used to decide objective targets for simulation (penalties due to QoS). Through the
+            results (graph of QoS vs Investment) a criterion of location for pieces of control equipment (automatic
+            cabinets and telecontrol breakers at lines) is proposed. The proposed level of automation is taking into
+            account by the responsible of each control zone to install the equipment. In Spain the Distribution of
+            electricity is a regulated activity. The remuneration of DSO is charged on customers through the Access
+            Tariffs. This tax joins different concepts. One of them is devoted to cover, theoretically, the distribution
+            activity. The value is decided by the Ministry. From 2008, all DSO are subjected to the same procedure and
+            legal conditions. The remuneration is individually assigned to each DSO taking into account issues such as:
+            incentives per Quality of Service improvements, incentives to reduce the losses, valuation of overcast,
+            effects to cover the foreseen demand and geographical restrictions. Each four (4) year the base value is
+            fixed while yearly some parameters are corrected depending on the DSO performance. The architecture
+            developed in the following section corresponds to the Use Case implementation within a DSO system
+            architecture. However, in the PRICE pilot the approach has been simpler.
+        </content>
+    </GeneralRemark>
+    <Narrative>
+        <completeDescription>Why? Requirements for increasing the level of automation in actual MV networks are rising
+            currently. The relation between investment in automation and Quality of Service it is not linear. For
+            example, the location of the same number of devices could lead to a variety of costs as well. Moreover,
+            initial investment plans might be not affordable due to the actual economic crisis. Therefore, a simulation
+            program to evaluate different scenarios is proposed to select a compromised point between costs, number of
+            equipment and propose criterion to locate them. What expectation? / When It is expected a definition of a
+            methodology to decide the level of automation in MV grids in a simplify manner. It would be based on a
+            simulation algorithm taking into account investment on equipment in different types of SS and lines, power
+            reinforcements and evaluation of their impact on the Quality of Service (TIEPI). It is intended to
+            facilitate decisions during the network planning phase fulfilling technical, cost and regulatory
+            constraints. What occurs? The main three steps in the process are: Use average values of outages (for
+            example rate of outages in SS, lines, cables...) and cost units of work to install telecontrol equipment
+            (cabinet at SS and breakers at lines) to increase the automation of the network. These data are managed by
+            the DSO after analysing historical records collected in their systems. Simulation phase to evaluate
+            different scenarios of outages over a simplified MV network portion Selection of compromise solution between
+            cost and quality of service achieved
+        </completeDescription>
+        <shortDescription>Nowadays the operation of MV networks creates new challenges for automation. Coupling this
+            with the worldwide economic situation, efforts for reaching a balance between Quality of Service indexes and
+            investments in automation and grid reinforcement through simplify methods are worthy. This Use Case
+            describes this process.
+        </shortDescription>
+    </Narrative>
+    <RelatedObjective>
+        <id>16</id>
+        <name>Facilitate the selection of level of automation in terms of Quality of Service and investment.</name>
+    </RelatedObjective>
+    <Domain>Distribution</Domain>
+    <Zone>Operation</Zone>
+    <Zone>Enterprise</Zone>
+    <Reference>
+        <id>40</id>
+        <impact>Business Layer – Definition of QoS indexes and their regulatory limits</impact>
+        <name>RD 1955/2000 from December 1st</name>
+        <originatorOrganisation>Ministry/System Operator</originatorOrganisation>
+        <status>Release 2000</status>
+        <type>Regulatory constraint</type>
+    </Reference>
+    <Reference>
+        <id>41</id>
+        <impact>Business Layer – update of some QoS limits</impact>
+        <name>RD 1634/2006 from December 29th</name>
+        <originatorOrganisation>Ministry/System Operator</originatorOrganisation>
+        <status>Release 2006</status>
+        <type>Regulatory constraint</type>
+    </Reference>
+    <Reference>
+        <id>42</id>
+        <impact>Business Layer – description remuneration methodology for DSO activities</impact>
+        <name>RD 222/2008</name>
+        <originatorOrganisation>Ministry/System Operator</originatorOrganisation>
+        <status>Release 2008</status>
+        <type>Regulatory constraint</type>
+    </Reference>
+    <Reference>
+        <id>43</id>
+        <impact>Business Layer – incentives/penalties for QoS</impact>
+        <name>Orden ICT/3801/2008</name>
+        <originatorOrganisation>Ministry/System Operator</originatorOrganisation>
+        <status>Release 2008</status>
+        <type>Regulatory constraint</type>
+    </Reference>
+    <Reference>
+        <id>44</id>
+        <impact>Business Layer – incentives/penalties for losses</impact>
+        <name>Orden ITC/2524/2009</name>
+        <originatorOrganisation>Ministry/System Operator</originatorOrganisation>
+        <status>Release 2009</status>
+        <type>Regulatory constraint</type>
+    </Reference>
+    <Reference>
+        <id>45</id>
+        <impact>Business Layer – Spanish data base of QoS</impact>
+        <name>Ministry web page</name>
+        <originatorOrganisation>Ministry/DSO</originatorOrganisation>
+        <status>Web page</status>
+        <type>Report</type>
+    </Reference>
+    <Scenario>
+        <id>90</id>
+        <name>Quality Index Analysis</name>
+        <number>1</number>
+        <postCondition>QoS indexes and outage ratios are calculated</postCondition>
+        <preCondition>The outage consequences are storage</preCondition>
+        <triggeringEvent>An outage happens in the network</triggeringEvent>
+        <PrimaryActor>
+            <id>523</id>
+            <name>Network Operation Statistics and Reporting</name>
+        </PrimaryActor>
+        <Step>
+            <event>Periodically</event>
+            <id>313</id>
+            <name>Get outage average ratio</name>
+            <number>1</number>
+            <service>INTERNAL PROCESS</service>
+            <InformationReceiver>
+                <id>523</id>
+                <name>Measure consumption at client’s premises</name>
+            </InformationReceiver>
+            <InformationProducer>
+                <id>523</id>
+                <name>Measure consumption at client’s premises</name>
+            </InformationProducer>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <id>91</id>
+        <name>Switching Simulation</name>
+        <number>2</number>
+        <postCondition>Investment vs QoS achieved per each scenario is calculated.</postCondition>
+        <preCondition>-The model of the network is available with the capacity to simulate different scenarios.
+            -Availability of average cost units for field operations -Availability of average fault rates
+        </preCondition>
+        <triggeringEvent>Need for simulating different levels and location of automation.</triggeringEvent>
+        <PrimaryActor>
+            <id>526</id>
+            <name>Network Operation Simulation</name>
+        </PrimaryActor>
+        <Step>
+            <event>Punctual</event>
+            <id>314</id>
+            <name>Ask for simulation</name>
+            <number>1</number>
+            <service>GET</service>
+            <InformationReceiver>
+                <id>526</id>
+                <name>Report the LV reports to the Meter Data Management System</name>
+            </InformationReceiver>
+            <InformationProducer>
+                <id>511</id>
+                <name>Send the meter power switch on/off command to the Smart Meter</name>
+            </InformationProducer>
+        </Step>
+        <Step>
+            <event>Punctual</event>
+            <id>315</id>
+            <name>Ask for information</name>
+            <number>2</number>
+            <service>GET</service>
+            <InformationReceiver>
+                <id>523</id>
+                <name>Measure consumption at client’s premises</name>
+            </InformationReceiver>
+            <InformationProducer>
+                <id>526</id>
+                <name>Report the LV reports to the Meter Data Management System</name>
+            </InformationProducer>
+        </Step>
+        <Step>
+            <event>Punctual</event>
+            <id>316</id>
+            <name>Send information</name>
+            <number>3</number>
+            <service>SHOW</service>
+            <InformationReceiver>
+                <id>526</id>
+                <name>Report the LV reports to the Meter Data Management System</name>
+            </InformationReceiver>
+            <InformationProducer>
+                <id>523</id>
+                <name>Measure consumption at client’s premises</name>
+            </InformationProducer>
+        </Step>
+        <Step>
+            <event>Iterative</event>
+            <id>317</id>
+            <name>Algorithm operation</name>
+            <number>4</number>
+            <service>INTERNAL PROCESS</service>
+            <InformationReceiver>
+                <id>526</id>
+                <name>Report the LV reports to the Meter Data Management System</name>
+            </InformationReceiver>
+            <InformationProducer>
+                <id>526</id>
+                <name>Report the LV reports to the Meter Data Management System</name>
+            </InformationProducer>
+        </Step>
+    </Scenario>
+    <Scenario>
+        <id>92</id>
+        <name>Decision Support</name>
+        <number>3</number>
+        <postCondition>A compromise solution for the level of automation is taken based on technical, economical and
+            regulated aspects.
+        </postCondition>
+        <preCondition>The curve with Investment vs QoS achieved per each scenario is available</preCondition>
+        <triggeringEvent>End of the simulation of automation scenarios</triggeringEvent>
+        <PrimaryActor>
+            <id>511</id>
+            <name>Asset Investment Planning</name>
+        </PrimaryActor>
+        <Step>
+            <event>Punctual</event>
+            <id>318</id>
+            <name>Send simulation results</name>
+            <number>1</number>
+            <service>SHOW</service>
+            <InformationReceiver>
+                <id>511</id>
+                <name>Send the meter power switch on/off command to the Smart Meter</name>
+            </InformationReceiver>
+            <InformationProducer>
+                <id>526</id>
+                <name>Report the LV reports to the Meter Data Management System</name>
+            </InformationProducer>
+        </Step>
+        <Step>
+            <event>Punctual</event>
+            <id>319</id>
+            <name>Decision taken process</name>
+            <number>2</number>
+            <service>INTERNAL PROCESS</service>
+            <InformationReceiver>
+                <id>511</id>
+                <name>Send the meter power switch on/off command to the Smart Meter</name>
+            </InformationReceiver>
+            <InformationProducer>
+                <id>511</id>
+                <name>Send the meter power switch on/off command to the Smart Meter</name>
+            </InformationProducer>
+        </Step>
+    </Scenario>
+    <VersionInformation>
+        <approvalStatus>final</approvalStatus>
+        <changes>Final version for XML export</changes>
+        <date>2014-11-06T00:00:00.000+01:00</date>
+        <number>2</number>
+        <authors>Iberdrola</authors>
+    </VersionInformation>
+</UseCase>
