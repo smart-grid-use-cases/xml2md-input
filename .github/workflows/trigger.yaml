@@ -1,0 +1,22 @@
+name: Trigger xml2md
+
+on:
+  push:
+    tags:
+      - 'release-*'
+
+jobs:
+  dispatch_event:
+    runs-on: ubuntu-latest
+    name: Dispatch event
+
+    steps:
+    - name: Get version info
+      id:   tag
+      run:  echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
+    - uses: juztcode/repo-ditpatch-action@v1
+      with:
+        event-type: release_event
+        token: ${{ secrets.REPO_TRIGGER_KEY }}
+        repository: smart-grid-use-cases/xml2md
+        client-payload: '{"tag": "${{ steps.tag.outputs.TAG }}" }'
