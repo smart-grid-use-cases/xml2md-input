@@ -14,18 +14,23 @@ jobs:
     - name: Get version info
       id:   tag
       run:  echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Create Archive
       id: create-archive
       run: |
-        zip -r Release $(find . -iname *.xml -o -iname *.png)
+        find . \( -iname "*.xml" -o -iname "*.png" \) -exec zip Release $(echo {} | sed 's_./__') \;
+        # find files with the right suffix, add them to the zip,
+        # working around space in the filenames and zip's incredible
+        # inability to cope with ./ at the start of a filename
     - name: Create Release
       id: create-release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.event.client_payload.tag }}
-        release_name: ${{ github.event.client_payload.tag }}
+        tag_name: ${{ steps.tag.outputs.TAG }}
+        release_name: ${{ steps.tag.outputs.TAG }}
         draft: false
         prerelease: false
     - name: Upload Release Asset
