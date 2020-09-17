@@ -14,9 +14,38 @@ jobs:
     - name: Get version info
       id:   tag
       run:  echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Create Archive
+      id: create-archive
+      run: |
+        find . \( -iname "*.xml" -o -iname "*.png" \) -exec zip Release $(echo {} | sed 's_./__') \;
+        # find files with the right suffix, add them to the zip,
+        # working around space in the filenames and zip's incredible
+        # inability to cope with ./ at the start of a filename
+    - name: Create Release
+      id: create-release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.tag.outputs.TAG }}
+        release_name: ${{ steps.tag.outputs.TAG }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create-release.outputs.upload_url }}
+        asset_path: ./Release.zip
+        asset_name: Release.zip
+        asset_content_type: application/zip
     - uses: juztcode/repo-ditpatch-action@v1
       with:
         event-type: release_event
         token: ${{ secrets.REPO_TRIGGER_KEY }}
-        repository: smart-grid-use-cases/xml2md
+        repository: "${{ github.repository_owner }}/xml2md"
         client-payload: '{"tag": "${{ steps.tag.outputs.TAG }}" }'
