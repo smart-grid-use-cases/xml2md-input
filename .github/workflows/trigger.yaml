@@ -19,7 +19,9 @@ jobs:
     - name: Create Archive
       id: create-archive
       run: |
+        cd xml-use-cases
         find . \( -iname "*.xml" -o -iname "*.png" \) -exec zip Release $(echo {} | sed 's_./__') \;
+        mv Release.zip ../
         # find files with the right suffix, add them to the zip,
         # working around space in the filenames and zip's incredible
         # inability to cope with ./ at the start of a filename
