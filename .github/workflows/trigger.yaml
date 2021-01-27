@@ -1,6 +1,7 @@
 name: Trigger xml2md
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'release-*'
