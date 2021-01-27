@@ -12,14 +12,14 @@ jobs:
     name: Dispatch event
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Get version info
       id:   tag
       run: |
             NEXT_VERSION=$(./get_next.sh ${{ github.repository_owner }} xml2md-input)
             echo "NEXT_VERSION: ${NEXT_VERSION}"
             echo ::set-output name=next-release::${NEXT_VERSION}
-    - name: Checkout
-      uses: actions/checkout@v2
     - name: Create Archive
       id: create-archive
       run: |
