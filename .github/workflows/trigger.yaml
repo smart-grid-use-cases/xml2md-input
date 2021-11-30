@@ -1,9 +1,10 @@
 name: Trigger xml2md
 
 on:
+  workflow_dispatch:
   push:
-    tags:
-      - 'release-*'
+    branches:
+      - master
 
 jobs:
   dispatch_event:
@@ -11,11 +12,14 @@ jobs:
     name: Dispatch event
 
     steps:
-    - name: Get version info
-      id:   tag
-      run:  echo ::set-output name=TAG::${GITHUB_REF#refs/tags/}
     - name: Checkout
       uses: actions/checkout@v2
+    - name: Get version info
+      id:   tag
+      run: |
+            NEXT_VERSION=$(./get_next.sh ${{ github.repository_owner }} xml2md-input)
+            echo "NEXT_VERSION: ${NEXT_VERSION}"
+            echo ::set-output name=next-release::${NEXT_VERSION}
     - name: Create Archive
       id: create-archive
       run: |
@@ -31,8 +35,8 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.tag.outputs.TAG }}
-        release_name: ${{ steps.tag.outputs.TAG }}
+        tag_name: ${{ steps.tag.outputs.next-release }}
+        release_name: ${{ steps.tag.outputs.next-release }}
         draft: false
         prerelease: false
     - name: Upload Release Asset
@@ -50,4 +54,4 @@ jobs:
         event-type: release_event
         token: ${{ secrets.REPO_TRIGGER_KEY }}
         repository: "${{ github.repository_owner }}/xml2md"
-        client-payload: '{"tag": "${{ steps.tag.outputs.TAG }}" }'
+        client-payload: '{"tag": "${{ steps.tag.outputs.next-release }}" }'
