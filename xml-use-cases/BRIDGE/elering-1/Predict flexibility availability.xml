@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Elaborate network development plan (including defining system needs for distribution)&lt;br/&gt;Ensure a transparent and non-discriminatory access to the distribution network for each user&lt;br/&gt;Operate the distribution grid over a specific region in a secure, reliable and efficient way&lt;br/&gt;Optimize system operation distribution grid from planning to real-time, using available levers (grid expansion, flexibility activation,...)&lt;br/&gt;Assess network status of the distribution grid and broadcast selected information of the network status to eligible actors (e.g. aggregators, other system operators)&lt;br/&gt;Support the Transmission System Operator in carrying out its responsibilities (including load shedding) and coordinate measures if necessary</description>
+      <mRID>b8c224b3-3a8c-44b9-8eb8-8d38f96be10f</mRID>
+      <name>Distribution System Operator (DS_O) </name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Elaborate network development plan (including defining system needs for transmission)&lt;br/&gt;Ensure a transparent and non-discriminatory access to the transmission network for each user&lt;br/&gt;Operate the transmission grid over a specific region in a secure, reliable and efficient way&lt;br/&gt;Secure and manage in real time the physical generation-consumption balance on a geographical perimeter, including ensuring the frequency control service &lt;br/&gt;Optimize transmission system operation from planning to real-time, using available levers (grid expansion, flexibility activation,...)&lt;br/&gt;Assess network status of the transmission grid and broadcast selected information of the network status to eligible actors (e.g. aggregators, other system operators)&lt;br/&gt;Provide data to the interconnection capacity market operator for the management of cross border transactions&lt;br/&gt;In critical situations, implement dedicated actions and deliver alerts during stress events&lt;br/&gt;If necessary, implement emergency measures (e.g. system defence plan) including load shedding</description>
+      <mRID>e1faae3f-9109-40ca-9468-129b57e584e9</mRID>
+      <name>Transmission System Operator (TS_O)</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>System Operator means a natural or legal person responsible for operating, ensuring the maintenance of and, if necessary, developing the system in a given area and, where applicable, its interconnections with other systems, and for ensuring the long-term ability of the system to meet reasonable demands for the distribution or transmission of electricity (cf. ENTSOE-EFET-ebIX harmonized role model 2019). &lt;br/&gt;Can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Transmission System Operator (cf. definition in T3.3 deliverable), for frequency control, congestion management and voltage control on transmission network,&lt;/li&gt;&lt;li&gt;A Distribution System Operator (cf. definition in T3.3 deliverable), for congestion management and voltage control on distribution network.&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;NB: In some countries (e.g. Germany and Poland), the high voltage network is part of the distribution grid and in other countries (e. g. France and Italy) the high voltage network is part of the transmission grid. &lt;br/&gt;&lt;br/&gt;A System Operator can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Primary System Operator,&lt;/li&gt;&lt;li&gt;A Secondary System Operator.&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+      <name>System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Flexibility Platform (FP) for System Operators and Flexibility Service Providers that enables the trading of different flexibility products and services. A FP is operated by a Market Operator.&lt;br/&gt;&lt;br/&gt;Available to System Operators and Flexibility Services Providers. It is used to support the prequalification, the bidding, the activation and the verification processes, ensuring coordination between activities undertaken by several operators using the same flexible resources. Several national and regional FPs may exist.</description>
+      <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+      <name>Flexibility Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Can be a Distribution Network Flexibility Provider or a Transmission Network Flexibility Provider (cf. definitions in T3.3 deliverable). &lt;br/&gt;Similar to Flexibility Aggregator. Can be both aggregator and individual consumer/generator. Type of Energy Service Provider.</description>
+      <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+      <name>Flexibility Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+      <name>Flexibility Need</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+      <name>Flexibility Potential</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat1</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Collection of data for prediction (long term - years)</description>
+        <identifier>Req1</identifier>
+        <mRID>8fd0604e-3f8d-497b-8b6c-65e519cc1175</mRID>
+        <name>FPRED-REQ1</name>
+      </Requirement>
+      <Requirement>
+        <description>Computation of predictions (long term - years)</description>
+        <identifier>Req2</identifier>
+        <mRID>a8e209b8-668f-4618-94f6-45cfec8e4577</mRID>
+        <name>FPRED-REQ2</name>
+      </Requirement>
+      <Requirement>
+        <description>Computation of predictions (long term - intraday operation)</description>
+        <identifier>Req3</identifier>
+        <mRID>9f08745f-29a2-4fad-86ae-8a7b6f9a3ab8</mRID>
+        <name>FPRED-REQ6</name>
+      </Requirement>
+      <Requirement>
+        <description>Collection of data for prediction (medium-term - days to years ahead)</description>
+        <identifier>Req4</identifier>
+        <mRID>405bf996-c666-4b6e-ae81-be6dc03e3eb5</mRID>
+        <name>FPRED-REQ3</name>
+      </Requirement>
+      <Requirement>
+        <description>Computation of predictions ( medium-term - days to years ahead )</description>
+        <identifier>Req5</identifier>
+        <mRID>9553a4c6-df9f-4224-a64e-335c14565f42</mRID>
+        <name>FPRED-REQ4</name>
+      </Requirement>
+      <Requirement>
+        <description>Collection of data for prediction (short term - intraday operation)</description>
+        <identifier>Req6</identifier>
+        <mRID>11c3359a-b4bb-40d3-a055-6296bf5860a7</mRID>
+        <name>FPRED-REQ5</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <Actor>
+            <mRID>b8c224b3-3a8c-44b9-8eb8-8d38f96be10f</mRID>
+          </Actor>
+          <Actor>
+            <mRID>e1faae3f-9109-40ca-9468-129b57e584e9</mRID>
+          </Actor>
+          <Actor>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </Actor>
+          <Actor>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </Actor>
+          <Actor>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>d6052089-72b4-4d83-953c-0fde63ec74ec</mRID>
+        <name>Operational Planning timeframe requires data on the amount and type of flexibility that has been acquired</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description>We will consider that data exchanges:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Between large producers (FSPs) and System Operators are already done in real time between large producer&amp;#8217;s SCADA and System Operator&amp;#8217;s SCADA,&lt;/li&gt;&lt;li&gt;Between small FSPs and System Operators will be done in real time via Data Exchange Platforms.&lt;/li&gt;&lt;/ul&gt;</description>
+        <mRID>486d733a-7e81-4486-b3ab-ee13d21e31ac</mRID>
+        <name>Real Time timeframe requires receiving high resolution data (e.g. updates every second or minute depending on product) directly from providers and from short term forecasting models when providers cannot provide the high resolution data.</name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>97ba01ac-e65d-4dae-a8e6-571663857bfa</mRID>
+        <name>Investment Planning timeframe requires data about future demand and supply scenarios that are not created in this use case</name>
+        <number>3</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>70c33f5d-6874-42d4-966b-f2390f45d454</mRID>
+        <name>Predict flexibility availability - overview</name>
+        <URI type="UMLDiagram">Predict flexibility availability\Image9.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>aaf6a99e-55ce-451c-bd27-da3638026e3d</mRID>
+        <name>Predict flexibility availability - scenarios flowchart</name>
+        <URI type="UMLDiagram">Predict flexibility availability\Image10.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>aabb135c-3c75-44d7-95b3-b711162f19bc</mRID>
+      <name>Predict flexibility availability</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>754eaf38-968a-414f-ab15-d20a40d913dd</mRID>
+        <shortDescription>This use case describes how the prediction of flexibility availability is undertaken. Flexibility products are described as either slow (e.g. Manual Frequency Restoration Reserve (mFRR) and the UK Short Term Operating Reserve (STOR)) or semi-fast (e.g. Automatic Frequency Restoration Reserve (aFRR)) or fast (e.g. Frequency Containment Reserves (FCR) and Fast Frequency Response (FFR)) and can provide services for balancing and congestion management at local and national levels for TSOs and DSOs. &lt;br/&gt;The assessment of flexibility availability in this use case is split into three timeframes:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Investment planning (3+ years ahead) aims to understand future availability and if the predictions highlight insufficient capacity that needs addressing.&lt;/li&gt;&lt;li&gt;Operation planning (days to years ahead) aims to predict the short, medium and long term availability of flexible products that have committed to provide service.&lt;/li&gt;&lt;li&gt;Real time Planning (Intraday operation) aims to predict the current availability of flexible products for balancing and congestion management requirements for that day. This time frame is covered by DER-SCADA, flexibility bidding and flexibility activation SUCs. It relates to understand the real time flexibility availability which could be based on forecasting using historical data on how assets have performed. For example, the flexibility bidding SUC could say that today 10MW had been awarded for usage, the flexibility activation SUC could identify that, when called on, only 9MW responded. This information would be fed into the prediction forecaster, so that in the future it could tell the flexibility bidding SUC that, if it wants 10MW, then it should get 11MW as it is predicted that 10% will not respond.&lt;/li&gt;&lt;/ul&gt;</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>5431202b-ce09-4134-b989-3765a4758c46</mRID>
+        <name>Flexibility products have been predefined and are being used</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>67c0a859-29bc-4105-b011-296a693865c0</mRID>
+        <name>DSO obtains data on future (greater than 3 years) electricity demand and localised generation scenarios for all areas under its control</name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>c4585f92-1837-45e0-bba6-3aee82eafcb5</mRID>
+        <name>Prediction models that can utilise historical availability data must be available</name>
+        <number>3</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>fe3a05ba-9c68-44a6-acf6-0ae1ce91ae3c</mRID>
+        <name>System Operator obtains the amount of flexibility required for short-term (days/weeks ahead), medium-term (months ahead), and long-term (years ahead) periods</name>
+        <number>4</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>Uncertainty in these underlying models is compensated by provisioning additional flexibility contingency reserve.</description>
+        <mRID>a4e9dfe7-d8bc-406d-96c6-edfb4527cb83</mRID>
+        <name>Models of how flexibility products interact with system parameters such as inertia and direction of energy flows are well defined, allowing the need for an impact of flexibility products to be reasonably well understood.</name>
+        <number>5</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>bd991425-e0d7-48f8-8cdc-8cf9aed757ee</mRID>
+        <name>TSO obtains data on future (greater than 3 years) electricity demand and supply scenarios for the country and individual areas</name>
+        <number>6</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>daf45ed2-e8cd-42e2-8ae7-3a799026d37b</mRID>
+        <name>The objective of this use case is to detail how the prediction of flexibility product availability is undertaken. </name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <description>Assessment on transmission network.&lt;br/&gt;Example for intermittent electricity supply: renewables.</description>
+          <event />
+          <InformationProducer>
+            <mRID>e1faae3f-9109-40ca-9468-129b57e584e9</mRID>
+          </InformationProducer>
+          <mRID>70ab7a6d-8bc4-4cf0-b21d-90df9a4dcbbb</mRID>
+          <name>Assess the levels of expected generation and intermittent electricity supply</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Assessment on transmission network.&lt;br/&gt;Example for inflexible electricity demand: lights.&lt;br/&gt;Example for flexible electricity demand: electric vehicle charging.</description>
+          <event />
+          <InformationProducer>
+            <mRID>e1faae3f-9109-40ca-9468-129b57e584e9</mRID>
+          </InformationProducer>
+          <mRID>7caab82f-2339-4d5f-a924-432f80a6f91b</mRID>
+          <name>Assess the levels of expected inflexible and flexible electricity demand</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>There should be sufficient capacity and flexibility, in order to maintain agreed KPI&amp;#8217;s (e.g. having a 10% reserve margin)</description>
+          <event />
+          <InformationProducer>
+            <mRID>e1faae3f-9109-40ca-9468-129b57e584e9</mRID>
+          </InformationProducer>
+          <mRID>5e212631-d0e4-4c1d-8a45-12ad04cf3951</mRID>
+          <name>Compare supply and demand assessments across the country and for individual areas</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>Examples of a national signal: flexibility market, demanding futures on flexibility&lt;br/&gt;Modsarus Use Case::InstanceName=National and local requirements&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>e1faae3f-9109-40ca-9468-129b57e584e9</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>cd96a42f-74e9-4dff-ae4d-2044eda10d16</mRID>
+          <name>Signal to the market with appropriate mechanisms the national and local requirements</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=National and local requirements&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>c4c3d567-1eab-4b09-a3a8-20372edf3b35</mRID>
+          <name>Forward the national and local requirements</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>National and local requirements to register:&lt;br/&gt;- Amount of firm electricity supply required&lt;br/&gt;- Amount of intermittent electricity supply required&lt;br/&gt;- Amount of fast (seconds response rate) flexibility product required&lt;br/&gt;- Amount of slow (minutes response rate) flexibility product required</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>d6810107-e5e7-4758-915a-77caa0a6be2c</mRID>
+          <name>Register flexibility needs</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>fbb0c257-5e3c-4ced-94f5-2836d0fcafae</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>311eee1f-f88d-400a-8cab-98b9f8c087c0</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image2.png</URI>
+        </Drawing>
+        <mRID>4ef5c62b-c523-4cb0-b486-a0506bc92224</mRID>
+        <name>TSO Predicting Flexibility Availability for Investment Planning </name>
+        <number>1</number>
+        <Precondition>
+          <description />
+          <mRID>af0d9636-a50e-4b75-ab69-82ab13c90a22</mRID>
+          <name>This scenario should start after the registration of the prequalification results (see "Prequalification of the Flexibility Service Providers and providers per service/product" scenario in "Manage flexibility bids" SUC).</name>
+        </Precondition>
+        <Requirement>
+          <mRID>8fd0604e-3f8d-497b-8b6c-65e519cc1175</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>a8e209b8-668f-4618-94f6-45cfec8e4577</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>9f08745f-29a2-4fad-86ae-8a7b6f9a3ab8</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <description>Assessment on distribution network.&lt;br/&gt;Example for inflexible electricity demand: lights.&lt;br/&gt;Example for flexible electricity demand: electric vehicle charging.&lt;br/&gt;Examples of areas of distribution network: street, town, region.</description>
+          <event />
+          <InformationProducer>
+            <mRID>b8c224b3-3a8c-44b9-8eb8-8d38f96be10f</mRID>
+          </InformationProducer>
+          <mRID>bcee6453-a722-422b-b73a-c1c1677259d2</mRID>
+          <name>Assess  the levels of expected generation connected to the distribution grid, inflexible and flexible electricity demand across all areas of its distribution network</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Assessment on distribution network.&lt;br/&gt;Example for expected distributed generation: solar.&lt;br/&gt;Examples of areas of distribution network: street, town, region.</description>
+          <event />
+          <InformationProducer>
+            <mRID>b8c224b3-3a8c-44b9-8eb8-8d38f96be10f</mRID>
+          </InformationProducer>
+          <mRID>9525fdbe-c382-4188-9749-9e99dbe55bb3</mRID>
+          <name>Assess the levels of expected distributed generation across all areas of its distribution network</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Example for flexible electricity demand: electric vehicle charging</description>
+          <event />
+          <InformationProducer>
+            <mRID>b8c224b3-3a8c-44b9-8eb8-8d38f96be10f</mRID>
+          </InformationProducer>
+          <mRID>df74b41b-18ad-4b62-89e7-3e9a9e8d91c8</mRID>
+          <name>Use the demand and distributed generation assessment to understand which areas could utilise flexible electricity demand to reduce the need for network reinforcement</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>Example for signal: DSO flexibility calls for tenders&lt;br/&gt;Modsarus Use Case::InstanceName=Local requirements&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>b8c224b3-3a8c-44b9-8eb8-8d38f96be10f</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>2b57e4f8-d8f1-4b1a-b3dc-edaab93d2d8c</mRID>
+          <name>Signal to the market with appropriate mechanisms the requirements</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Local requirements&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>b7ba19de-934f-4d63-9c68-40d2c3762efa</mRID>
+          <name>Forward local requirements</name>
+          <number>2.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Requirements to register for network reinforcement:&lt;br/&gt;- Amount of reinforcement required that cannot be addressed with flexibility &lt;br/&gt;- Amount of fast (seconds response rate) flexibility product required&lt;br/&gt;- Amount of slow (minutes response rate) flexibility product required</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>a9a52ba3-16f1-4fff-a064-f6824aaedc7f</mRID>
+          <name>Register flexibility needs</name>
+          <number>2.6</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>2aa4bf65-280a-4301-b152-7ae3d11188e1</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image3.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>b8635602-a211-4d28-bb05-f2871f64dac7</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image4.png</URI>
+        </Drawing>
+        <mRID>1e4422f1-e226-4660-9de4-e706b05b6b13</mRID>
+        <name>DSO Predicting Flexibility Availability for Investment Planning </name>
+        <number>2</number>
+        <Requirement>
+          <mRID>8fd0604e-3f8d-497b-8b6c-65e519cc1175</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>9f08745f-29a2-4fad-86ae-8a7b6f9a3ab8</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>a8e209b8-668f-4618-94f6-45cfec8e4577</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Prequalification results&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>e0fb260d-5fea-4687-a14d-817783049e5b</mRID>
+          <name>Publish the results of prequalification with additional restrictions information </name>
+          <number>3.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Prequalification results&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <mRID>3982da88-cb17-466b-bf04-b439236100ca</mRID>
+          <name>Forward prequalification results</name>
+          <number>3.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>7e00d001-f995-4ad1-9921-07d9ecb9fe6d</mRID>
+          <name>Register flexibility needs</name>
+          <number>3.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>Based on the flexibility energy that has been awarded to providers. The flexibility energy is adjusted using forecasting models of actual delivery by the providers and historical data&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Need&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>07b9f471-8b4b-4220-8527-2850de0155fe</mRID>
+          <name>Predict fast and slow flexibility product availability for the short-term period</name>
+          <number>3.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>Based on the flexibility capacity that has been awarded.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Need&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>6356f2b3-e492-4dec-b780-7700d53790d9</mRID>
+          <name>Predict fast and slow flexibility product availability for the medium-term period</name>
+          <number>3.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>Based on the flexibility capacity that has been already awarded and still to be awarded based on their acquisition mechanisms (e.g. capacity market)&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Need&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>15de89d3-749d-465e-8c40-2a1fd5cb13e2</mRID>
+          <name>Predict fast and slow flexibility product availability for the long-term period</name>
+          <number>3.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>a60e2b25-b378-4f14-9755-26f4a9b5ea69</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Need&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>ed07edd4-7763-4264-865c-bbaa6ca2f2f7</mRID>
+          <name>Forward flexibility needs</name>
+          <number>3.7</number>
+          <service />
+        </Activity>
+        <description>The System Operator can be a TSO or a  DSO.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>e99fc899-8976-4b91-986b-c4495d02dfcd</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image5.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>010b83df-2fb6-4216-8cf8-334acdd7d5d2</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image6.png</URI>
+        </Drawing>
+        <mRID>fb58386a-3e2c-4e46-9c67-843167bc4ea7</mRID>
+        <name>System Operator Predicting Flexibility Availability for Operational Planning </name>
+        <number>3</number>
+        <Precondition>
+          <description />
+          <mRID>2691590d-084d-4750-b4bf-967bc3a3ac53</mRID>
+          <name>The scenario should start with "Prequalification results" last activity of the prequalification scenario described in "Manage flexibility bids" SUC.</name>
+        </Precondition>
+        <Requirement>
+          <mRID>405bf996-c666-4b6e-ae81-be6dc03e3eb5</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>9553a4c6-df9f-4224-a64e-335c14565f42</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>For large producers (FSPs): some data are already exchanged in real time between large producer&amp;#8217;s SCADA and network operator&amp;#8217;s SCADA.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <mRID>adb2267d-4ec8-49bd-ac99-86482efdffc5</mRID>
+          <name>Send large FSPs real time signals about their current and near-term ability to provide flexibility</name>
+          <number>4.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>For FSPs who do not have a SCADA to exchange data directly with Network Operators. We will consider that data exchanges between small FSPs and system/network operators will be done in real time via Data Exchange Platforms.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>fb53d056-2358-4218-a866-990100fcdd59</mRID>
+          <name>Send small FSPs real time signals about their current and near-term ability to provide flexibility</name>
+          <number>4.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <mRID>b990ebbe-7085-40e3-9902-311f24528497</mRID>
+          <name>Forward small FSPs real time signals</name>
+          <number>4.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <mRID>e0d6da2a-5266-49e0-87d8-d64be9066d6a</mRID>
+          <name>Receive the flexibility predictions</name>
+          <number>4.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>For FSPs that cannot offer real time signals.&lt;br/&gt;Flexibility availability is based on historical information and prediction parameters (e.g. weather).</description>
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <mRID>6ffe94f5-294d-42ea-be3d-a4a62b74b3da</mRID>
+          <name>For small FSPs that cannot provide real time signals, predict their current and near-term ability to provide flexibility availability</name>
+          <number>4.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Done to understand availability over the day for both slow and fast flexibility products.</description>
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <mRID>789263b9-95b0-4eab-8e24-f4389bc41d8b</mRID>
+          <name>Combine the flexibility predictions</name>
+          <number>4.6</number>
+          <service />
+        </Activity>
+        <description>The System Operator can be a TSO (imbalance) or a DSO (congestions).</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>e46b74b6-447a-4cff-a0bd-f59c4dd7ef71</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image7.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>c141c7b9-e0ef-4874-a25e-06df97623bb8</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Predict flexibility availability\Image8.png</URI>
+        </Drawing>
+        <mRID>db2724cf-36dc-47f7-88f8-60124c1c8b72</mRID>
+        <name>System Operator Predicting Flexibility Availability for Real Time Planning</name>
+        <number>4</number>
+        <Requirement>
+          <mRID>9553a4c6-df9f-4224-a64e-335c14565f42</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>9f08745f-29a2-4fad-86ae-8a7b6f9a3ab8</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>405bf996-c666-4b6e-ae81-be6dc03e3eb5</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>11c3359a-b4bb-40d3-a055-6296bf5860a7</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>The scope of this use case is the prediction of flexibility product availability.</scope>
+      <Version>
+        <approvalStatus />
+        <changes />
+        <date>2018-05-08T00:00:00</date>
+        <mRID>92594434-2654-4967-ae58-182ea5edf74c</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>34e42901-99ae-45e3-8a42-7b70e6d3e752</mRID>
+          <name>Mitchell Curtis (Upside)</name>
+        </Author>
+        <Author>
+          <mRID>2209e43e-1e8c-4fff-823e-dcda0caf8319</mRID>
+          <name> &#xD;
+Graham Oakes (Upside)</name>
+        </Author>
+        <changes>First Draft</changes>
+        <date>2018-05-08T00:00:00</date>
+        <mRID>cd7588e2-77ae-42d4-9c2a-67020ec93a55</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>6471ed64-e9e0-4afd-b428-4f93a0a2eb26</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>aabc3fcb-a9f9-4fee-ba25-392bcd1317d1</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-07-04T00:00:00</date>
+        <mRID>cc574ef1-dd46-4ed5-acab-715a15c5d67f</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>307b4a44-1bcd-4bce-86c8-23fe6bb4af69</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>8cc70859-32e1-41e8-8011-6c4d7d4f9513</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Changes from Mitchell Curtis</changes>
+        <date>2018-07-10T00:00:00</date>
+        <mRID>db0927ab-1c1e-4d16-a5b2-62bc541e55a1</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>e33f2efd-5fb6-43d8-be09-f961672a1a7d</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>76bfc244-31cc-4a6e-a674-96803569f336</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>872c9a6a-9885-4f43-942d-e5a5657075c5</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Remarks from Innogy.</changes>
+        <date>2018-09-21T00:00:00</date>
+        <mRID>3fb14ec4-c8b1-4337-bbd8-f29bee9a35dd</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>b8b2b5b0-c9c5-4eec-803f-d4705063030f</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>e6e8f5a5-93f9-426c-a62e-073eb5d29d45</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>b0fbf5d6-cd04-4923-b723-9addc35ebdb9</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>217111c1-d89f-4611-8f64-91ed72ef75a0</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>b7c9a421-92a7-41dc-af6e-2f2e35ab7092</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>a650775d-1cd0-422b-98aa-04dca2c85c79</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>17b6ddde-df07-4aee-8fe0-686e3fb4d284</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>906c09a8-7ad6-4c38-b31d-7f6d667805e6</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Changes following WP5&amp;amp;9 workshop in Chatou</changes>
+        <date>2019-06-05T00:00:00</date>
+        <mRID>0ae69eeb-775e-45fb-acbd-e24caac4509c</mRID>
+        <number>10</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>c39573ea-7753-4c16-91d5-e0cfc6f68ace</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>45ae9a45-1e17-4784-90b7-a4abbe0e0f87</mRID>
+        <number>11</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

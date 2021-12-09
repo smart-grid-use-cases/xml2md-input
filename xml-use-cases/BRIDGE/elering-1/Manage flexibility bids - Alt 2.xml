@@ -1,0 +1,950 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>System hosted by Optimisation Operators and used for the power grid congestion assessment, including grid validation if activation will cause congestion.</description>
+      <mRID>3af5821a-e1cb-4f65-b006-bd2ff500ea8f</mRID>
+      <name>Grid Validation System</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Initiates the call for tenders and initiates the activation of a flexibility. It also can operate the power grid on which a flexibility service unit is connected or this unit may otherwise impact its grid. In this case, it assesses the impact on its network of the flexibility to be procured because the activation of such flexibility may potentially cause congestion in its grid.</description>
+      <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+      <name>Primary System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>A market operator is a party that provides a service whereby the offers to sell electricity are matched with bids to buy electricity (cf. ENTSOE-EFET-ebIX harmonized role model 2019).&lt;br/&gt;In EU-SysFlex project, a market operator not only trades electricity but also flexibility services.&lt;br/&gt;Organize auctions (continuous auctions, discrete auctions, calls for tender) between buyers and sellers of electricity-related products in the markets, and more generally publish the corresponding prices, for assets connected to power grid.&lt;br/&gt;Manage/operate the platform for trading (where bids and offers are collected).&lt;br/&gt;Clear the market and communicate results.&lt;br/&gt;(cf. definition in T3.3 deliverable)&lt;br/&gt;</description>
+      <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+      <name>Market Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Operates the power grid on which a flexibility service unit is connected or this unit may otherwise impact its grid. Assesses the impact on its network of the flexibility to be procured because the activation of such flexibility may potentially cause congestion in its grid.</description>
+      <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+      <name>Secondary System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Flexibility Platform (FP) for System Operators and Flexibility Service Providers that enables the trading of different flexibility products and services. A FP is operated by a Market Operator.&lt;br/&gt;&lt;br/&gt;Available to System Operators and Flexibility Services Providers. It is used to support the prequalification, the bidding, the activation and the verification processes, ensuring coordination between activities undertaken by several operators using the same flexible resources. Several national and regional FPs may exist.</description>
+      <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+      <name>Flexibility Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Can be a Distribution Network Flexibility Provider or a Transmission Network Flexibility Provider (cf. definitions in T3.3 deliverable). &lt;br/&gt;Similar to Flexibility Aggregator. Can be both aggregator and individual consumer/generator. Type of Energy Service Provider.</description>
+      <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+      <name>Flexibility Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>System Operator means a natural or legal person responsible for operating, ensuring the maintenance of and, if necessary, developing the system in a given area and, where applicable, its interconnections with other systems, and for ensuring the long-term ability of the system to meet reasonable demands for the distribution or transmission of electricity (cf. ENTSOE-EFET-ebIX harmonized role model 2019). &lt;br/&gt;Can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Transmission System Operator (cf. definition in T3.3 deliverable), for frequency control, congestion management and voltage control on transmission network,&lt;/li&gt;&lt;li&gt;A Distribution System Operator (cf. definition in T3.3 deliverable), for congestion management and voltage control on distribution network.&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;NB: In some countries (e.g. Germany and Poland), the high voltage network is part of the distribution grid and in other countries (e. g. France and Italy) the high voltage network is part of the transmission grid. &lt;br/&gt;&lt;br/&gt;A System Operator can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Primary System Operator,&lt;/li&gt;&lt;li&gt;A Secondary System Operator.&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+      <name>System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Optimise and select the bids, where relevant in combination with switching measures; clear the market for auctions or select individual bids in the order book organised by the MO taking into account the grid data (constraints and sensitivities/topology if needed) provided by DS_O and TS_O ; communicate results (rewarded offers and prices) to the MO. The OO role can be carried out by a system operator, market operator or a third party. (cf. definition in T3.2 deliverable)</description>
+      <mRID>b90e1c1b-a95b-4863-8f49-0f139318fb0a</mRID>
+      <name>Optimisation Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+      <name>Flexibility Potential</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>97336539-bfa7-4501-b370-ff9d6d4bf681</mRID>
+      <name>Any Data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info3</identifier>
+      <mRID>85046a3c-134d-43c2-96b4-f08485a41a0a</mRID>
+      <name>Flexibility Call for Tenders</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info4</identifier>
+      <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+      <name>Flexibility Bid</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Functional requirements</description>
+      <identifier>Cat1</identifier>
+      <mRID>59e7899c-d9ee-4534-81a6-81b37dce5e81</mRID>
+      <name>Functional</name>
+      <Requirement>
+        <description />
+        <identifier>Req1</identifier>
+        <mRID>1627548d-0b09-47b7-a94e-59ec4e29b23b</mRID>
+        <name>A call for tenders process is supervised by a Market Operator</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat2</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Algorithm for prequalification of flexibility providers</description>
+        <identifier>Req2</identifier>
+        <mRID>1996b486-a64b-41d7-bfdf-20d00b62a5ad</mRID>
+        <name>FBIDS-REQ4</name>
+      </Requirement>
+      <Requirement>
+        <description>Calculation of grid impacts (congestion, imbalance)</description>
+        <identifier>Req3</identifier>
+        <mRID>4b9c7c91-f308-4f45-97ce-885ad27c5840</mRID>
+        <name>FBIDS-REQ9</name>
+      </Requirement>
+      <Requirement>
+        <description>Selection of successful bids</description>
+        <identifier>Req4</identifier>
+        <mRID>9506aede-d3d4-4c82-b45d-584eb98173da</mRID>
+        <name>FBIDS-REQ7</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability to exchange information on System Operators' flexibility need and FSPs&amp;#8217; flexibility potential through flexibility platform (and DEP)</description>
+        <identifier>Req5</identifier>
+        <mRID>b08ead07-85dd-4aad-a7f4-de3fb87cf6e6</mRID>
+        <name>FBIDS-REQ2</name>
+      </Requirement>
+      <Requirement>
+        <description>Flexibility platform's ability to collect bids from FSPs</description>
+        <identifier>Req6</identifier>
+        <mRID>ed5aabc5-05ea-47d6-ad88-670c0e6912d0</mRID>
+        <name>FBIDS-REQ6</name>
+      </Requirement>
+      <Requirement>
+        <description>Flexibility platform's ability to collect grid validation results from SOs</description>
+        <identifier>Req7</identifier>
+        <mRID>a3bdfbbb-1a7c-4f64-9f00-18b329c05c15</mRID>
+        <name>FBIDS-REQ8</name>
+      </Requirement>
+      <Requirement>
+        <description>Automated exchange of bids is possible</description>
+        <identifier>Req8</identifier>
+        <mRID>8b7771a2-4c29-4e2b-9dd7-bf4edf56fa97</mRID>
+        <name>FBIDS-REQ5</name>
+      </Requirement>
+      <Requirement>
+        <description>Auction process supervised by Market Operator</description>
+        <identifier>Req9</identifier>
+        <mRID>17ab855d-ee4e-4ec1-bd38-9a613ebc8e0e</mRID>
+        <name>FBIDS-REQ3</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>3af5821a-e1cb-4f65-b006-bd2ff500ea8f</mRID>
+          </Actor>
+          <Actor>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </Actor>
+          <Actor>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </Actor>
+          <Actor>
+            <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+          </Actor>
+          <Actor>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </Actor>
+          <Actor>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </Actor>
+          <Actor>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </Actor>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <Actor>
+            <mRID>b90e1c1b-a95b-4863-8f49-0f139318fb0a</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description>Alternative market processes, e.g. for real time bid/offer price matching are also possible. A mixed model (e.g. periodic calls for tenders to buy &amp;#8220;baseload&amp;#8221; flexibility plus a real time spot market) is also feasible.</description>
+        <mRID>3f0837e8-bb64-4d72-abad-1d8061d1fe1a</mRID>
+        <name>Scenario 2 assumes a call for tenders-based process for matching flexibility bids to demands of flexibility</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description>Clustering leads to more cost-efficient bid selection since there can be a time gap between the need of the PSO to know the flexibility potential in underlying grids and the final bid selection/bid activation. Due to this time gap, the underlying grid situation can change so that finally the SSO can decide on which bid to select in order to cope with the changed grid situation. The advantage is the reduction of bid limitations by the SSO.</description>
+        <mRID>d77f5a2c-2624-4e66-a6d0-794058bff471</mRID>
+        <name>PSO and SSO define the framework for clustering bids, such as based on which criteria (e.g. price and sensitivity) and within which range. </name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description>If this is the case, the bidding/procurement process can be eased by avoiding this check in case of the use of the flexibility for balancing purposes.</description>
+        <mRID>3debe4e0-3649-44b7-8277-af1a2899af80</mRID>
+        <name>Grid prequalification is carried out to check whether a flexibility can cause a new congestion in the grid. </name>
+        <number>3</number>
+      </Assumption>
+      <Assumption>
+        <description>For congestion management products, current sensitivities (mainly depending on switiching procedures) are necessary so that the SSO grid  assessment is always necessary.</description>
+        <mRID>a9445b5f-70f8-46a7-8a8f-d343781b14d1</mRID>
+        <name>Grid prequalification only makes sense if the SSO's grid assessment during the following bidding phase can be avoided. </name>
+        <number>4</number>
+      </Assumption>
+      <Assumption>
+        <description>It might be possible that the flexibility platform ranks the bids based on price and location as stated by the PSO in the call for tender. However, it is up to the PSO to select the individual bids or cluster of bids based on its individual needs (e.g. best sensitivity of a bid towards a congestion) and the information received by the SSO (limitations, sensitivities).</description>
+        <mRID>d0d3b819-dcab-4ca2-b47e-6f0f5baebb15</mRID>
+        <name>Scenario 2 assumes that the flexibility platform runs an order book where system operators can select the appropriate bids to fulfil their needs depending on where the flexibility is connected to. </name>
+        <number>5</number>
+      </Assumption>
+      <Assumption>
+        <description>'Single' stands for concept where different flexibility buyers and sellers can trade. However, flexibility platforms are part of the competitive domain, so that also many different flexibility platforms could exist next to each other, whereas competition leads to the most efficient solution. Especially, since the challenges of the future electricity system lie in local congestions, decentralised flexibility platforms could also be a solution.&lt;br/&gt;</description>
+        <mRID>f3e50405-d22b-436c-af4d-062a75807740</mRID>
+        <name>The use case assumes a single market place operated by a Flexibility Platform</name>
+        <number>6</number>
+      </Assumption>
+      <Assumption>
+        <description>The System Operator who initiates the call for tenders is a leading operator. There is no single lead operator. The flexibility platform should accept several parallel calls for tenders initiated by different System Operators. The scenarios do not depict how synergies across system operators are lifted.</description>
+        <mRID>b6e2b269-e7cd-4f7b-b4b3-f4ffa78b8311</mRID>
+        <name>Each System Operator has the same right to participate in the flexibility platform</name>
+        <number>7</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>1c21a27f-441b-490c-a683-792fa0c2490e</mRID>
+        <name>A flexibility market design gathers TSOs and DSOs</name>
+        <number>8</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>fd9785ab-2a6f-4624-ba7e-e5075336d83a</mRID>
+        <name>Data exchange occurs as a result of business processes. The method of implementing business processes depends on the architecture of the flexibility services market</name>
+        <number>9</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>307f0a25-550e-4abe-8c62-85453e8a6f6d</mRID>
+        <name>Manage flexibility bids - overview</name>
+        <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image5.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>9bf40ee8-f7ea-4456-ac10-9486be919b59</mRID>
+        <name>Manage flexibility bids - scenarios flowchart</name>
+        <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image6.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>5fb70767-0f55-46d8-b7d7-f6c79bdb753a</mRID>
+      <name>Manage flexibility bids - Alternative 2</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>02a84099-0b3c-4ace-942d-8260443f3866</mRID>
+        <shortDescription>The use case describes the process of pre-qualification of the Flexibility Service Providers (aggregators and individual consumption, generation and storage units) and the bidding process ending with the selection of flexibility bids, leading to the initiation of activation in case of energy bids or the reservation of capacity in case of capacity bids. Implementation of these processes takes place on the Flexibility Platform (flexibility register), which gathers flexibility needs provided by System Operators as well as flexibility potentials, and registers flexibility bids provided by Flexibility Service Providers.&lt;br/&gt;According to EU-SysFlex WP3 suggestion, the function of grid impact assessment and hosting of Grid Validation System could be taken over by Optimisation Operator role from the Primary and Secondary System Operator roles.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description>To achieve this prerequisite, Flexibility Service Providers as a default do not see the reason for being selected. However, it can be possible to publish aggregated historical information to incentivize the offering of flexibility bids. Regulators might be able to review samples of bid selections to ensure the non-discriminatory selection by system operators.</description>
+        <mRID>395d0ef2-3ab9-4a30-8e98-8512c20c931f</mRID>
+        <name>Flexibility Service Providers should be prevented from gambling and influencing the load flow to create high revenues for them or for associated flexibilities, whereas the System Operators must manage these congestions and pay for them</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>2ea76cb9-42e4-446d-bf45-f64549969db2</mRID>
+        <name>Flexibility Service Providers and System Operators need their own applications to connect to the flexibility platform.</name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>53cac658-43e4-4248-82e6-0f87c184fd43</mRID>
+        <name>In some cases, provision for bi-lateral flexibility contracts to be negotiated would be useful, in order to trial new and innovative flexibility products before they can be specified fully for call for tenders</name>
+        <number>3</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>c5e4dc48-ea53-46c3-b41d-652ea4040812</mRID>
+        <name>Before entering bidding process scenario, service providers should undergo a process of prequalification and their infrastructure including application should meet technical requirements, the fulfilment of which is a condition for positive certification</name>
+        <number>4</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>However, this information does not include the current switching state of individual grid assets.</description>
+        <mRID>bb547c2e-3a3b-4352-9578-064ed57ce1f8</mRID>
+        <name>Flexibility Platform holds the information about which Primary System Operator is linked to which Secondary System Operator.</name>
+        <number>5</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>dd5ed973-adf7-44b6-8324-ca076e627e4f</mRID>
+        <name>The entry barrier for Flexibility Service Providers should be as low as possible</name>
+        <number>6</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>cb6596d6-ab32-4d10-8b0e-e4ea8d32d662</mRID>
+        <name>Communication standards must be established </name>
+        <number>7</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>2dd5a1c7-afed-4cac-899b-034b64247699</mRID>
+        <name>In the prequalification process, the grid impact assessment and the grid prequalification follow only if product prequalification (matching the SO’s need and FSP’s potential) is successful.</name>
+        <number>8</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>bbfebb40-07b0-4021-be67-64d933413b90</mRID>
+        <name>Explanation regarding the exchange of information supporting the pre-qualification and bidding processes in the Flexibility Services Market.</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <description>Each System Operator defines services and publishes the definition of these services on the flexibility platform.</description>
+          <event />
+          <InformationProducer>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationProducer>
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>0505d947-e6d1-4bb1-a7b6-30914c43b577</mRID>
+          <name>Publish prequalification criteria</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>Each Flexibility Service Provider registers its flexibility potential on the Flexibility Platform with respect to the need of a System Operator.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>d0d4c571-8842-4dd3-9c0c-132f658922a1</mRID>
+          <name>Publish flexibility potential</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>84185abd-b67b-42c7-963a-ccfa73e6383d</mRID>
+          <name>Forward prequalification criteria</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>f7a98e67-73bc-4be9-acb1-541d0cd8689a</mRID>
+          <name>Register prequalification criteria</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>f01986a9-3926-4394-b0d1-09b747aa3b75</mRID>
+          <name>Forward flexibility potential</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>faf5f95b-6b69-4e43-8bee-7547dec0af50</mRID>
+          <name>Register flexibility potential</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Based on the information submitted in Flexibility Service Providers&amp;#8217; flexibility potential, Flexibility Platform prequalifies the ability of Flexibility Service Providers to deliver flexibility with respect to System Operators&amp;#8217; needs.</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>fc63728d-e3b6-4d90-a663-9b582723f32f</mRID>
+          <name>Initiate Prequalification of  Flexibility Service Provider (product and provider prequalification)</name>
+          <number>1.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>Flexibility Platform sends required level of information necessary for grid impact assessment to the different System Operators concerned (both TSOs and DSOs). &lt;br/&gt;This activity leads to registering whether grid assessment is necessary during the bidding phase in case of balancing products.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>4985c8ad-25e2-4d0e-b312-5fc4f06a51f7</mRID>
+          <name>Send necessary information for grid impact assessment</name>
+          <number>1.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>a105b25a-b7aa-4dae-a230-96f8bdd560f9</mRID>
+          <name>Compare prequalification criteria and flexibilitry potential</name>
+          <number>1.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+          </InformationReceiver>
+          <mRID>90b0aaca-1dba-49f7-9d95-b06bd4fbc21d</mRID>
+          <name>Forward  necessary information for grid impact assessment</name>
+          <number>1.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>ec556f1b-8608-4de1-ab7c-a7e614f2bc37</mRID>
+          </BusinessObject>
+          <description>Secondary System Operators assess the impact of flexibility activations in their grid in order to avoid congestions due to these activations. &lt;br/&gt;Secondary System Operators provide the results of grid impact assessment to the Primary System Operator setting the need for asking the Secondary System Operator for grid impact assessment during the bidding/procurement phase.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Potential&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <mRID>6febd424-0638-4e4e-8948-323964037810</mRID>
+          <name>Assess grid impact (grid prequalification) </name>
+          <number>1.11</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>97336539-bfa7-4501-b370-ff9d6d4bf681</mRID>
+          </BusinessObject>
+          <description>The PSO registers whether the flexibility in the SSO grid can be procured and activated in a certain time frame or wheter for every procurement/activation the grid impact assessment of SSO has to be taken into account.&lt;br/&gt;Modsarus Use Case::InstanceName=Any Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationProducer>
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <mRID>98b9838e-9b7c-4c30-924a-5c26a58f0714</mRID>
+          <name>Registers secondary grid assessment results (grid prequalification)</name>
+          <number>1.12</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>229364c3-05be-4b84-aa89-b36215f15df8</mRID>
+          <name>Send the results of prequalification to FSP and PSO</name>
+          <number>1.13</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationReceiver>
+          <mRID>ee720583-b37b-4b2c-ba4e-c3352b8d1c49</mRID>
+          <name>Forward the results of product prequalification</name>
+          <number>1.14</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationProducer>
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <mRID>081cdb1d-c80b-491a-9495-8edd05fb0b24</mRID>
+          <name>Receive results of product prequalification </name>
+          <number>1.15</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <mRID>a2afddae-8cdd-483a-b6df-2773f0fd97e7</mRID>
+          <name>Receive product and provider prequalification results</name>
+          <number>1.16</number>
+          <service />
+        </Activity>
+        <description>Prequalification of both Flexibility Service Providers themselves and the technical feasibility of the flexibility (&amp;#8216;product prequalification&amp;#8217;) as well as the assessment if the flexibilities can cause congestions in the grid (&amp;#8216;grid prequalification&amp;#8217;).</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>8926963c-6dd2-4ad0-bab6-f5e95f34866e</mRID>
+          <name>Prequalification process</name>
+          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>3e5fcfef-5c8f-44ee-a43d-c467879aa75f</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image2.png</URI>
+        </Drawing>
+        <mRID>21a6e3f7-eee9-4558-bed5-57cbc9af8dc1</mRID>
+        <name>Prequalification of the Flexibility Service Providers and their flexibilities</name>
+        <number>1</number>
+        <Precondition>
+          <description />
+          <mRID>c5e4dc48-ea53-46c3-b41d-652ea4040812</mRID>
+          <name>Before entering bidding process scenario, service providers should undergo a process of prequalification and their infrastructure including application should meet technical requirements, the fulfilment of which is a condition for positive certification</name>
+        </Precondition>
+        <Precondition>
+          <description />
+          <mRID>53cac658-43e4-4248-82e6-0f87c184fd43</mRID>
+          <name>In some cases, provision for bi-lateral flexibility contracts to be negotiated would be useful, in order to trial new and innovative flexibility products before they can be specified fully for call for tenders</name>
+        </Precondition>
+        <Precondition>
+          <description />
+          <mRID>dd5ed973-adf7-44b6-8324-ca076e627e4f</mRID>
+          <name>The entry barrier for Flexibility Service Providers should be as low as possible</name>
+        </Precondition>
+        <Precondition>
+          <description />
+          <mRID>cb6596d6-ab32-4d10-8b0e-e4ea8d32d662</mRID>
+          <name>Communication standards must be established </name>
+        </Precondition>
+        <Requirement>
+          <mRID>1627548d-0b09-47b7-a94e-59ec4e29b23b</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>1996b486-a64b-41d7-bfdf-20d00b62a5ad</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>4b9c7c91-f308-4f45-97ce-885ad27c5840</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>9506aede-d3d4-4c82-b45d-584eb98173da</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>b08ead07-85dd-4aad-a7f4-de3fb87cf6e6</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>ed5aabc5-05ea-47d6-ad88-670c0e6912d0</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>a3bdfbbb-1a7c-4f64-9f00-18b329c05c15</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>8b7771a2-4c29-4e2b-9dd7-bf4edf56fa97</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>17ab855d-ee4e-4ec1-bd38-9a613ebc8e0e</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>85046a3c-134d-43c2-96b4-f08485a41a0a</mRID>
+          </BusinessObject>
+          <description>A call for tenders of flexibility services relies on specific products and covers specific periods (week ahead, day ahead, intraday, etc). &lt;br/&gt;The call for tenders is opened by the Primary System Operator. The Primary System Operator is the operator who needs the flexibility service.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Call for Tenders&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>6f3a7860-92a6-4735-bf45-69fa89ddb53c</mRID>
+          <name>Open the flexibility call for tenders</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>85046a3c-134d-43c2-96b4-f08485a41a0a</mRID>
+          </BusinessObject>
+          <description>Secondary System Operators and FSPs should receive information about call for tenders opening from via Flexibility Platform (not directly from Primary System Operator).&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Call for Tenders&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationReceiver>
+          <mRID>00fcb9bf-b247-4c53-b930-4342b0d36e16</mRID>
+          <name>Register flexibility call for tenders opening</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Bid&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>14439fe8-0007-4226-9f33-1a2e0be3a0dc</mRID>
+          <name>Send flexibility bids</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Bid&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>4092ff1b-0e7d-4eff-a7a5-2280aebee334</mRID>
+          <name>Forward flexibility bids</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+          </BusinessObject>
+          <description>In addition to flexibility bids received from Flexibility Service Providers, the Flexibility Platform also registers flexibility coming from European/regional/national platforms and systems like MARI, PICASSO or COBA (Common Baltic balancing Area). These platforms are used to collect the bids for some flexibility services (e.g. mFRR). The value of Flexibility Platform is to bring different information together and making it available to different flexibility buyers.&lt;br/&gt;Flexibility bids are ranked on merit order principle and location.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Bid&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>1415f1df-fb42-4853-9180-59fba6ad117b</mRID>
+          <name>Register flexibility bids</name>
+          <number>2.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+          </BusinessObject>
+          <description>Locational ranking principles to be agreed between Primary System Operator and Flexibility Platform.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Bid&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>4ac174d1-2a3a-4b07-a343-38888bb90b7b</mRID>
+          <name>Rank bids based on merit order principle and location</name>
+          <number>2.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+          </BusinessObject>
+          <description>Flexibility Platform sends flexibility bids from Flexibility Platform to Secondary system operator via DEP.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Bid&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+          </InformationReceiver>
+          <mRID>9f576288-2095-46f7-b365-b9cb6ab8fc6e</mRID>
+          <name>Send flexibility bids from Flexibility Platform to Secondary system operator</name>
+          <number>2.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Secondary System Operator performs grid impact assessment of bids to avoid congestions in its grid.  &lt;br/&gt;If order book was opened for congestion management, Secondary System Operator informs Primary System Operator about the efficiency of the flexibilities to solve their congestions (sensitivities).&lt;br/&gt;Additionally, bids in the SSO grid are being clustered according to the criteria (e.g. cost minimization for PSO based on close to real time grid situation) agreed by the PSO and SSO.&lt;br/&gt;SSO sends results to PSO.</description>
+          <event />
+          <InformationProducer>
+            <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationReceiver>
+          <mRID>4848c35b-4151-457f-be0d-ba43204c4592</mRID>
+          <name>Assess secondary grid impact and cluster flexibility bids (according to PSO/SSO agreement)</name>
+          <number>2.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>PSO selects the bid or cluster that serves the need based on the merit order list provided by the FP. With the bid selection the call for tender is closed.</description>
+          <event />
+          <InformationProducer>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+          </InformationReceiver>
+          <mRID>65875075-4569-4cd7-9c28-6329cf5bf9c2</mRID>
+          <name>Select flexibility bid or cluster and close the flexibility call for tenders</name>
+          <number>2.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>97336539-bfa7-4501-b370-ff9d6d4bf681</mRID>
+          </BusinessObject>
+          <description>Secondary System Operator declusters flexibility bid cluster and selects best flexibilities. SSO infroms FP and PSO&lt;br/&gt;Modsarus Use Case::InstanceName=Any Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>6a6d00e5-7ffc-4832-9b93-a346392c62cb</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>b29869b7-4114-40e9-86b3-0b5da64b5a43</mRID>
+          <name>Decluster selected flexibility bid cluster and inform FP and PSO</name>
+          <number>2.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>eb116f35-39eb-4ce4-8136-5fa3c744b655</mRID>
+          </InformationProducer>
+          <mRID>3cede971-26ee-4d8c-9ee3-c7119fe3cff0</mRID>
+          <name>Register flexibility bid selection</name>
+          <number>2.11</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>97336539-bfa7-4501-b370-ff9d6d4bf681</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Any Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>8f7f7091-39ab-4379-8035-e3a3b043f444</mRID>
+          <name>Forward Flexibility bid selection to FP</name>
+          <number>2.12</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>add614ed-4d4f-46a1-b96a-0948ea7e892f</mRID>
+          <name>Register flexibility bid selection and call for tenders closure</name>
+          <number>2.13</number>
+          <service />
+        </Activity>
+        <description>The Flexibility Platform should allow many parallel calls for tender in which n Flexibility Service Providers offer flexibilities for m flexibility products, previously defined with System Operators and possibly standardized, and, on the buyers' side, there are x System Operators looking for the cheapest products.&lt;br/&gt;This means that it may happen that more than one System Operator will be willing to buy same flexibility. It may also mean that it is not necessarily the cheapest flexibility which would bring highest socio-economic value. &lt;br/&gt;System Operators mutually coordinate the flexibility buying before the final selection of bids. This coordination is out of the scope of this use case .</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>9a84bbb8-e7b0-4fe7-afc9-6bb790728470</mRID>
+          <name>Bidding process</name>
+          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image3.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>131e5912-9622-4fc9-b7e9-d339a0e0f124</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image4.png</URI>
+        </Drawing>
+        <mRID>df46b412-4600-4b83-bf70-cc0818cde35f</mRID>
+        <name>Bidding process</name>
+        <number>2</number>
+        <Requirement>
+          <mRID>1627548d-0b09-47b7-a94e-59ec4e29b23b</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>1996b486-a64b-41d7-bfdf-20d00b62a5ad</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>9506aede-d3d4-4c82-b45d-584eb98173da</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>b08ead07-85dd-4aad-a7f4-de3fb87cf6e6</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>ed5aabc5-05ea-47d6-ad88-670c0e6912d0</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>4b9c7c91-f308-4f45-97ce-885ad27c5840</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>a3bdfbbb-1a7c-4f64-9f00-18b329c05c15</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>8b7771a2-4c29-4e2b-9dd7-bf4edf56fa97</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>17ab855d-ee4e-4ec1-bd38-9a613ebc8e0e</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Describing the pre-qualification and bidding processes on the flexibility services market and defining required data flow to support management of pre-qualification of Flexibility Service Providers and management of flexibility bids.</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>3346fa6f-fde3-4a34-803c-5ce7b8a0bee8</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>c2daab6f-9aa7-49ca-be88-876c5d6e2464</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>017e828c-4dfd-47ac-a154-739790578fbd</mRID>
+          <name>Wiebke Albers (innogy SE)</name>
+        </Author>
+        <changes>alternative SUC</changes>
+        <date>2019-09-02T00:00:00</date>
+        <mRID>31e76fde-c81e-4d62-be72-f59b3bcd3fc7</mRID>
+        <number>1</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Operates a single DER unit.&lt;br/&gt;Distributed Energy Resources can consist of generation sources, energy storage facilities and facilities participating in Demand Response. Are mainly connected to distribution power grids but can also be connected to transmission power grids (e.g. Portugal).&lt;br/&gt;Can be an Asset Operator, a Generator or a Generation Asset Operator (cf. definitions in T3.3 deliverable).</description>
+      <mRID>9d306918-8a80-41e1-9545-c4173c3976b8</mRID>
+      <name>DER Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>SCADA operated by a System Operator.</description>
+      <mRID>328ba15c-42bf-42b1-945d-127aab24c7bd</mRID>
+      <name>System Operator SCADA</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>SCADA operated by an Aggregator.</description>
+      <mRID>c307526e-765c-4f70-83b7-6893c5118e3e</mRID>
+      <name>Aggregator SCADA</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Flexibility Platform (FP) for System Operators and Flexibility Service Providers that enables the trading of different flexibility products and services. A FP is operated by a Market Operator.&lt;br/&gt;&lt;br/&gt;Available to System Operators and Flexibility Services Providers. It is used to support the prequalification, the bidding, the activation and the verification processes, ensuring coordination between activities undertaken by several operators using the same flexible resources. Several national and regional FPs may exist.</description>
+      <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+      <name>Flexibility Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      <name>Operational planning and forecasting</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      </Area>
+      <description />
+      <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      <name>Operational planning and forecasting</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>d233fbe2-d6f8-4623-89c0-c50eea811e98</mRID>
+      <name>DER Structural Data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>8fd4a450-4a75-4d4f-ad42-9f5661d35651</mRID>
+      <name>DER Real Time Data</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Functional requirements</description>
+      <identifier>Cat1</identifier>
+      <mRID>59e7899c-d9ee-4534-81a6-81b37dce5e81</mRID>
+      <name>Functional</name>
+      <Requirement>
+        <description>Applicable standards, in particular:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;ICCP: Inter-Control Center Communications Protocol (IEC 60870-6/TASE.2),&lt;/li&gt;&lt;li&gt;Communication networks and systems for power utility automation (IEC 61850-8-2),&lt;/li&gt;&lt;li&gt;RESTful services.&lt;/li&gt;&lt;/ul&gt;</description>
+        <identifier>Req1</identifier>
+        <mRID>2b41cee9-30ef-41dc-93e2-291685c63dec</mRID>
+        <name>Transmissions between DEP and SCADA should be based on standards</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Security requirements</description>
+      <identifier>Cat2</identifier>
+      <mRID>c44d91be-533b-4762-9b73-aca8371243d3</mRID>
+      <name>Security</name>
+      <Requirement>
+        <description>Applicable standards, in particular IEC 62351.</description>
+        <identifier>Req2</identifier>
+        <mRID>63b15f5e-3edf-46e1-b142-af2d67d1a436</mRID>
+        <name>IT infrastructure of DER and/or aggregator meets safety standards</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description />
+      <identifier>Cat3</identifier>
+      <mRID>b50a27e2-b8b9-4aaa-947a-a459914dbda5</mRID>
+      <name>Performance</name>
+      <Requirement>
+        <description>According to KORRR art. 10, the refresh rate for the real-time data exchanges shall not be longer than 1 minute. It should be defined by each TSO in its control area.</description>
+        <identifier>Req3</identifier>
+        <mRID>5ef4999a-2781-4010-8e80-749933b35149</mRID>
+        <name>Real-time data sent from the DER unit reach SCADA systems in no more than 1 minute</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat4</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Encrypted data exchange</description>
+        <identifier>Req4</identifier>
+        <mRID>5e73c5d8-1027-40b6-8ced-7640662d12d2</mRID>
+        <name>DER-SCADA-REQ1</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability of DEP to forward activation requests from System Operators to DER</description>
+        <identifier>Req5</identifier>
+        <mRID>b5656698-619e-4c9e-9a4b-699003b8c341</mRID>
+        <name>DER-SCADA-REQ7</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability of DEP to forward near-real-time (up to 1 hour) data from DER's to System Operators</description>
+        <identifier>Req6</identifier>
+        <mRID>f7ecbcd4-cbd7-420d-8c1f-b66ad79e0305</mRID>
+        <name>DER-SCADA-REQ6</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability of DEP to forward real-time data from DER's to System Operators</description>
+        <identifier>Req7</identifier>
+        <mRID>dd1ce7c9-4f60-4b53-9271-27638175f59f</mRID>
+        <name>DER-SCADA-REQ4</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability of DEP to forward very-near-real-time (up to 1 minute) data from DER's to System Operators</description>
+        <identifier>Req8</identifier>
+        <mRID>99bbfdb2-f7ee-4289-953e-338013a1e262</mRID>
+        <name>DER-SCADA-REQ5</name>
+      </Requirement>
+      <Requirement>
+        <description>Communication link between DEP and SO's SCADA</description>
+        <identifier>Req9</identifier>
+        <mRID>3c811d2b-1a8d-4b89-8cef-e92165421fbd</mRID>
+        <name>DER-SCADA-REQ2</name>
+      </Requirement>
+      <Requirement>
+        <description>Safety of DER's IT infrastructure</description>
+        <identifier>Req10</identifier>
+        <mRID>f774b2e9-dbb0-49dd-a04c-ff6b47e24fa9</mRID>
+        <name>DER-SCADA-REQ3</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>9d306918-8a80-41e1-9545-c4173c3976b8</mRID>
+          </Actor>
+          <Actor>
+            <mRID>328ba15c-42bf-42b1-945d-127aab24c7bd</mRID>
+          </Actor>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <Actor>
+            <mRID>c307526e-765c-4f70-83b7-6893c5118e3e</mRID>
+          </Actor>
+          <Actor>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>23d8244a-4fb1-4b22-9d35-5ff3a8ebd05f</mRID>
+        <name>It is assumed that systems of authentication and access permission are implemented that allow data exchange with all individual DER units, even those that are part of the aggregator pool.</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description>This Use Case covers data exchanges:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;From individual DERs or aggregated DERs to TSO/DSO SCADAs for sending DER schedule, DER structural data and DER real-time setpoint data,&lt;/li&gt;&lt;li&gt;From TSO/DSO SCADAs to individual DERs or aggregated DERs for sending activation requests (except for very fast flexibility products).&lt;/li&gt;&lt;/ul&gt;It will not cover data exchanges from TSO/DSO SCADAs to DERs for remote control. It is assumed that activation itself is the responsibility of individual DER itself and/or its aggregator.</description>
+        <mRID>f57b2118-ba71-450d-88c7-3b7b287abfe7</mRID>
+        <name>Data are exchanged in both direction</name>
+        <number>2</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>b945eb07-6da2-4e9f-add9-1313ae76e0e6</mRID>
+        <name>Exchange data between DERs and Network Operators - overview</name>
+        <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image3.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>40fcbc8b-2e7e-4fbf-812f-418faa361fb7</mRID>
+        <name>Exchange data between DERs and Network Operators - scenarios flowchart</name>
+        <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image4.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>37ffc866-efa1-46c6-8046-2244bb18e77d</mRID>
+      <name>Exchange data between DERs and System Operators</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>a8b4c8f6-4c51-499b-9a8c-019a2a8d08db</mRID>
+        <shortDescription>The use case includes data exchange between distributed generators, demand response (DR) resources and energy storage devices, and a Data Exchange Platform (DEP) that communicates with TSO and DSO SCADA systems. DEP is not appropriate for time-critical data exchange (like activation of very fast products) thus being out of scope of this use case. It is assumed that the SCADA systems may require both schedule data for planning purpose and structural data (including connection diagrams) each time they are changed.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>4590d7a5-6990-410b-9cd7-289367fbefe7</mRID>
+        <name>Communication standards must be established</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>d0cbd34f-f3ff-4359-8317-b2f7c4d1820b</mRID>
+        <name>The legislative framework is needed (market)</name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>This is secondary to the provision of the cross-border service. In this case, it is necessary to implement international technical standards and meet the requirements arising therefrom.</description>
+        <mRID>238de331-a199-4eaa-be10-a8b4299c0c13</mRID>
+        <name>Cross-border exchange is required in case of cross-border service provision</name>
+        <number>3</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>&lt;br/&gt;1) The DER unit should ensure the implementation of the functionality specified in KORRR art. 17. This means that the DER unit needs to provide real-time data.&lt;br/&gt;2) The aggregator should ensure the implementation of the functionality specified in KORRR art. 17 and, in particular, those referred to in SO GL art. 53. This means that the aggregator must have a system that collects in real-time the setpoints of individual DER units and their configurations. &lt;br/&gt;3) DEP should be able to handle real-time processes and should be able to handle numerous information streams coming from DER devices. At the same time, DEP should be able to immediately transfer this information to the SCADA systems of TSOs and DSOs.&lt;br/&gt;4) SCADA systems of TSOs and DSOs should be able to receive information from DEP.</description>
+        <mRID>c8898f77-8312-4163-924e-4cb6aeb554dc</mRID>
+        <name>The system roles involved in this system use case should be available</name>
+        <number>4</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>ed36cf4a-5794-4599-b2ad-4a9ec3845c72</mRID>
+        <name>Ensuring the observability and controllability of DER units providing electrical energy and flexibility services to the power system.</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>d233fbe2-d6f8-4623-89c0-c50eea811e98</mRID>
+          </BusinessObject>
+          <description>Occasional provision of non-real-time data.&lt;br/&gt;Modsarus Use Case::InstanceName=DER Structural Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=In case of changes in portfolio or changes in topology.&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>9d306918-8a80-41e1-9545-c4173c3976b8</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>d31b9dcd-ff47-4c95-b50e-46f894da2adb</mRID>
+          <name>Provide DER changes in schedule data and DER structural data</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>d233fbe2-d6f8-4623-89c0-c50eea811e98</mRID>
+          </BusinessObject>
+          <description>Occasional provision of non-real-time data.&lt;br/&gt;Modsarus Use Case::InstanceName=DER Structural Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=In case of changes in portfolio or changes in topology.&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>c307526e-765c-4f70-83b7-6893c5118e3e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>c2284e6a-d611-49bc-bf50-1e82e8c2c4fe</mRID>
+          <name>Provide changes in aggregated DER schedule data and aggregated DER structural data</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>d233fbe2-d6f8-4623-89c0-c50eea811e98</mRID>
+          </BusinessObject>
+          <description>Transmission of schedule and structural data when they are changed (push method).&lt;br/&gt;Data are sent to the SCADA systems of the TSOs and the DSOs which need such data.&lt;br/&gt;Modsarus Use Case::InstanceName=DER Structural Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=In case of changes in portfolio or changes in topology.&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>328ba15c-42bf-42b1-945d-127aab24c7bd</mRID>
+          </InformationReceiver>
+          <mRID>8f4a678b-0d23-4208-8b39-bfb819da3def</mRID>
+          <name>Forward DER schedule and structural data</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>8fd4a450-4a75-4d4f-ad42-9f5661d35651</mRID>
+          </BusinessObject>
+          <description>Real-time data transfer for all DERs to SCADA systems (push method).&lt;br/&gt;Data are sent to the SCADA systems of the TSOs and the DSOs which need such data.&lt;br/&gt;Modsarus Use Case::InstanceName=DER Real Time Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=At least P,Q,V.&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>328ba15c-42bf-42b1-945d-127aab24c7bd</mRID>
+          </InformationReceiver>
+          <mRID>bde14040-de20-4987-b064-9f12826c11a3</mRID>
+          <name>Forward DER real-time setpoint data</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>8fd4a450-4a75-4d4f-ad42-9f5661d35651</mRID>
+          </BusinessObject>
+          <description>In the case of an aggregator that manages multiple DERs.&lt;br/&gt;Modsarus Use Case::InstanceName=DER Real Time Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=At least P,Q,V.&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>c307526e-765c-4f70-83b7-6893c5118e3e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>abc511cc-15e6-498c-b7a3-25b701092a56</mRID>
+          <name>Provide aggregated DER real-time setpoint data</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>8fd4a450-4a75-4d4f-ad42-9f5661d35651</mRID>
+          </BusinessObject>
+          <description>In case of the single DER unit.&lt;br/&gt;Modsarus Use Case::InstanceName=DER Real Time Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=At least P,Q,V.&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>9d306918-8a80-41e1-9545-c4173c3976b8</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>26cfd57b-95f2-4e93-922d-7ac83ed464c4</mRID>
+          <name>Provide DER real-time setpoint data</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>328ba15c-42bf-42b1-945d-127aab24c7bd</mRID>
+          </InformationProducer>
+          <mRID>ccf1ffcb-fe16-48a3-9fe8-c9f84c57059c</mRID>
+          <name>Take into account DER data</name>
+          <number>1.7</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>7bad6582-c3b6-46a4-a5cf-d1cee49776a5</mRID>
+          <name>Exchange data from DERs to Network Operators - activities flowchart</name>
+          <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>eb8d11c2-9b14-4b67-9201-ef7ea756ceaf</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image2.png</URI>
+        </Drawing>
+        <mRID>d750d5cb-09e7-4c67-ba03-6ed7b6fc2294</mRID>
+        <name>Exchange data from DERs to System Operators</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>2b41cee9-30ef-41dc-93e2-291685c63dec</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>63b15f5e-3edf-46e1-b142-af2d67d1a436</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>5ef4999a-2781-4010-8e80-749933b35149</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>5e73c5d8-1027-40b6-8ced-7640662d12d2</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>b5656698-619e-4c9e-9a4b-699003b8c341</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>f7ecbcd4-cbd7-420d-8c1f-b66ad79e0305</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>dd1ce7c9-4f60-4b53-9271-27638175f59f</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>99bbfdb2-f7ee-4289-953e-338013a1e262</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>3c811d2b-1a8d-4b89-8cef-e92165421fbd</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>f774b2e9-dbb0-49dd-a04c-ff6b47e24fa9</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <description>Cf. &amp;quot;Manage flexibility activations&amp;quot; data exchange System Use Case.</description>
+        <mRID>a701684f-f2e2-46dc-bb00-2c409326b3b6</mRID>
+        <name>Exchange data from System Operators to DERs</name>
+        <number>2</number>
+        <Requirement>
+          <mRID>2b41cee9-30ef-41dc-93e2-291685c63dec</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>63b15f5e-3edf-46e1-b142-af2d67d1a436</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>b5656698-619e-4c9e-9a4b-699003b8c341</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>f7ecbcd4-cbd7-420d-8c1f-b66ad79e0305</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>dd1ce7c9-4f60-4b53-9271-27638175f59f</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>99bbfdb2-f7ee-4289-953e-338013a1e262</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>5e73c5d8-1027-40b6-8ced-7640662d12d2</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>3c811d2b-1a8d-4b89-8cef-e92165421fbd</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>f774b2e9-dbb0-49dd-a04c-ff6b47e24fa9</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Data exchange between DER (Distributed Energy Resources) and SCADA systems of TSO and DSOs, using the Data Exchange Platform as an intermediary.</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>df68a75d-b673-4120-90d8-d09f4b75aad5</mRID>
+          <name>Wojciech Lubczynski (PSE)</name>
+        </Author>
+        <changes />
+        <date>2018-04-05T00:00:00</date>
+        <mRID>b32a119f-5d98-4305-b775-58ce414539e5</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>9c944286-b95e-437e-bd09-5be68e872dbc</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>e6768046-ed4d-4210-9ff6-d4838776ba9d</mRID>
+          <name>&#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-07-19T00:00:00</date>
+        <mRID>9605223a-1294-4c4d-a6a7-c9cfbdcffa6d</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>9daff4b9-cbd3-46af-8d17-1b631703e5ac</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>44f7f146-4f0b-49e6-8092-50bd2347b664</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>bc730f72-b3a4-477e-8688-2a5d4cf1bccf</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <changes>Remarks from Elering (Narrative) and EirGrid.</changes>
+        <date>2018-09-21T00:00:00</date>
+        <mRID>2dbc0723-40d0-44a0-ae86-0e91dcc35295</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>37b80f5e-1133-4b36-9c7e-4b9602ce14ac</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>c47ac39a-7f0a-4bd3-bc79-210ff41568b8</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>c6d486d2-bcb9-4b68-9f7d-2943e4470307</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>45100791-7647-4791-b065-d37097f528b0</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>0f99349a-a5d7-4c4c-b800-ab1b4aff7efb</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>ddaa1e88-6432-4555-85c6-0f864b547a9b</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>84abbc91-ea85-4acf-82a5-a8792c3be4ea</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>038c6a47-cd9c-45a8-8db4-307e4e10d042</mRID>
+        <number>8</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Any kind of system used to store data (including Data Hub and Flexibility Platform).</description>
+      <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+      <name>Data Source</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Any person who owns data and can give authorization to other parties to access them. Can be, inter alia: &lt;br/&gt;&lt;ul&gt;&lt;li&gt;Flexibility Services Provider&lt;/li&gt;&lt;li&gt;Market Operator&lt;/li&gt;&lt;li&gt;Consumer&lt;/li&gt;&lt;li&gt;Generator&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+      <name>Data Owner</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Any kind of system connected to a Data Exchange Platform and used by a market participant who wishes to receive data.</description>
+      <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+      <name>Application</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Customer Portal manages data users' authentication, access permissions and data logs. Customer Portals store data related to its services (e.g. authentication information, representation rights, access permissions, data logs).</description>
+      <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+      <name>Customer Portal</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Customer Portal for another country.&lt;br/&gt;Can also mean a separate portal in the same country.</description>
+      <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+      <name>Foreign Customer Portal</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      <name>Operational planning and forecasting</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      <name>Access to data</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      <name>Balance management</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      <name>Services related to end customers</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      </Area>
+      <description />
+      <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      <name>Operational planning and forecasting</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      </Area>
+      <description />
+      <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      <name>Access to data</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      </Area>
+      <description />
+      <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      <name>Balance management</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      </Area>
+      <description />
+      <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      <name>Services related to end customers</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+      <name>Customer Consent</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>18a3d942-56e4-4d68-b1f1-99e1d9bb5766</mRID>
+      <name>Authorization information</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info3</identifier>
+      <mRID>d4537ba5-98ff-4482-bda0-efa3c6218f60</mRID>
+      <name>Authorization request</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description />
+      <identifier>Cat1</identifier>
+      <mRID>bd1580a2-20b8-41fa-a8df-2ae6041bf604</mRID>
+      <name>Personal data</name>
+      <Requirement>
+        <description>Right to withdraw consent or restrict the processing or sharing their data. Explicit and unambiguous informed consent must be obtained</description>
+        <identifier>Req1</identifier>
+        <mRID>e784b912-12f0-463c-80dc-2ec08a13865d</mRID>
+        <name>Consent Citizen Right</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat2</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Ability to share access permissions between data owners, concerned DEPs, applications and data sources</description>
+        <identifier>Req2</identifier>
+        <mRID>51518695-787c-4a15-be61-8f859cbba0f1</mRID>
+        <name>AUTHZN -REQ3</name>
+      </Requirement>
+      <Requirement>
+        <description>Every person needs access permission</description>
+        <identifier>Req3</identifier>
+        <mRID>154407af-1387-46c5-849d-4b0d6a4ec164</mRID>
+        <name>AUTHZN -REQ1</name>
+      </Requirement>
+      <Requirement>
+        <description>Valid identity of the person receiving access permissions</description>
+        <identifier>Req4</identifier>
+        <mRID>93d37a8c-6416-4944-ae26-00f561f1e249</mRID>
+        <name>AUTHZN -REQ2</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+          </Actor>
+          <Actor>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </Actor>
+          <Actor>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </Actor>
+          <Actor>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <description>Data exchange platform to create and forward authorization information.</description>
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>ae2e1588-6340-444d-bcea-963320934fb1</mRID>
+        <name>Focus on data that has a big sensitivity to its owner and therefore requires high level of confidentiality.</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>fb86b7be-00cb-4248-b981-3a3f897dd490</mRID>
+        <name>For system operation and market operation, data is needed from data generating roles which require high confidentiality (e.g. private households).</name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>f80ef531-69cc-4060-87b3-23791ea1dafa</mRID>
+        <name>An authorization system has to be in place to enable cross border exchange of data.</name>
+        <number>3</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>c09b7259-1a8c-40ab-9466-5869f46790f6</mRID>
+        <name>Manage authorizations - overview</name>
+        <URI type="UMLDiagram">Manage access permissions\Image5.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>a5a09f50-2002-4744-b960-4cddc47ec71c</mRID>
+        <name>Manage authorizations - scenarios flowchart</name>
+        <URI type="UMLDiagram">Manage access permissions\Image6.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>455a7db3-78b0-4890-96cb-c0bd4dfb1013</mRID>
+      <name>Manage access permissions</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>56dcebee-ba58-4c87-ba09-eaa3b018efc5</mRID>
+        <shortDescription>The party who is the data owner (e.g. electricity consumer is the owner of its consumption data) can authorize any application to have access to its data. Cross-border acknowledgement of authorizations shall be enabled.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>d0a4fdb4-c3c4-4993-b0e1-e7b9d31bd1a7</mRID>
+        <name>DEPs and authorization systems of different countries and different authorization systems inside a country are able to acknowledge each other.</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>2ee4e238-23b1-4039-b744-f897cc84b3b6</mRID>
+        <name>Data generating roles need to have IT tools that enable access to data (RT or ex-post) in real time.</name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>In order to create and provide information about authorization, the DEP have to know which roles are interested to exchange data. Thus an overview of all roles that are generating or requesting data must be available along with the type of data they intend to generate or request.</description>
+        <mRID>dc9c7942-a875-487d-9b83-90899d591db5</mRID>
+        <name>Elaborating which roles are generating which type of data and which type of data is requested by which role</name>
+        <number>3</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>80e93616-341f-42b5-838d-5376357e50cc</mRID>
+        <name>Facilitating exchange of personal and other sensitive data as well as associated energy services (incl. across country borders).</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>Optional&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>a8d6a8a5-5219-4af3-b709-eddf7725da65</mRID>
+          <name>Acknowledge customer consent</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>1dd9bd76-405d-4b6e-9ab3-291052ded001</mRID>
+          <name>Acknowledge customer consent</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>The data owner can select the available applications in the list of service providers (see SUC Provide list of suppliers and ESCOs) and the available data objects.</description>
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <mRID>400baea8-4eb7-4249-9c72-a2b060ab4aa0</mRID>
+          <name>Choose application and data object from the list</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationReceiver>
+          <mRID>01d903dd-0c50-4b75-866d-1170530177fa</mRID>
+          <name>Create customer consent</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>01d903dd-0c50-4b75-866d-1170530177fa</mRID>
+          <name>Create customer consent</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <mRID>01d903dd-0c50-4b75-866d-1170530177fa</mRID>
+          <name>Create customer consent</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>57137ac8-4f5c-470e-ba2a-f8429e037290</mRID>
+          <name>Grant customer consent</name>
+          <number>1.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationReceiver>
+          <mRID>a7417081-628d-4ca8-9995-5adefa71d01d</mRID>
+          <name>Notify customer consent</name>
+          <number>1.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+          </InformationReceiver>
+          <mRID>a7417081-628d-4ca8-9995-5adefa71d01d</mRID>
+          <name>Notify customer consent</name>
+          <number>1.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+          </InformationReceiver>
+          <mRID>0b4cec2e-0dfe-4495-842a-cff37a331db5</mRID>
+          <name>Notify customer consent</name>
+          <number>1.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationReceiver>
+          <mRID>0b4cec2e-0dfe-4495-842a-cff37a331db5</mRID>
+          <name>Notify customer consent</name>
+          <number>1.11</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>c09fca11-f6ae-494f-a875-dc46f193423c</mRID>
+          <name>Present list of applications and list of data objects</name>
+          <number>1.12</number>
+          <service />
+        </Activity>
+        <description>&lt;ul&gt;&lt;li&gt;Via the Customer Portal and the Data Exchange Platform (DEP), any data owner (e.g. electricity consumer is the owner of its consumption data) can authorize any application (incl. from other countries) to have access to its data. A data owner can select the available applications from the list of service providers (see SUC Provide list of suppliers and ESCOs).&lt;/li&gt;&lt;li&gt;In the cross-border case, the DEP forwards the customer consent to the relevant foreign Customer Portal.&lt;/li&gt;&lt;li&gt;The Customer Portal operator sends the information about the authorization to the application (optional) and to the data source concerned (incl. from other countries).&lt;/li&gt;&lt;/ul&gt;An example for this scenario would be when a customer looks for a new electricity supplier or service provider (incl. aggregator), and, therefore, makes his data accessible.</description>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>457b1af7-ab87-4f14-92ab-aeedcc02e05d</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Manage access permissions\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>0133dd55-41ff-4f0b-89de-d9a60e50e69c</mRID>
+          <name>The Data Owner gives authorization directly - activities flowchart</name>
+          <URI type="UMLDiagram">Manage access permissions\Image2.png</URI>
+        </Drawing>
+        <mRID>09b1601a-e5cc-4fcd-a422-eb7e804480ad</mRID>
+        <name>The Data Owner gives authorization directly</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>e784b912-12f0-463c-80dc-2ec08a13865d</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>51518695-787c-4a15-be61-8f859cbba0f1</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>154407af-1387-46c5-849d-4b0d6a4ec164</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>93d37a8c-6416-4944-ae26-00f561f1e249</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>18a3d942-56e4-4d68-b1f1-99e1d9bb5766</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authorization information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationReceiver>
+          <mRID>fa95a0af-58ee-4742-bf31-260f0fe29665</mRID>
+          <name>Notify authorization refusal</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>d4537ba5-98ff-4482-bda0-efa3c6218f60</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authorization request&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>1f1f5c17-7efb-48ba-867d-92a7bf278b32</mRID>
+          <name>Notify authorization request</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationReceiver>
+          <mRID>fb7b40b8-0b3e-4a77-83fe-2b8439d0ad87</mRID>
+          <name>Notify customer consent</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>d4537ba5-98ff-4482-bda0-efa3c6218f60</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authorization request&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>61ff79cc-dbc5-4b6a-8ed8-e401d7c6fdd0</mRID>
+          <name>Request authorization</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>d4537ba5-98ff-4482-bda0-efa3c6218f60</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authorization request&lt;br/&gt;Modsarus Use Case::InstanceDescription=Authorization request&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationReceiver>
+          <mRID>acfff939-6cdb-4660-b3d5-ca15d970fc72</mRID>
+          <name>Notify authorization request</name>
+          <number>2.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <mRID>599ea8f9-0c67-4734-8df4-8be7d3d0d9a0</mRID>
+          <name>Acknowledge authorization request</name>
+          <number>2.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>650201bc-892f-4123-9487-2c5fc8743252</mRID>
+          <name>Update customer consent</name>
+          <number>2.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+          </InformationReceiver>
+          <mRID>a497915c-9582-4e1a-ba16-bc8d4ed0f149</mRID>
+          <name>Notify customer consent</name>
+          <number>2.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>0dd151df-ddcc-48b7-9236-208eb2f4a16c</mRID>
+          </InformationProducer>
+          <mRID>cd62d947-2c07-42fd-8479-d56eaafaff30</mRID>
+          <name>Acknowledge customer consent</name>
+          <number>2.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationProducer>
+          <mRID>d59579f2-89e2-4028-a90f-cd70334f68fb</mRID>
+          <name>Acknowledge customer consent</name>
+          <number>2.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>18a3d942-56e4-4d68-b1f1-99e1d9bb5766</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authorization information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationReceiver>
+          <mRID>ff066b54-c1f7-4923-b749-81f5f893c0e2</mRID>
+          <name>Notify authorization refusal</name>
+          <number>2.11</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>3b6d4cd1-7cd7-473e-af25-2cd3f990d415</mRID>
+          </InformationProducer>
+          <mRID>3dc7185e-61fa-4a17-97e3-4a4def67f9d1</mRID>
+          <name>Acknowledge authorization refusal</name>
+          <number>2.12</number>
+          <service />
+        </Activity>
+        <description>&lt;ul&gt;&lt;li&gt;An application sends request for authorization in order to access the data of a data owner.&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;In the cross-border case, the DEP forwards the customer consent to the relevant foreign Customer Portal.&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;The Customer Portal operator sends the information about the authorization to the application (optional) and to the data source concerned (incl. in other countries).&lt;/li&gt;&lt;/ul&gt;</description>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>e9fbffea-d0a9-4df2-8fe9-a46e639f4611</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Manage access permissions\Image3.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>d674f759-4cbd-4c1b-b713-70ef349a6fa1</mRID>
+          <name>The application requests for authorization - activities flowchart</name>
+          <URI type="UMLDiagram">Manage access permissions\Image4.png</URI>
+        </Drawing>
+        <mRID>2fe989f9-06b7-447e-8786-113ed2778425</mRID>
+        <name>The application requests for authorization</name>
+        <number>2</number>
+        <Requirement>
+          <mRID>e784b912-12f0-463c-80dc-2ec08a13865d</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>51518695-787c-4a15-be61-8f859cbba0f1</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>154407af-1387-46c5-849d-4b0d6a4ec164</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>93d37a8c-6416-4944-ae26-00f561f1e249</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Giving authorization by data owners (e.g. consumers) to other parties interested in using this data.</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>f4791e49-bb77-4fea-8146-de3d92a31fa4</mRID>
+          <name>Christian Radl (Transnet)</name>
+        </Author>
+        <changes />
+        <date>2018-04-06T00:00:00</date>
+        <mRID>50f3aa57-cc82-486f-b850-8c0d89b51c11</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>6de3657b-b3f9-4e76-8f73-22a8bd3e129f</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <Author>
+          <mRID>8bd29492-d08f-4b39-b0e3-9b69a963deb8</mRID>
+          <name> &#xD;
+Georg Rute (Elering)&#xD;
+&#xD;
+… </name>
+        </Author>
+        <changes />
+        <date>2018-06-01T00:00:00</date>
+        <mRID>54dc9e97-7797-4f66-af87-f1a4fff3e54e</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>56877bde-8efd-4d25-8da1-afe43b1ec76c</mRID>
+          <name>Mandimby Ranaivo R. (AKKA)</name>
+        </Author>
+        <Author>
+          <mRID>06eb9d41-263d-443e-bb6b-e99c528db0c9</mRID>
+          <name> &#xD;
+Florentin Dam (AKKA)</name>
+        </Author>
+        <changes />
+        <date>2018-07-17T00:00:00</date>
+        <mRID>afc10a92-06ac-4e24-9f93-5e697d28c605</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>9d86fb04-4612-4a79-9766-b2a34ce9e12a</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>5024c04b-6517-4f28-8336-e36b4ce8b194</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>1af74db8-aed2-4b59-8b25-625b27fd99f0</mRID>
+          <name>Mandimby Ranaivo R. (AKKA)</name>
+        </Author>
+        <changes />
+        <date>2018-09-05T00:00:00</date>
+        <mRID>a653ba45-e578-40cd-8981-d495ec029b80</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>1e0c2903-4ade-4060-a17d-d7889ed65957</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-09-21T00:00:00</date>
+        <mRID>a8868500-8863-4403-b708-c575d561a2f0</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>3ba7d63f-7497-4bb3-afca-2bb5916e4157</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>21728a57-316a-4629-bc14-2903a2000f84</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>aa96fe93-32f1-4b15-b204-89f6cb8070d3</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>3b4db24a-c917-4bb3-9b15-3308ee103be6</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>83b73f05-2f1d-4c2a-8898-4a3657159ccd</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>7eddd47f-6749-46fd-81b9-f0c0cbbc7c7b</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>f66ea3ec-ddbd-4442-b6de-1e1f47b51633</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>90aff938-cafb-4adf-b9ad-73c57e336acc</mRID>
+        <number>10</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>a0c421f3-ac13-45d2-a951-7dbb521e6039</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>&amp;#8216;Authorization Grant&amp;#8217; Business Object identical to &amp;#8216;Customer Consent&amp;#8217;.</changes>
+        <date>2020-08-05T00:00:00</date>
+        <mRID>4e52a0fd-aef0-4a0c-8e75-0cae10e18ae2</mRID>
+        <number>11</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

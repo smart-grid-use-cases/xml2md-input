@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Operates a Customer Portal.</description>
+      <mRID>26df8cd5-2699-4fc8-bd64-bbfc0698827f</mRID>
+      <name>Customer Portal Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Trust authority. Verifies the identity of authenticating parties.&lt;br/&gt;Some countries will have their own authentication service provider. For countries which will not, there may be a more global and to be defined one.</description>
+      <mRID>9488169b-e952-4818-b0f0-d417cf25f11b</mRID>
+      <name>Authentication Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Any person who owns data and can give authorization to other parties to access them. Can be, inter alia: &lt;br/&gt;&lt;ul&gt;&lt;li&gt;Flexibility Services Provider&lt;/li&gt;&lt;li&gt;Market Operator&lt;/li&gt;&lt;li&gt;Consumer&lt;/li&gt;&lt;li&gt;Generator&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+      <name>Data Owner</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Any natural person who has received representation rights from a data owner.</description>
+      <mRID>bd6ead6c-b65f-44e5-b686-9c9456170f0a</mRID>
+      <name>Data Delegated Third party</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Customer Portal for another country.&lt;br/&gt;Can also mean a separate portal in the same country.</description>
+      <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+      <name>Foreign Customer Portal</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Customer Portal manages data users' authentication, access permissions and data logs. Customer Portals store data related to its services (e.g. authentication information, representation rights, access permissions, data logs).</description>
+      <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+      <name>Customer Portal</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      <name>Access to data</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      <name>Operational planning and forecasting</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      <name>Services related to end customers</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      <name>Balance management</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      </Area>
+      <description />
+      <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      <name>Access to data</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      </Area>
+      <description />
+      <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      <name>Operational planning and forecasting</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      </Area>
+      <description />
+      <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      <name>Services related to end customers</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      </Area>
+      <description />
+      <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      <name>Balance management</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Logging Identification Data</identifier>
+      <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+      <name>Authenticate Information</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Representation Rights</identifier>
+      <mRID>2d556860-d3eb-4096-a4e9-da817e315002</mRID>
+      <name>Representation Rights</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description />
+      <identifier>Cat1</identifier>
+      <mRID>bd1580a2-20b8-41fa-a8df-2ae6041bf604</mRID>
+      <name>Personal data</name>
+      <Requirement>
+        <description>Right to secure direct access of own personal data and to any processing, storage or sharing details</description>
+        <identifier>Req1</identifier>
+        <mRID>2af6ad64-c90f-4bc9-aebd-7c01060f85c4</mRID>
+        <name>Access Citizen Right</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat2</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Ability to share information related to representation rights between data users and concerned Customer Portals</description>
+        <identifier>Req2</identifier>
+        <mRID>5798483d-0d41-4eee-8923-e6104e0a5407</mRID>
+        <name>AUTH-REQ-3</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability to share authentication information between data users, Customer Portal and Authentication Service Provider</description>
+        <identifier>Req3</identifier>
+        <mRID>61a984c8-570b-44ea-ae27-4ac6e8d539a4</mRID>
+        <name>AUTH-REQ-4</name>
+      </Requirement>
+      <Requirement>
+        <description>Authentication tools</description>
+        <identifier>Req4</identifier>
+        <mRID>f92f957a-3da4-4c7a-b131-07c09c7c78f5</mRID>
+        <name>AUTH-REQ-2</name>
+      </Requirement>
+      <Requirement>
+        <description>Right to access own data</description>
+        <identifier>Req5</identifier>
+        <mRID>6274a294-499d-4bb6-9d98-ef3d0a488633</mRID>
+        <name>AUTH-REQ-1</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Functional requirements</description>
+      <identifier>Cat3</identifier>
+      <mRID>59e7899c-d9ee-4534-81a6-81b37dce5e81</mRID>
+      <name>Functional</name>
+      <Requirement>
+        <description>Authentication means may include ID-card, mobile-ID or bank link. &lt;br/&gt;Information associated to authentication process may include name, surname and ID-code of individual customers; company name and registry code of corporate customers as well as name, surname and ID-code of their representatives.</description>
+        <identifier>Req6</identifier>
+        <mRID>1e05916d-6efd-4312-b48e-80cf75241cb5</mRID>
+        <name>Authentication means</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>26df8cd5-2699-4fc8-bd64-bbfc0698827f</mRID>
+          </Actor>
+          <Actor>
+            <mRID>9488169b-e952-4818-b0f0-d417cf25f11b</mRID>
+          </Actor>
+          <Actor>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </Actor>
+          <Actor>
+            <mRID>bd6ead6c-b65f-44e5-b686-9c9456170f0a</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </Actor>
+          <Actor>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </Actor>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>ea90f4af-ecac-45e6-9d39-a5ca6c23f46f</mRID>
+        <name>eIDAS (electronic IDentification, Authentication and trust Services) regulation and its trust levels shall be applied</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>0883e1f1-c04e-495f-afa1-adc32b854675</mRID>
+        <name>Private and/or commercially sensitive data needs to be exchanged</name>
+        <number>2</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>00fbbb2c-c15c-47b8-8eb4-1934f1bff340</mRID>
+        <name>Authenticate data users - overview</name>
+        <URI type="UMLDiagram">Authenticate data users\Image5.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>cbc6d527-0ca9-42e8-86ca-3045c0d62136</mRID>
+        <name>Authenticate data users - scenarios flowchart</name>
+        <URI type="UMLDiagram">Authenticate data users\Image6.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>70ddd78e-22a6-4642-87c0-ea314198c288</mRID>
+      <name>Authenticate data users</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>ccad8f1c-4ee2-4040-87eb-84c75a8a8f47</mRID>
+        <shortDescription>All data users need to be authenticated to a Customer Portal before having access to a Data Exchange Platform (DEP), for the exchange of individual metering data (private data) or any other information with restricted access.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>5bd31d3c-4274-4a35-93e5-578fdae0dc58</mRID>
+        <name>National or platform specific identification infrastructure – ID card, dedicated password, internet bank link, etc</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>95afdfdd-1157-486a-a02d-559c5a2caef4</mRID>
+        <name>Cross-border acknowledgment of different authentication schemes</name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>9b146541-23c2-44fc-9843-075922a33fb3</mRID>
+        <name>GDPR (General Data Protection Regulation) shall be applied.</name>
+        <number>3</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>905853ba-49cd-4e7d-beec-5ad4b6aff65d</mRID>
+        <name>Support easy but secure access to data</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+          </BusinessObject>
+          <description>Authentication means may include ID-card, mobile-ID or bank link. &lt;br/&gt;Information associated to authentication process may include name, surname and ID-code of individual customers; company name and registry code of corporate customers as well as name, surname and ID-code of their representatives.&lt;br/&gt;Modsarus Use Case::InstanceName=Authenticate Information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <Drawing>
+            <drawingType>activity overview</drawingType>
+            <mRID>{B7A60C82-A1DF-4683-BEC9-CE1BA03B83D2}</mRID>
+            <name>Activity1 - overview</name>
+            <URI type="UMLDiagram">Authenticate data users\Image3.png</URI>
+          </Drawing>
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>299c70cb-e83e-41ac-a327-2574e50f414c</mRID>
+          <name>Authenticate</name>
+          <number>1.1</number>
+          <Requirement>
+            <mRID>1e05916d-6efd-4312-b48e-80cf75241cb5</mRID>
+          </Requirement>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authenticate Information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>9488169b-e952-4818-b0f0-d417cf25f11b</mRID>
+          </InformationReceiver>
+          <mRID>589b0380-5f5a-4ca3-8cfe-ac5df32c372d</mRID>
+          <name>Verify Logging Identification</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Verifies the identity of authenticating parties.&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>9488169b-e952-4818-b0f0-d417cf25f11b</mRID>
+          </InformationProducer>
+          <mRID>3a05beb4-26da-4d2d-a047-d6f2d28dfcd6</mRID>
+          <name>Verify Identity</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authenticate access&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>bd6ead6c-b65f-44e5-b686-9c9456170f0a</mRID>
+          </InformationReceiver>
+          <mRID>d6378ace-96ac-475c-bf63-3bf670023571</mRID>
+          <name>Give access to data</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <mRID>7ac612ba-0be3-4d9c-82a5-eaa9405396e4</mRID>
+          <name>Access to Own Data</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>2d556860-d3eb-4096-a4e9-da817e315002</mRID>
+          </BusinessObject>
+          <description>A data owner gives representation rights for data per consumption/generation point. &lt;br/&gt;He/she can also select types of data (e.g. historical consumption/generation data, sub-meter data, operational data) for which he/she gives representation rights.&lt;br/&gt;He/she selects the persons to whom he/she gives representation rights.&lt;br/&gt;Modsarus Use Case::InstanceName=Representation Rights&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>69e7c854-408a-4ae4-a78e-bc19b6788e42</mRID>
+          <name>Delegate Representation Rights</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>2d556860-d3eb-4096-a4e9-da817e315002</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Representation Rights&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationReceiver>
+          <mRID>a56d2f99-5977-42b6-8551-e20623e612d5</mRID>
+          <name>Register Representation Rights</name>
+          <number>1.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>2d556860-d3eb-4096-a4e9-da817e315002</mRID>
+          </BusinessObject>
+          <description>Customer Portal operator checks the validity of the representation rights.&lt;br/&gt;Modsarus Use Case::InstanceName=Representation Rights&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>4d94c23c-6715-41e5-b589-d432e35faf7b</mRID>
+          <name>Verify Representation Rights</name>
+          <number>1.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>2d556860-d3eb-4096-a4e9-da817e315002</mRID>
+          </BusinessObject>
+          <description>If the representation right is given to a person in another country, then the Customer Portal operators of the involved countries share the information about representation rights between themselves.&lt;br/&gt;Modsarus Use Case::InstanceName=Representation Rights&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>4d76cff9-0f8a-46b9-99e0-cc60b0336047</mRID>
+          <name>Verify Representation Rights in a Foreign Country</name>
+          <number>1.9</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authenticate Information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>fd39f4c9-defb-47a3-ab08-1c3e9f746571</mRID>
+          <name>Notify Representation Rights</name>
+          <number>1.10</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authenticate Information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <Drawing>
+            <drawingType>activity overview</drawingType>
+            <mRID>{98E627CE-CFA1-4df7-866B-F70FB0D09F36}</mRID>
+            <name>Activity1 - overview</name>
+            <URI type="UMLDiagram">Authenticate data users\Image4.png</URI>
+          </Drawing>
+          <event />
+          <InformationProducer>
+            <mRID>bd6ead6c-b65f-44e5-b686-9c9456170f0a</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>26b8a659-cb7c-4bcb-b059-5be4094f845c</mRID>
+          <name>Authenticate</name>
+          <number>1.11</number>
+          <Requirement>
+            <mRID>1e05916d-6efd-4312-b48e-80cf75241cb5</mRID>
+          </Requirement>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>bd6ead6c-b65f-44e5-b686-9c9456170f0a</mRID>
+          </InformationProducer>
+          <mRID>b35388c7-b939-47e9-83a4-6f68893d950e</mRID>
+          <name>Access to Delegated Data</name>
+          <number>1.12</number>
+          <service />
+        </Activity>
+        <description>Any person needing access to personal or commercial data needs to be authenticated to a Customer Portal for having access to the data via a DEP &amp;#8211; either logging in through a Customer Portal or through third party application connected to a DEP. &lt;br/&gt;&lt;br/&gt;This may involve:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Consumer&amp;#8217;s/generator&amp;#8217;s access to own consumption/generation data;&lt;/li&gt;&lt;li&gt;Access to a person&amp;#8217;s data by another person who has received representation rights from data owner.&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;After authenticating himself/herself, the data owner (e.g. electricity consumer is the owner of its consumption data) can give representation rights to any other person who can then act on behalf of the data owner.&lt;br/&gt;&lt;br/&gt;Customer Portal operator checks the validity of the representation rights. If a representation right is given to a person in another country, then the Customer Portal operators of the involved countries share the information about representation rights between themselves.&lt;br/&gt;&lt;br/&gt;After authenticating himself/herself, the person who has received the representation rights can see who is he/she representing and act on behalf of data owner.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>a9056f33-9d50-4f5b-9d49-beab453c1611</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Authenticate data users\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>253c8c6d-f3f5-4c67-b17f-18f1e8bbebcd</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Authenticate data users\Image2.png</URI>
+        </Drawing>
+        <mRID>768c3906-7890-4035-84ad-914554f0f5dc</mRID>
+        <name>Authentication process and representation rights delegation</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>2af6ad64-c90f-4bc9-aebd-7c01060f85c4</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>5798483d-0d41-4eee-8923-e6104e0a5407</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>61a984c8-570b-44ea-ae27-4ac6e8d539a4</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>f92f957a-3da4-4c7a-b131-07c09c7c78f5</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>6274a294-499d-4bb6-9d98-ef3d0a488633</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Access to private data and other information with restricted access through a Customer Portal and a Data Exchange Platform only to authorized users</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>026e661c-4601-4858-9c44-1b63475ca1d6</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <changes />
+        <date>2018-04-12T00:00:00</date>
+        <mRID>9ec9e24b-ce07-4f3f-b5b2-e249b24c5438</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>457a59c1-0644-4ef6-ba10-6180891ccf4d</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <Author>
+          <mRID>466984c8-d5c3-4535-baa5-d3035574165b</mRID>
+          <name> &#xD;
+Georg Rute (Elering)&#xD;
+</name>
+        </Author>
+        <changes />
+        <date>2018-06-01T00:00:00</date>
+        <mRID>3e55f4bd-93cc-49ce-a7a1-a24911748ec1</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>22959af3-a373-4b15-b322-b3a658a1f54c</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>fc1a6cb5-7fed-4961-b8fb-e1d1f8e11411</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-06-28T00:00:00</date>
+        <mRID>5ce40aca-85be-4354-8b8c-9fbefb484c9e</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>b11daec7-9ea7-415f-aab0-be761fa0d857</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>8c1b9527-e06f-4833-a17f-13974c6d38b6</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-07-02T00:00:00</date>
+        <mRID>75b41d62-c9a6-4283-85a7-19a9289a9df3</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>ebc1a048-19f2-47f6-ab1d-86c31322a2ff</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>0338f141-8e19-425a-af8b-ceffa65a763a</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-10T00:00:00</date>
+        <mRID>863be41d-6034-4129-9963-90de02808344</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>c2ec3b70-dfa1-4f81-8e12-22203ac942cf</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>ae9165f4-d9e1-476d-bda3-a3aa0e809444</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes>&amp;#8220;Delegated Authentication&amp;#8221; changed into &amp;#8220;Representation Rights&amp;#8221;</changes>
+        <date>2018-08-19T00:00:00</date>
+        <mRID>4551a396-c5cd-4c7b-9fa9-699d26e44535</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>37910daf-688f-44cf-9367-9665dc8066c0</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>a53d7ccd-8d83-47a3-87d3-e43b09489d89</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>c17ed1af-0cee-4881-b43d-b3ee635400e2</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>39cff510-9330-485c-9128-0b18631b2f3d</mRID>
+          <name> Ricardo Jover (EDF)</name>
+        </Author>
+        <changes>Remarks from Innogy, Elering  (Automatic process for DEP, without Operator) and EirGrid.</changes>
+        <date>2018-09-21T00:00:00</date>
+        <mRID>4bff792e-e4ab-4852-aa99-cb1b8db81875</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>8a534da3-ae9f-45cc-9333-626a3e5e8423</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>09bc95a2-502c-4d64-b119-ff43a051063a</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>eab49e0b-864e-444c-b008-dd02fd6cb52b</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>2fde3289-9ff7-4195-ab7a-30fdf7addbb7</mRID>
+        <number>10</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>70484a76-bc80-4718-b363-5a04f03c8bd7</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>4ad3e673-34d3-4751-92f4-dc274bbcda13</mRID>
+        <number>11</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>b11fbef4-a257-4b49-aa68-302b94789ba4</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>648334de-ccd9-4807-a140-1ac5e32cf7ef</mRID>
+        <number>12</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

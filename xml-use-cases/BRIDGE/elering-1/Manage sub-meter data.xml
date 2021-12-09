@@ -1,0 +1,935 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Consumer, generator or storage facility owner.</description>
+      <mRID>cd408e86-b417-4753-9694-7e517e2d852a</mRID>
+      <name>Customer</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Sub-Meter Data Collection Tool is an information system which main functionality is to collect measurements from In-House Devices.&lt;br/&gt;Data is published to Sub-Meter Data Collection Tool, not requested by the tool.&lt;br/&gt;</description>
+      <mRID>6d6da729-6f3c-49f4-ac5b-8834147a20a8</mRID>
+      <name>Sub-Meter Data Collection Tool</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Automation Controller is an information system which main functionality is to send activation signals to In-House Devices.</description>
+      <mRID>0d0473c7-bfd2-4750-91ee-4c1453277b1e</mRID>
+      <name>Automation Controller</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Any kind of electrical device installed at a customer's location.&lt;br/&gt;E.g. heat pump, water boiler, EV charger.</description>
+      <mRID>7f424812-b086-4dc4-be53-b79b2acbec68</mRID>
+      <name>In-House Device</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data Hub is an information system which main functionality is to store and make available measurements (e.g. meter data, operational data) and associated master data. Data Hubs are not necessarily centralized in a country or in a region.</description>
+      <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+      <name>Data Hub</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Can be a Distribution Network Flexibility Provider or a Transmission Network Flexibility Provider (cf. definitions in T3.3 deliverable). &lt;br/&gt;Similar to Flexibility Aggregator. Can be both aggregator and individual consumer/generator. Type of Energy Service Provider.</description>
+      <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+      <name>Flexibility Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>A party offering energy-related services to any other party (adapted from ENTSOE-EFET-ebIX harmonized role model).&lt;br/&gt;Energy service provider (ESCO &amp;#8211; energy service company) is a market-based role which is responsible for delivering energy services to the customers (or to other parties of behalf of the customers). In case these services necessitate the access to customer&amp;#8217;s data, the consent of this customer is required. Examples of the executors of this role include aggregator, flexibility service provider, energy efficiency provider, energy monitoring provider. &lt;br/&gt;Can also be an Aggregator or a Generator (cf. definitions in T3.3 deliverable).</description>
+      <mRID>4c6daeab-d76a-411a-b30e-b78cd5094b54</mRID>
+      <name>Energy Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data hub operator owns and operates an information system which main functionality is to store and make available electricity (also gas, heat) metering data and associated master data. Can be :&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Grid Data Hub Operator in the sphere of a System Operator&lt;/li&gt;&lt;li&gt;Market Data Hub Operator in the sphere of a Market Operator&lt;/li&gt;&lt;li&gt;Meter Data Hub Operator in the sphere of a Metered Data Operator&lt;/li&gt;&lt;li&gt;Sub-meter Data Hub Operator in the sphere of an Energy Service Provider&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>c78ed029-b57b-4e34-a45d-3a5d729f9a20</mRID>
+      <name>Data Hub Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      <name>Access to data</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      <name>Operational planning and forecasting</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      <name>Services related to end customers</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      </Area>
+      <description />
+      <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      <name>Access to data</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      </Area>
+      <description />
+      <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      <name>Operational planning and forecasting</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      </Area>
+      <description />
+      <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      <name>Services related to end customers</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description>Time resolution:1 second.&lt;br/&gt;Content: energy, active power, reactive power, time-stamp, sub-meter ID, type of device behind the sub-meter (e.g. car charger, heating facility), energy flow direction (generation or consumption).</description>
+      <identifier>Info1</identifier>
+      <mRID>4bb24bb0-7f1f-419d-a6a2-c15c8cd3557f</mRID>
+      <name>Sub-Meter Data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>90883b6f-5b55-41d2-b437-0f3b354fa345</mRID>
+      <name>Request on Sub-Meter Data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info3</identifier>
+      <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+      <name>Customer Consent</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info4</identifier>
+      <mRID>c2c65024-04a2-4643-9c45-ac85151b327e</mRID>
+      <name>Control Signal</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat1</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Collection of data from sub-meters</description>
+        <identifier>Req1</identifier>
+        <mRID>6b0fd1d1-63a7-4e3e-a987-f19ef3e82850</mRID>
+        <name>SUBMET-REQ1</name>
+      </Requirement>
+      <Requirement>
+        <description>Storing sub-meter data in a data hub</description>
+        <identifier>Req2</identifier>
+        <mRID>82a2cdb6-181d-4091-a640-794ce6ccb8a8</mRID>
+        <name>SUBMET-REQ3</name>
+      </Requirement>
+      <Requirement>
+        <description>Transmission protocols of sub-metering</description>
+        <identifier>Req9</identifier>
+        <mRID>7387fec5-9fed-4842-ba6b-54843d92873d</mRID>
+        <name>SUBMET-REQ5</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability of DEP to forward activation orders from a customer (data owner) or application (energy service provider) to devices</description>
+        <identifier>Req10</identifier>
+        <mRID>dc149914-c8cd-43c3-ab32-65bbd30a3ce2</mRID>
+        <name>SUBMET-REQ7</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability of DEP to forward sub-meter data from data hub to customer (data owner) and application (energy service provider)</description>
+        <identifier>Req11</identifier>
+        <mRID>e07bb719-575d-4c26-aaa3-6a40c8ecdf63</mRID>
+        <name>SUBMET-REQ2</name>
+      </Requirement>
+      <Requirement>
+        <description>Data format of sub-metering</description>
+        <identifier>Req12</identifier>
+        <mRID>426c7705-9872-4475-87ff-0887cff16879</mRID>
+        <name>SUBMET-REQ4</name>
+      </Requirement>
+      <Requirement>
+        <description>SLA between customer and energy service provider</description>
+        <identifier>Req13</identifier>
+        <mRID>0762ff37-9e63-405d-b133-4c3c6d4981dd</mRID>
+        <name>SUBMET-REQ6</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Functional requirements</description>
+      <identifier>Cat2</identifier>
+      <mRID>59e7899c-d9ee-4534-81a6-81b37dce5e81</mRID>
+      <name>Functional</name>
+      <Requirement>
+        <description>Data is published to Sub-Meter Collection Tool, not requested by it. &lt;br/&gt;Sub-Meter Data Collection Tool checks quality of received data: check within the scope of the device, e.g. that data packets are well formed and within reasonable bounds for the device, and across multiple devices, e.g. that readings from sub-meters are consistent with the aggregate reading from the main meter in the location. This quality check is very dependent on the geometry/setup of the sub meters (sub-meters of sub-meters, generated power, thermal energy...). Validation is therefore highly application/use case specific.&lt;br/&gt;Then, Sub-Meter Collection Tool sends data to Data Hub for storing.</description>
+        <identifier>Req3</identifier>
+        <mRID>595982bc-539c-4bc9-9e6d-f025a932c60a</mRID>
+        <name>Sub-Meter Collection Tool collects data from devices</name>
+      </Requirement>
+      <Requirement>
+        <description />
+        <identifier>Req5</identifier>
+        <mRID>2532dcb1-85fa-4cbe-baf5-c777cff73215</mRID>
+        <name>Data Hub is used by Sub-Meter Data Operators</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description />
+      <identifier>Cat3</identifier>
+      <mRID>b50a27e2-b8b9-4aaa-947a-a459914dbda5</mRID>
+      <name>Performance</name>
+      <Requirement>
+        <description />
+        <identifier>Req4</identifier>
+        <mRID>4a886828-21d2-4e11-ae98-a7d6ca505cb9</mRID>
+        <name>Sub-meter data must be available up to one second later after reception</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description />
+      <identifier />
+      <mRID />
+      <name />
+      <Requirement>
+        <description />
+        <identifier>Req6</identifier>
+        <mRID>6bdb83c1-a2dd-4591-8fd2-3dfb567d4883</mRID>
+        <name>Data format for sub-metering: JSON, RFC8259/ECMA404.</name>
+      </Requirement>
+      <Requirement>
+        <description />
+        <identifier>Req7</identifier>
+        <mRID>7031117d-1837-4c9a-badc-c13ea831acaf</mRID>
+        <name>Transmission protocols for sub-metering: MQTT, ISO/IEC PRF 20922, TLS, RFC6176</name>
+      </Requirement>
+      <Requirement>
+        <description />
+        <identifier>Req8</identifier>
+        <mRID>f85ceac5-708f-4b4c-94af-5749149a676e</mRID>
+        <name>Terms of conditions to be agreed between customer and energy service provider – specify which data from which devices to be exchanged, which granularity (e.g. hourly, 1 second), when available (e.g. once a day, very close to real time), etc</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>cd408e86-b417-4753-9694-7e517e2d852a</mRID>
+          </Actor>
+          <Actor>
+            <mRID>6d6da729-6f3c-49f4-ac5b-8834147a20a8</mRID>
+          </Actor>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <Actor>
+            <mRID>0d0473c7-bfd2-4750-91ee-4c1453277b1e</mRID>
+          </Actor>
+          <Actor>
+            <mRID>7f424812-b086-4dc4-be53-b79b2acbec68</mRID>
+          </Actor>
+          <Actor>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </Actor>
+          <Actor>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </Actor>
+          <Actor>
+            <mRID>4c6daeab-d76a-411a-b30e-b78cd5094b54</mRID>
+          </Actor>
+          <Actor>
+            <mRID>c78ed029-b57b-4e34-a45d-3a5d729f9a20</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>2780ac55-670f-4df9-b121-400d019367a1</mRID>
+        <name>Every individual and organization has the right to make the decisions regarding the data of their devices, incl. easy access to these data by themselves and granting access to third parties.</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>40253c1e-2dcd-427b-a584-d977b90b1cbb</mRID>
+        <name>If the DEP maintains local copies of data or audit logs of transfers, then these are also subject to suitable data and privacy protections.</name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>02e02bdb-75d9-44f4-9e96-115cc48d0ac6</mRID>
+        <name>Rules for data protection and privacy are in place (authentication of users, consent management).</name>
+        <number>3</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>984675e1-c29c-4fc0-bdb9-e1bdfc0e6095</mRID>
+        <name>Most of the meter readings will be sent by certified meters. But certified meter data is not always enough: one may need more granular data (e.g. measurements on device level, measurements per second/minute) and take advantage of finer grained sub-meters </name>
+        <number>4</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>7236dced-3594-4864-a2e7-b72b60c2a248</mRID>
+        <name>Manage sub-meter data - overview</name>
+        <URI type="UMLDiagram">Manage sub-meter data\Image7.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>1d22feb0-a7ce-46cc-8f0f-ee00637ad8b8</mRID>
+        <name>Manage sub-meter data - scenarios flowchart</name>
+        <URI type="UMLDiagram">Manage sub-meter data\Image8.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>448262b7-933a-405d-b941-3ec4eff0fb9d</mRID>
+      <name>Manage sub-meter data</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>eb407968-8283-4702-8663-fc76332eb28e</mRID>
+        <shortDescription>Communication with different energy consuming and producing devices should be enabled in an organized way to satisfy the needs of different stakeholders. Customers need to monitor and control their devices. Flexibility service providers (flexibility aggregators) and other energy service providers need access for service provision based on these devices. TSOs and DSOs need information for flexibility settlement.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>dce7eec1-e3a2-4345-9f1d-75ddbf789913</mRID>
+        <name>Sub-meter data operator is needed.</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>This assumes access by energy service provider of one country to sub-meter devices in another country.</description>
+        <mRID>4259fbde-dbfd-4133-bb11-fa1e8ca9647b</mRID>
+        <name>Cross-border service provision is required. </name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>6d2fc495-f9fc-457a-bf44-510d93d3ab69</mRID>
+        <name>Standardized/harmonized rules to communicate with the devices.</name>
+        <number>3</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>91d8a6d8-bdcb-44d4-a7b0-837873af1dc5</mRID>
+        <name>Support easy access to sub-meter data</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>4bb24bb0-7f1f-419d-a6a2-c15c8cd3557f</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Sub-Meter Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>7f424812-b086-4dc4-be53-b79b2acbec68</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>6d6da729-6f3c-49f4-ac5b-8834147a20a8</mRID>
+          </InformationReceiver>
+          <mRID>d407e8b5-f4a4-47c7-9e84-a0dab1f14daa</mRID>
+          <name>Send sub-meter data</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>4bb24bb0-7f1f-419d-a6a2-c15c8cd3557f</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Sub-Meter Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>6d6da729-6f3c-49f4-ac5b-8834147a20a8</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationReceiver>
+          <mRID>ee703586-a44b-41a5-b2f1-05fa47cb865b</mRID>
+          <name>Check sub-meter data quality</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationProducer>
+          <mRID>cacfd07d-dbd0-4ffd-b02f-8a83fafb4cd0</mRID>
+          <name>Store sub-meter data</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>07d02354-42aa-44f4-ab30-da431cd00da8</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Manage sub-meter data\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>edcb6774-3e86-4381-b3fb-2ccf90039818</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Manage sub-meter data\Image2.png</URI>
+        </Drawing>
+        <mRID>c37c9d22-16f4-4197-97f3-fbfc30992e17</mRID>
+        <name>Collect sub-meter data</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>6b0fd1d1-63a7-4e3e-a987-f19ef3e82850</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>82a2cdb6-181d-4091-a640-794ce6ccb8a8</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>4bb24bb0-7f1f-419d-a6a2-c15c8cd3557f</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Sub-Meter Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>cd408e86-b417-4753-9694-7e517e2d852a</mRID>
+          </InformationReceiver>
+          <mRID>0e94b0f3-13a8-4a44-85ba-72e29fd8774a</mRID>
+          <name>Forward sub-meter data</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationProducer>
+          <mRID>0028fbc4-af09-4bf5-9713-5519c6c437b2</mRID>
+          <name>Process data request</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <mRID>408b81b7-a39f-45a6-bac7-4b380b625e36</mRID>
+          <name>Receive sub-meter data</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>cd408e86-b417-4753-9694-7e517e2d852a</mRID>
+          </InformationProducer>
+          <mRID>8ffe84f5-b013-40bb-b62f-ef902bf58f24</mRID>
+          <name>Receive sub-meter data</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>90883b6f-5b55-41d2-b437-0f3b354fa345</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Request on Sub-Meter Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>d72ff87a-4ef8-4ada-a86d-6c257ff4666d</mRID>
+          <name>Request specific consumption or generation data of devices</name>
+          <number>2.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>90883b6f-5b55-41d2-b437-0f3b354fa345</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Request on Sub-Meter Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>cd408e86-b417-4753-9694-7e517e2d852a</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>a400e798-1e06-4f92-b85b-9de63bbb9dbd</mRID>
+          <name>Request specific consumption or generation data of devices</name>
+          <number>2.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer Consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>2d74fa23-ed0d-4715-aeeb-e24d0a4c5575</mRID>
+          <name>Check existence of valid consent</name>
+          <number>2.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>90883b6f-5b55-41d2-b437-0f3b354fa345</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Request on Sub-Meter Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationReceiver>
+          <mRID>b1c31d37-8617-40cd-a4a1-b4648cf321f2</mRID>
+          <name>Forward request on sub-meter data</name>
+          <number>2.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>4bb24bb0-7f1f-419d-a6a2-c15c8cd3557f</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Sub-Meter Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>fcbbf74d-ae92-40d6-a378-b6588a099e52</mRID>
+          <name>Send sub-meter data</name>
+          <number>2.9</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>71235399-d3a7-43f0-9c8a-f3e22a655163</mRID>
+          <name>Ensure data collection from sub-meter level devices to be made available over DEP</name>
+          <URI type="UMLDiagram">Manage sub-meter data\Image3.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>5118a582-6b65-459b-af4f-81e3efe04496</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Manage sub-meter data\Image4.png</URI>
+        </Drawing>
+        <mRID>5e0d2a8a-97c0-4dd0-9482-8eaa6fdd6992</mRID>
+        <name>Ensure data collection from sub-meter level devices to be made available over DEP</name>
+        <number>2</number>
+        <Precondition>
+          <description>i. Either customer finds the flexibility service provider in the list on DEP&lt;br/&gt;ii. Or flexibility service provider contacts potential customer directly</description>
+          <mRID>9aba6149-fa93-4106-ae41-9d53ececd89c</mRID>
+          <name>* A contract must exist between customer and flexibility service provider</name>
+        </Precondition>
+        <Precondition>
+          <description />
+          <mRID>7a899166-3878-415b-a7f8-4a003e328e84</mRID>
+          <name>* Sub-meter data collection tool must be already registered on DEP as an energy service provider application – see SUC ‘Integrate new application’</name>
+        </Precondition>
+        <Precondition>
+          <description />
+          <mRID>642a8b49-9028-4b59-ba5a-ad25343b0f2f</mRID>
+          <name>* Sub-meter data collection tool must appear in the list of applications on DEP – see SUC ‘Provide list of suppliers and ESCOs’</name>
+        </Precondition>
+        <Requirement>
+          <mRID>595982bc-539c-4bc9-9e6d-f025a932c60a</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>4a886828-21d2-4e11-ae98-a7d6ca505cb9</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>2532dcb1-85fa-4cbe-baf5-c777cff73215</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>6bdb83c1-a2dd-4591-8fd2-3dfb567d4883</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>7031117d-1837-4c9a-badc-c13ea831acaf</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>f85ceac5-708f-4b4c-94af-5749149a676e</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>7387fec5-9fed-4842-ba6b-54843d92873d</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>dc149914-c8cd-43c3-ab32-65bbd30a3ce2</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>e07bb719-575d-4c26-aaa3-6a40c8ecdf63</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>426c7705-9872-4475-87ff-0887cff16879</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>0762ff37-9e63-405d-b133-4c3c6d4981dd</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>c2c65024-04a2-4643-9c45-ac85151b327e</mRID>
+          </BusinessObject>
+          <description>Customer (consumer/generator) can order directly the Sub-Meter Data Operator to activate his/her devices.&lt;br/&gt;Modsarus Use Case::InstanceName=Control Signal&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>cd408e86-b417-4753-9694-7e517e2d852a</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>0d0473c7-bfd2-4750-91ee-4c1453277b1e</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>9aa68f55-861b-4ab3-ae4a-55021a398420</mRID>
+          <name>Send activation order</name>
+          <number>3.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c2c65024-04a2-4643-9c45-ac85151b327e</mRID>
+          </BusinessObject>
+          <description>An activation order can be sent by Energy Service Provider to Sub-Meter Data Operator (operating Automation Controller), based on the defined coordination mechanisms and TSO&amp;#8217;s or DSO&amp;#8217;s request to activate some flexibility.&lt;br/&gt;Modsarus Use Case::InstanceName=Control Signal&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>2c03850f-a919-41af-8106-e0b5366dd713</mRID>
+          <name>Send activation order</name>
+          <number>3.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bbac2544-418c-4356-b574-c4b6bf048588</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Customer consent&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>970801fb-6fd6-4380-bff0-7c06da883c0e</mRID>
+          <name>Check existence of valid consent</name>
+          <number>3.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c2c65024-04a2-4643-9c45-ac85151b327e</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Control Signal&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>0d0473c7-bfd2-4750-91ee-4c1453277b1e</mRID>
+          </InformationReceiver>
+          <mRID>6fd653ef-4e23-48f3-9bf6-3f798442df81</mRID>
+          <name>Forward control signal</name>
+          <number>3.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>c2c65024-04a2-4643-9c45-ac85151b327e</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Control Signal&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>0d0473c7-bfd2-4750-91ee-4c1453277b1e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>7f424812-b086-4dc4-be53-b79b2acbec68</mRID>
+          </InformationReceiver>
+          <mRID>3124f217-d938-4824-8d71-ea7a585aab34</mRID>
+          <name>Send control signal</name>
+          <number>3.5</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>0d0960d0-7eae-4332-a2a5-719ef91877da</mRID>
+          <name>Enable sending control signals to devices over DEP</name>
+          <URI type="UMLDiagram">Manage sub-meter data\Image5.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>cdc99632-fd28-4ab0-b9a6-44dc57bc4b7e</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Manage sub-meter data\Image6.png</URI>
+        </Drawing>
+        <mRID>fff26187-28c5-4cfa-93b0-b7654f5057ea</mRID>
+        <name>Enable sending control signals to devices over DEP</name>
+        <number>3</number>
+        <Requirement>
+          <mRID>2532dcb1-85fa-4cbe-baf5-c777cff73215</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Using data exchange platform for exchanging sub-meter data. A sub-meter data is a data measured by a non-revenue grade meter and related to tariffs.</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>cba06a67-870e-4b2a-bbd8-f37ddef5a7fa</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <changes />
+        <date>2018-04-12T00:00:00</date>
+        <mRID>cca036c4-14d3-4226-a5b3-8a00305bacec</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>4f8b3377-4db8-4bdf-b1d5-ffd3129985d3</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <Author>
+          <mRID>13d668ca-bc64-4d4a-9215-3d8060a9f738</mRID>
+          <name> &#xD;
+Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>228618e7-444c-4978-b968-2e5760044f18</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-05-07T00:00:00</date>
+        <mRID>207d2bf9-bdd2-4c6d-ba67-ef05db794efd</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>56d2ce45-a56e-4988-9e33-dd98f1a3a910</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <Author>
+          <mRID>1a28befb-d6f2-493e-a183-ee1f9e5c4e34</mRID>
+          <name> &#xD;
+Graham Oakes (Upside)</name>
+        </Author>
+        <Author>
+          <mRID>5a2cd262-e53e-4eb8-9ac4-ce99469425b3</mRID>
+          <name> &#xD;
+Mitchell Curtis (Upside)</name>
+        </Author>
+        <changes />
+        <date>2018-08-11T00:00:00</date>
+        <mRID>3c5cc77f-0169-448c-b160-a459f009f2dd</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>7af3041e-24e9-4dcb-b7f6-e0f2d418edc3</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>6e1f4338-8394-45ed-ad23-6934cec63a33</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-05-17T00:00:00</date>
+        <mRID>93075e0b-89e8-46f5-a815-e3d5def37add</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>f5f3772c-7988-4513-a8b5-053ee89059ff</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <Author>
+          <mRID>848a2278-6f0a-45d2-b615-30c34a48dd33</mRID>
+          <name> &#xD;
+Olav Rossøy (Enoco)</name>
+        </Author>
+        <changes />
+        <date>2018-05-25T00:00:00</date>
+        <mRID>3de0ae24-a9ff-4f43-b71e-ebf4e7c93d88</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>e2402636-5557-4046-8d86-a8148b0aac41</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>44ce8f11-7c60-45ff-af07-f7382aa10908</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-06-06T00:00:00</date>
+        <mRID>a514b4e7-905e-430d-9dcd-1c4629de59b1</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>933635ab-22da-4a22-b2b0-b4e48aae5711</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>f5fa3706-8d36-418e-ae8d-e7925457ff2a</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>37c4f978-b69b-4f23-b96b-4e47d17f4961</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>3dde5025-1470-4f99-bef8-ac224fae9d8b</mRID>
+          <name> Ricardo Jover (EDF)</name>
+        </Author>
+        <changes>Remarks from Innogy, Elering and EirGrid.</changes>
+        <date>2018-09-21T00:00:00</date>
+        <mRID>27bb2888-23b9-47e7-b591-fa9fef29b180</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>0db1416c-6e02-4030-bca1-98bceef4e757</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>279a5ce2-b53c-4e94-8849-5155ed55cc68</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>8620693f-d514-4da2-9860-57dadab54c92</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>c3ba57ad-68c3-4347-b187-af358f13f732</mRID>
+        <number>10</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>db81fecb-ced1-4f35-b628-1124760fd655</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>c2c4ff24-260e-4760-a2d2-c61a6eeb1cc4</mRID>
+        <number>11</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>9a5b855c-0608-4511-92cf-9862b9e71a34</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>d485824c-39dc-433c-8d80-47fd6c53c09b</mRID>
+        <number>12</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

@@ -1,0 +1,717 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Data Hub is an information system which main functionality is to store and make available measurements (e.g. meter data, operational data) and associated master data. Data Hubs are not necessarily centralized in a country or in a region.</description>
+      <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+      <name>Data Hub</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Provide metered data to authorized users in a transparent and non-discriminatory manner&lt;br/&gt;</description>
+      <mRID>f54a3eef-e16c-4917-9fb7-ba2e51f07da6</mRID>
+      <name>Metered Data Operator (MDO)</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Meter Data Collection Tool is an information system which main functionality is to collect meter readings from electricity meters.</description>
+      <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+      <name>Meter Data Collection Tool</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>System Operator means a natural or legal person responsible for operating, ensuring the maintenance of and, if necessary, developing the system in a given area and, where applicable, its interconnections with other systems, and for ensuring the long-term ability of the system to meet reasonable demands for the distribution or transmission of electricity (cf. ENTSOE-EFET-ebIX harmonized role model 2019). &lt;br/&gt;Can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Transmission System Operator (cf. definition in T3.3 deliverable), for frequency control, congestion management and voltage control on transmission network,&lt;/li&gt;&lt;li&gt;A Distribution System Operator (cf. definition in T3.3 deliverable), for congestion management and voltage control on distribution network.&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;NB: In some countries (e.g. Germany and Poland), the high voltage network is part of the distribution grid and in other countries (e. g. France and Italy) the high voltage network is part of the transmission grid. &lt;br/&gt;&lt;br/&gt;A System Operator can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Primary System Operator,&lt;/li&gt;&lt;li&gt;A Secondary System Operator.&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+      <name>System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>A market operator is a party that provides a service whereby the offers to sell electricity are matched with bids to buy electricity (cf. ENTSOE-EFET-ebIX harmonized role model 2019).&lt;br/&gt;In EU-SysFlex project, a market operator not only trades electricity but also flexibility services.&lt;br/&gt;Organize auctions (continuous auctions, discrete auctions, calls for tender) between buyers and sellers of electricity-related products in the markets, and more generally publish the corresponding prices, for assets connected to power grid.&lt;br/&gt;Manage/operate the platform for trading (where bids and offers are collected).&lt;br/&gt;Clear the market and communicate results.&lt;br/&gt;(cf. definition in T3.3 deliverable)&lt;br/&gt;</description>
+      <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+      <name>Market Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Can be a Distribution Network Flexibility Provider or a Transmission Network Flexibility Provider (cf. definitions in T3.3 deliverable). &lt;br/&gt;Similar to Flexibility Aggregator. Can be both aggregator and individual consumer/generator. Type of Energy Service Provider.</description>
+      <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+      <name>Flexibility Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data hub operator owns and operates an information system which main functionality is to store and make available electricity (also gas, heat) metering data and associated master data. Can be :&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Grid Data Hub Operator in the sphere of a System Operator&lt;/li&gt;&lt;li&gt;Market Data Hub Operator in the sphere of a Market Operator&lt;/li&gt;&lt;li&gt;Meter Data Hub Operator in the sphere of a Metered Data Operator&lt;/li&gt;&lt;li&gt;Sub-meter Data Hub Operator in the sphere of an Energy Service Provider&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>c78ed029-b57b-4e34-a45d-3a5d729f9a20</mRID>
+      <name>Data Hub Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      <name>Access to data</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      <name>Operational planning and forecasting</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      <name>Services related to end customers</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      <name>Balance management</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      </Area>
+      <description />
+      <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      <name>Access to data</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      </Area>
+      <description />
+      <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      <name>Operational planning and forecasting</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      </Area>
+      <description />
+      <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      <name>Services related to end customers</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      </Area>
+      <description />
+      <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      <name>Balance management</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+      <name>Authenticate Information</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>620429a9-a8f8-48c6-bf92-5f3e362b6cff</mRID>
+      <name>Metering Data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info3</identifier>
+      <mRID>21762d22-bc38-489c-b1a7-a5db4ca4945f</mRID>
+      <name>Market Data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info4</identifier>
+      <mRID>cdb8292b-f5e6-4f45-bee0-25916c5c6cbf</mRID>
+      <name>Request on market data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Congestion matrices are provided by System Operators and stored in Flexibility Platforms. It consists in a matrix based on grid models. Flexibility bids are inserted into the matrix, in order to check whether congestions would occur.</description>
+      <identifier>Info5</identifier>
+      <mRID>1d84924c-81aa-4e8a-b1b4-0a5be6a8b488</mRID>
+      <name>Congestion Matrix</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat1</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Get near-real-time data (up to 1 hour) from meters</description>
+        <identifier>Req1</identifier>
+        <mRID>176b9940-9da9-45fa-b76b-db17de4ffbca</mRID>
+        <name>DC-REQ1.1</name>
+      </Requirement>
+      <Requirement>
+        <description>Get historical data (monthly) from conventional meters</description>
+        <identifier>Req2</identifier>
+        <mRID>16aced1b-e4e3-4345-8316-278b3691b313</mRID>
+        <name>DC-REQ1.2</name>
+      </Requirement>
+      <Requirement>
+        <description>Store data in a meter data hub</description>
+        <identifier>Req3</identifier>
+        <mRID>7c86cd26-f793-4a23-98ed-bfea4035d883</mRID>
+        <name>DC-REQ1.3</name>
+      </Requirement>
+      <Requirement>
+        <description>Get near-real-time (up to 1 hour) data from market</description>
+        <identifier>Req4</identifier>
+        <mRID>c7b8d744-dbbc-4fe9-8932-d072212e22cb</mRID>
+        <name>DC-REQ2.1</name>
+      </Requirement>
+      <Requirement>
+        <description>Get historical data from market</description>
+        <identifier>Req5</identifier>
+        <mRID>d70ae303-c4c4-47bf-8814-eed06b87bfb3</mRID>
+        <name>DC-REQ2.2</name>
+      </Requirement>
+      <Requirement>
+        <description>Store data in a market data hub</description>
+        <identifier>Req6</identifier>
+        <mRID>786acf6f-952c-4c5a-b4c2-c5b5ab7ae331</mRID>
+        <name>DC-REQ2.3</name>
+      </Requirement>
+      <Requirement>
+        <description>Get very-near-real-time (up to 1 minute) data from grid</description>
+        <identifier>Req7</identifier>
+        <mRID>57301224-834e-4319-ae19-5efb9150541f</mRID>
+        <name>DC-REQ3.1</name>
+      </Requirement>
+      <Requirement>
+        <description>Get near-real-time (up to 1 hour) data from grid</description>
+        <identifier>Req8</identifier>
+        <mRID>0ed0485f-31be-4cf6-a49a-18f8cd2a65e9</mRID>
+        <name>DC-REQ3.2</name>
+      </Requirement>
+      <Requirement>
+        <description>Get historical data from grid</description>
+        <identifier>Req9</identifier>
+        <mRID>1b901786-140a-404e-9369-adae4ff9dbd5</mRID>
+        <name>DC-REQ3.3</name>
+      </Requirement>
+      <Requirement>
+        <description>Store data in a grid data hub</description>
+        <identifier>Req10</identifier>
+        <mRID>de4e7a1e-ad65-4477-b158-4abcc02570be</mRID>
+        <name>DC-REQ3.4</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </Actor>
+          <Actor>
+            <mRID>f54a3eef-e16c-4917-9fb7-ba2e51f07da6</mRID>
+          </Actor>
+          <Actor>
+            <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+          </Actor>
+          <Actor>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </Actor>
+          <Actor>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </Actor>
+          <Actor>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </Actor>
+          <Actor>
+            <mRID>c78ed029-b57b-4e34-a45d-3a5d729f9a20</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>ff2ffbe0-9aca-4647-b3dd-c145e4287168</mRID>
+        <name>Data should be simultaneously available to all authorized stakeholders to ensure level playing field (cf. SUC dealing with authorizations).</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description>Granting access can be representation rights for users (cf. &amp;#8220;Authentication&amp;#8221; SUC) or authorizations for applications (cf. &amp;#8220;Manage access permissions&amp;#8221; SUC).</description>
+        <mRID>769cbfb3-0b6e-4a83-ba53-91f0cf95782a</mRID>
+        <name>Every individual and organization has the right to make the decisions regarding their meter data, incl. easy access to these data by themselves and granting access to third parties</name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>dbb22ed8-ad28-4765-b4f1-ae6548ddf3ca</mRID>
+        <name>Rules for data protection are in place (authentication of users, consent management)</name>
+        <number>3</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>98bf0c05-3f0f-4ff5-8225-1ba5c88cf63c</mRID>
+        <name>Collect energy data - overview</name>
+        <URI type="UMLDiagram">Collect energy data\Image7.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>3b53e903-56fb-4310-96d5-d8f90598dc34</mRID>
+        <name>Collect energy data - scenarios flowchart</name>
+        <URI type="UMLDiagram">Collect energy data\Image8.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>0a6fe1a6-7ef9-4100-873b-0701b8ca492b</mRID>
+      <name>Collect energy data</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>c07f3cf6-0225-45a5-8bea-e595ef80ff25</mRID>
+        <shortDescription>Collection of different types of meter, market and grid data to be made available through a data exchange platform to interested parties. Users of data exchange platform can receive data directly from data provider (data source) or from a data hub which collects (and stores) data. This use case focuses on data necessary for flexibility trading. See separate use case description for sub-meter data (because the involved systems are different).</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>5bbebcd9-636a-4efc-b2ad-d069e18b519d</mRID>
+        <name>Cross border effect: It should be allowed and enabled to store data in one country from a data provider in another country – e.g. collect meter data in one country and store them in a data hub in a foreign country.</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>e74ed8d5-e7a2-40e4-acc9-5bdcd66b5313</mRID>
+        <name>Standardized/harmonized rules for communication (cf. SUC dealing with data transfer)</name>
+        <number>2</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>ea9b8492-78ca-4514-a600-4ba9115a29de</mRID>
+        <name>Collection of data which can be shared.</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authenticate Information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f54a3eef-e16c-4917-9fb7-ba2e51f07da6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+          </InformationReceiver>
+          <mRID>9f7c9f70-eba1-4c47-b878-b1ac827bc935</mRID>
+          <name>Send data collection's request</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+          </InformationProducer>
+          <mRID>0b06e2e9-3897-4a75-8d13-7201afb19dd5</mRID>
+          <name>Receive request and authenticate user</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>620429a9-a8f8-48c6-bf92-5f3e362b6cff</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Metering Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>f54a3eef-e16c-4917-9fb7-ba2e51f07da6</mRID>
+          </InformationReceiver>
+          <mRID>356f0e39-b6b8-4834-8590-132142fe8cf2</mRID>
+          <name>Send meter data</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>620429a9-a8f8-48c6-bf92-5f3e362b6cff</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Metering Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>f54a3eef-e16c-4917-9fb7-ba2e51f07da6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationReceiver>
+          <mRID>275592b6-23d1-4c81-8442-46017def7033</mRID>
+          <name>Transmit meter data</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationProducer>
+          <mRID>41501958-0724-4847-9038-da3f1408c41b</mRID>
+          <name>Store meter data</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <description>Metered Data Operators can collect data from electricity meters at transmission or distribution levels and store them in the Data Hub.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>9510194c-95c5-4bf9-a489-d7498fd72758</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Collect energy data\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>49db3aca-780d-4b4b-bc2b-795b8cece37f</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Collect energy data\Image2.png</URI>
+        </Drawing>
+        <mRID>38d347ba-c0b7-44e8-9021-470d3851d430</mRID>
+        <name>Collect data from certified meters </name>
+        <number>1</number>
+        <Requirement>
+          <mRID>176b9940-9da9-45fa-b76b-db17de4ffbca</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>16aced1b-e4e3-4345-8316-278b3691b313</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>7c86cd26-f793-4a23-98ed-bfea4035d883</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>21762d22-bc38-489c-b1a7-a5db4ca4945f</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Market Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </InformationReceiver>
+          <mRID>a4512813-a0a8-4474-9740-3cbee50845cd</mRID>
+          <name>Send market data</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>cdb8292b-f5e6-4f45-bee0-25916c5c6cbf</mRID>
+          </BusinessObject>
+          <description>A Market Operator collects with its Flexibility Platform individual data from FSPs (i.e. bids and schedules).&lt;br/&gt;Modsarus Use Case::InstanceName=Request on market data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationReceiver>
+          <mRID>06252fc4-5f51-44b1-8664-4f02788a8e98</mRID>
+          <name>Collect market data</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>21762d22-bc38-489c-b1a7-a5db4ca4945f</mRID>
+          </BusinessObject>
+          <description>A Market Operator generates public market data (i.e. flexibility prices and volumes).&lt;br/&gt;Modsarus Use Case::InstanceName=Market Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationReceiver>
+          <mRID>be09abad-92d6-4f7d-a1f8-cb7b11e92c6d</mRID>
+          <name>Generate market data</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Store generated data in a Market Data Hub.</description>
+          <event />
+          <InformationProducer>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationProducer>
+          <mRID>473d934e-8930-4ee0-bce0-a8151758f606</mRID>
+          <name>Store generated market data</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <description>A Market Operator collects individual data from FSPs. Individual data can be flexibility bids or schedules.&lt;br/&gt;Market Operator can also generate some market data itself (either public or with restricted access) and store them in the Market Data Hub. Market data can be used for balancing and congestion management.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>fa02a2c1-ee4d-46d0-b55d-143f4972dc46</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Collect energy data\Image3.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>b47e78ef-48b8-41fe-b91c-0271dc3229a4</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Collect energy data\Image4.png</URI>
+        </Drawing>
+        <mRID>a1fb6ae4-1ec0-4d8a-99df-b24060cc956d</mRID>
+        <name>Collect market data </name>
+        <number>2</number>
+        <Requirement>
+          <mRID>c7b8d744-dbbc-4fe9-8932-d072212e22cb</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>d70ae303-c4c4-47bf-8814-eed06b87bfb3</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>786acf6f-952c-4c5a-b4c2-c5b5ab7ae331</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <mRID>ae9b400c-2bad-4511-a201-722552a3ac48</mRID>
+          <name>Collect grid data</name>
+          <number>3.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>1d84924c-81aa-4e8a-b1b4-0a5be6a8b488</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Grid Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=Necessary for flexibility services from their respective grids (DSO / TSO).&lt;br/&gt;Grid data can be power grid descriptions or power grid congestion data used for congestion management&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationReceiver>
+          <mRID>9e797c6d-2fe0-42a2-9f18-cc940e972ace</mRID>
+          <name>Generate grid data</name>
+          <number>3.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationProducer>
+          <mRID>73aa44c8-9b02-4af8-a694-e5229320a3d3</mRID>
+          <name>Store grid data</name>
+          <number>3.3</number>
+          <service />
+        </Activity>
+        <description>A System Operator collects and generates, in the Grid Data Hub, grid data related to its grid.&lt;br/&gt;Grid data can be power grid descriptions or power grid congestion data used for balancing and congestion management.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>34ae12be-1319-421f-b384-320eb0873300</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Collect energy data\Image5.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>4955e230-9b29-4783-a96b-4dfdbc478220</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Collect energy data\Image6.png</URI>
+        </Drawing>
+        <mRID>0b7e9511-61b8-4932-844f-d9e1d7b5fdf5</mRID>
+        <name>Collect grid data </name>
+        <number>3</number>
+        <Requirement>
+          <mRID>57301224-834e-4319-ae19-5efb9150541f</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>0ed0485f-31be-4cf6-a49a-18f8cd2a65e9</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>1b901786-140a-404e-9369-adae4ff9dbd5</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>de4e7a1e-ad65-4477-b158-4abcc02570be</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Collection of different types of energy related data from data providers to data hubs</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>8b774aeb-2ca3-48f6-a720-3ab7842e1506</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <changes />
+        <date>2018-04-12T00:00:00</date>
+        <mRID>dbca9955-e25e-4415-9fd3-02afb2d3e03a</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>e68932bb-3fac-4493-b0ec-8cf3b684e57e</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>70c44475-e6a3-4586-852c-20020f8c3ba5</mRID>
+          <name>&#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-07-07T00:00:00</date>
+        <mRID>c21caf32-1fb8-4189-a8a0-b45112370ad8</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>8c791d89-c22d-4957-bc8e-89822cad62ac</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>5e63a4d8-e14a-41de-b887-95ad8c283874</mRID>
+          <name>&#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes>&amp;#8220;Collect public market data&amp;#8221; and &amp;#8220;Collect individual market data&amp;#8221; scenarios merged into a &amp;#8220;Collect market data&amp;#8221; scenario, &lt;br/&gt;No DEP involved anymore.</changes>
+        <date>2018-07-19T00:00:00</date>
+        <mRID>e7d1df52-4636-424f-a75e-14ec16ac67d6</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>80cdd207-9450-4a15-ab0e-ce1b7454c2bb</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>75f5363d-1375-4917-bce6-2e4dfd434849</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>b04ab4b8-c55d-4178-b589-c7f91bf246c1</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>5b0170b2-ab84-4d4d-88c4-0c33ffa6f126</mRID>
+          <name> Ricardo Jover (EDF)</name>
+        </Author>
+        <changes>&lt;br/&gt;Remarks from Innogy and Elering.</changes>
+        <date>2018-09-21T00:00:00</date>
+        <mRID>38785076-b987-486f-a31d-7c5d976a544f</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>c717abce-bddd-4345-848d-700135a93474</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>930999c5-c594-424e-a513-b1d1dcf7db92</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>eb70c2f9-b29e-45e3-9d12-2fd0276afec3</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>0a51f40d-6cad-4140-bdee-a0a38675f0c4</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>52bdcaa9-cf55-495e-b67a-d957a5631943</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Description of Grid data</changes>
+        <date>2018-10-30T00:00:00</date>
+        <mRID>c5053260-beda-477c-b51c-398dbf434da4</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>1002e171-b75a-438f-bd6c-96aca4036bb1</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>13b5bfe4-0d51-4b66-bd1a-bc832b938353</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>641ff5a3-c2f4-454f-b703-a7decc0cae12</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>6411cb75-e2f5-41e7-9e3d-0e01d4751da3</mRID>
+        <number>10</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

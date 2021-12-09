@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data Hub is an information system which main functionality is to store and make available measurements (e.g. meter data, operational data) and associated master data. Data Hubs are not necessarily centralized in a country or in a region.</description>
+      <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+      <name>Data Hub</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>System Operator means a natural or legal person responsible for operating, ensuring the maintenance of and, if necessary, developing the system in a given area and, where applicable, its interconnections with other systems, and for ensuring the long-term ability of the system to meet reasonable demands for the distribution or transmission of electricity (cf. ENTSOE-EFET-ebIX harmonized role model 2019). &lt;br/&gt;Can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Transmission System Operator (cf. definition in T3.3 deliverable), for frequency control, congestion management and voltage control on transmission network,&lt;/li&gt;&lt;li&gt;A Distribution System Operator (cf. definition in T3.3 deliverable), for congestion management and voltage control on distribution network.&lt;/li&gt;&lt;/ul&gt;&lt;br/&gt;NB: In some countries (e.g. Germany and Poland), the high voltage network is part of the distribution grid and in other countries (e. g. France and Italy) the high voltage network is part of the transmission grid. &lt;br/&gt;&lt;br/&gt;A System Operator can be:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;A Primary System Operator,&lt;/li&gt;&lt;li&gt;A Secondary System Operator.&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+      <name>System Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Flexibility Platform (FP) for System Operators and Flexibility Service Providers that enables the trading of different flexibility products and services. A FP is operated by a Market Operator.&lt;br/&gt;&lt;br/&gt;Available to System Operators and Flexibility Services Providers. It is used to support the prequalification, the bidding, the activation and the verification processes, ensuring coordination between activities undertaken by several operators using the same flexible resources. Several national and regional FPs may exist.</description>
+      <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+      <name>Flexibility Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data hub operator owns and operates an information system which main functionality is to store and make available electricity (also gas, heat) metering data and associated master data. Can be :&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Grid Data Hub Operator in the sphere of a System Operator&lt;/li&gt;&lt;li&gt;Market Data Hub Operator in the sphere of a Market Operator&lt;/li&gt;&lt;li&gt;Meter Data Hub Operator in the sphere of a Metered Data Operator&lt;/li&gt;&lt;li&gt;Sub-meter Data Hub Operator in the sphere of an Energy Service Provider&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>c78ed029-b57b-4e34-a45d-3a5d729f9a20</mRID>
+      <name>Data Hub Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      <name>Balance management</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      <name>Operational planning and forecasting</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      </Area>
+      <description />
+      <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      <name>Balance management</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      </Area>
+      <description />
+      <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      <name>Operational planning and forecasting</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>620429a9-a8f8-48c6-bf92-5f3e362b6cff</mRID>
+      <name>Metering Data</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>235f29ab-b809-45c2-83c6-f5710d3dd2f5</mRID>
+      <name>Baseline</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info3</identifier>
+      <mRID>6bc23364-c3c2-4760-8065-7fba38f1d821</mRID>
+      <name>Activated Flexibility</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info4</identifier>
+      <mRID>1481302c-63be-407f-a49b-0a4ec9080511</mRID>
+      <name>Flexibility Settlement</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat1</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Calculation of actually delivered flexibility as a response to an activation request</description>
+        <identifier>Req1</identifier>
+        <mRID>ed80c55c-4905-449d-a080-0b8a38816665</mRID>
+        <name>FVERIF-REQ1</name>
+      </Requirement>
+      <Requirement>
+        <description>Verification that flexibility delivered matches with flexibility requested</description>
+        <identifier>Req2</identifier>
+        <mRID>022e5e04-25f7-4d18-bc6f-d14cf3b6e928</mRID>
+        <name>FVERIF-REQ2</name>
+      </Requirement>
+      <Requirement>
+        <description>Calculation of the penalty if flexibility delivered is less than flexibility requested</description>
+        <identifier>Req3</identifier>
+        <mRID>d30141fc-cac2-4282-a9c1-999392a0a429</mRID>
+        <name>FVERIF-REQ3</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <Actor>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </Actor>
+          <Actor>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </Actor>
+          <Actor>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <Actor>
+            <mRID>c78ed029-b57b-4e34-a45d-3a5d729f9a20</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>5025829d-2f9c-4eb1-a061-fb9d14b0c98b</mRID>
+        <name>Market participant baselines (i.e. from any FSP: aggregator, individual consumer, individual generator) have been previously defined.</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>1cb98ba2-8077-4eb7-a913-5cff959609cc</mRID>
+        <name>Activation volumes requested by System Operators have been previously registered in a Flexibility Platform.</name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>dd983083-7af0-4095-a01b-80f4acd55f38</mRID>
+        <name>Metering data have been previously loaded in Data Hubs.</name>
+        <number>3</number>
+      </Assumption>
+      <Assumption>
+        <description />
+        <mRID>eddea887-9d2b-4b65-acda-aac03ef29858</mRID>
+        <name>Penalties are defined in the contracts between System Operators and Flexibility Service Providers. However, there may be market designs where that kind of bilateral contracts are not required. In these cases, penalties may be correlated to imbalance price</name>
+        <number>4</number>
+      </Assumption>
+      <Assumption>
+        <description>Meter data can be consumption or production data. They can be provided by certified meters or sub-meters.</description>
+        <mRID>29759c69-a397-496b-9d8a-f18fe405c6c8</mRID>
+        <name>Meter data, baselines and information on requested flexibilities are available based on data access permission or legal obligation.</name>
+        <number>5</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>b6014c8d-3793-40d3-aace-16f495c65c77</mRID>
+        <name>Verify and settle activated flexibilities - overview</name>
+        <URI type="UMLDiagram">Verify and settle activated flexibilities\Image3.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>d78c648c-5f89-4a25-be53-70f462e4e7db</mRID>
+        <name>Verify and settle activated flexibilities - scenarios flowchart</name>
+        <URI type="UMLDiagram">Verify and settle activated flexibilities\Image4.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>5687b2d0-7bcb-4545-a185-5768e0f5db56</mRID>
+      <name>Verify and settle activated flexibilities</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>73da9a46-50e1-4e45-bab1-09779ed4e37e</mRID>
+        <shortDescription>Actual flexibility delivered is calculated as the difference between baseline and metered consumption/generation of that Flexibility Service Provider. The verification takes place by comparing the actually delivered flexibility and flexibility requested by the System Operator. Settlement means that a Flexibility Service Provider is asked for a penalty if actually delivered flexibility is less than requested flexibility. Imbalance settlement process follows but is out of the scope of this use case.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>87af6d33-5e73-43af-8b9c-f110e957defc</mRID>
+        <name>For the verification and the calculation of penalties, the values of actual inputs / withdrawals must be obtained through accurate, reliable and certified instruments (metering data). Meter data, baselines and activation requests are needed.</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>677d261b-679a-4bf0-b758-fb8c1a3bcde3</mRID>
+        <name>Meter data (incl. sub-meter data) and baselines are available for the process.</name>
+        <number>2</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>d45bdf06-82ba-4a31-887e-757c46d8f727</mRID>
+        <name>Calculate actually delivered flexibility as response to activation request. Verify that flexibility delivered matches with flexibility requested. Calculate the penalty if flexibility delivered is less than flexibility requested.</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>620429a9-a8f8-48c6-bf92-5f3e362b6cff</mRID>
+          </BusinessObject>
+          <description>Real generation/consumption data measured by certified meters data and/or sub-meter data collected by Data Hubs.&lt;br/&gt;Modsarus Use Case::InstanceName=Metering Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>43ac67ff-35a0-48e4-8b2c-d1eaf7537292</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>99e47158-cae4-40a0-beef-2401cdb8a1c0</mRID>
+          <name>Provide metering data</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>235f29ab-b809-45c2-83c6-f5710d3dd2f5</mRID>
+          </BusinessObject>
+          <description>Baselines stored at Flexibility Platform and collected previously (see &amp;quot;Calculate flexibility baseline&amp;quot; SUC) by Market Operators, FSPs or System Operators.&lt;br/&gt;Modsarus Use Case::InstanceName=Baseline&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>7101e541-2c2b-4005-b6a5-8e7e60d9c5da</mRID>
+          <name>Provide baselines</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>6bc23364-c3c2-4760-8065-7fba38f1d821</mRID>
+          </BusinessObject>
+          <description>Volumes of requested flexibilities by System Operators (in &amp;quot;Manage flexibility activation&amp;quot; SUC).&lt;br/&gt;Modsarus Use Case::InstanceName=Activated Flexibility&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>03c58c12-b9bf-4ff3-8c68-b3b20a9e9037</mRID>
+          <name>Provide requested activation volumes</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>620429a9-a8f8-48c6-bf92-5f3e362b6cff</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Metering Data&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>6a348748-7d75-4c71-b99a-e7662e0056b3</mRID>
+          <name>Forward metering data</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>The Flexibility Platform calculates the difference between the metered consumed/produced energy (delivered energy) and the baseline.</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>2c57bedd-7aa0-4017-a30b-c9783b1eb2c3</mRID>
+          <name>Calculate the actually delivered flexibilities</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>1481302c-63be-407f-a49b-0a4ec9080511</mRID>
+          </BusinessObject>
+          <description>The Flexibility Platform calculates the differences between the actually delivered flexibilities and the requested activation volumes.&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Settlement&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationReceiver>
+          <mRID>48a580de-e46e-455c-81d4-7db78cc25b49</mRID>
+          <name>Verify the delivered flexibilities</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>Penalties of the requested but not delivered flexibilities.</description>
+          <event />
+          <InformationProducer>
+            <mRID>63eb2d86-aa08-444e-88dc-51f7f64e714e</mRID>
+          </InformationProducer>
+          <mRID>6e443664-9ffb-49fc-861a-d2ac91843e97</mRID>
+          <name>Calculate penalties</name>
+          <number>1.7</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>4674e2e5-73d1-46cd-8dce-3bace0937a72</mRID>
+          <name>Scenario1 - activities flowchart</name>
+          <URI type="UMLDiagram">Verify and settle activated flexibilities\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>45002866-9f21-46d6-8096-991d11cb5087</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Verify and settle activated flexibilities\Image2.png</URI>
+        </Drawing>
+        <mRID>8f374277-eb15-48e8-88ea-359c04df53ef</mRID>
+        <name>Flexibility verification and settlement</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>ed80c55c-4905-449d-a080-0b8a38816665</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>022e5e04-25f7-4d18-bc6f-d14cf3b6e928</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>d30141fc-cac2-4282-a9c1-999392a0a429</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Verification of the flexibilities actually delivered by Flexibility Service Providers.</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>59a9ab44-aed4-4ffc-9474-0a7f64e537f8</mRID>
+          <name>Marco Pietrucci (Terna)</name>
+        </Author>
+        <changes />
+        <date>2018-04-05T00:00:00</date>
+        <mRID>3d4b436f-2e27-4301-8b42-2831c3477d95</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>4be1416d-4bcb-4ee1-b1c0-173f6e734f93</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>bd8110e0-490e-4a3a-99a9-5be84e2e106d</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-06-25T00:00:00</date>
+        <mRID>9c24a753-ac83-48a6-a6d2-d91127c79b1d</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>ab470740-8229-40e7-8607-1fe4a4276108</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>17ac453a-b55f-48cc-b978-8c947bea614a</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes>- Network operators involved, instead of BRPs.&lt;br/&gt;- Use of baseline, instead of winning bids.&lt;br/&gt;- Imbalance calculation changed into flexibility verification.&lt;br/&gt;- Calculation of delivered flexibilities and verification of delivered flexibilities in two steps.&lt;br/&gt;- Imbalance fees changed into penalties.&lt;br/&gt;- Invoice out of scope.</changes>
+        <date>2018-07-19T00:00:00</date>
+        <mRID>b4cf2927-a475-4e0c-92a9-23fdb3cdc3fb</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>1fee38af-77cb-4120-ab78-999268985db4</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-07-30T00:00:00</date>
+        <mRID>7f8becdf-813e-4c4d-8d19-09680cefb386</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>ec5fe01a-f978-4552-b9b1-6bcf955f3772</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>ddbe6bbc-a734-470f-a3c2-652aa765cfd7</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>378ae3f0-6264-4b8d-bbc4-bb8f6cf4bac1</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>bd53a61e-3b4b-4844-87a4-070b0f01a37f</mRID>
+          <name> Ricardo Jover (EDF)</name>
+        </Author>
+        <changes>Remarks from Innogy and EirGrid.</changes>
+        <date>2018-09-21T00:00:00</date>
+        <mRID>9c000ed4-0087-4520-b951-b56c8d8d1053</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>3f926057-327c-4117-89d6-33b7dd21f6c2</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>366b46f5-472d-4220-b311-734b2b185bd3</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>0fc9d774-57c1-4c84-aeb6-ea1e2c79c122</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>2a1980be-8a53-4c2e-9696-02b7e949cf1e</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>5b4dfe4d-a5a1-4727-9c7c-2d7520701c3c</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>f816cb4d-f0c0-4fb1-9a7f-77c68c18dd72</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>018c7097-0c64-4d92-af86-0f31fb04a7e8</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Elering review</changes>
+        <date>2019-07-09T00:00:00</date>
+        <mRID>053efb36-186e-4254-8047-da71338f0300</mRID>
+        <number>10</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>147782f1-527a-4db9-aef3-a5480f809d75</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>4e51084e-8dfd-4ca4-89e3-d51674bbaf4b</mRID>
+        <number>11</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>
