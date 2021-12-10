@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Aggregate and maximise value of portfolio(s) of resources (cf. definition in T3.3 deliverable).</description>
+      <mRID>b6fabe30-8a3f-459b-a964-c6bfd75fce83</mRID>
+      <name>Aggregator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Any person who uses data. Can be a Data Owner or a Data Delegated Third party.</description>
+      <mRID>f3850003-cd20-463b-891f-a2ab28c75bb1</mRID>
+      <name>Data User</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>A party offering energy-related services to any other party (adapted from ENTSOE-EFET-ebIX harmonized role model).&lt;br/&gt;Energy service provider (ESCO &amp;#8211; energy service company) is a market-based role which is responsible for delivering energy services to the customers (or to other parties of behalf of the customers). In case these services necessitate the access to customer&amp;#8217;s data, the consent of this customer is required. Examples of the executors of this role include aggregator, flexibility service provider, energy efficiency provider, energy monitoring provider. &lt;br/&gt;Can also be an Aggregator or a Generator (cf. definitions in T3.3 deliverable).</description>
+      <mRID>4c6daeab-d76a-411a-b30e-b78cd5094b54</mRID>
+      <name>Energy Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Flexibility Platform (FP) for System Operators and Flexibility Service Providers that enables the trading of different flexibility products and services. A FP is operated by a Market Operator.&lt;br/&gt;&lt;br/&gt;Available to System Operators and Flexibility Services Providers. It is used to support the prequalification, the bidding, the activation and the verification processes, ensuring coordination between activities undertaken by several operators using the same flexible resources. Several national and regional FPs may exist.</description>
+      <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+      <name>Flexibility Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      <name>Services related to end customers</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      <name>Access to data</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      </Area>
+      <description />
+      <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      <name>Services related to end customers</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      </Area>
+      <description />
+      <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      <name>Access to data</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>65fdb554-4b6f-4d8f-9034-e1c53eef2a88</mRID>
+      <name>ESCO information</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+      <name>Authenticate Information</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info3</identifier>
+      <mRID>13fa3203-6c24-47ca-904c-34647b438bb4</mRID>
+      <name>Aggregator information</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat1</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>List of suppliers and ESCOs is available through DEP; List of aggregators is available through flexibility platform additionally</description>
+        <identifier>Req1</identifier>
+        <mRID>540a5c74-d66e-4dcf-95e0-d01d365a42d0</mRID>
+        <name>ESCO-REQ1</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <description>Data exchange platform to share meter data</description>
+        </FurtherActorInformation>
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>b6fabe30-8a3f-459b-a964-c6bfd75fce83</mRID>
+          </Actor>
+          <Actor>
+            <mRID>f3850003-cd20-463b-891f-a2ab28c75bb1</mRID>
+          </Actor>
+          <Actor>
+            <mRID>4c6daeab-d76a-411a-b30e-b78cd5094b54</mRID>
+          </Actor>
+          <Actor>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>c7cdb77e-e34e-4bb9-a012-1ea19721e7be</mRID>
+        <name>The communication channel is protected</name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description>&lt;br/&gt;</description>
+        <mRID>5abae008-b71d-4036-90d1-bfa7b4b38b1b</mRID>
+        <name>Some sort of validation is applied (sending sms or email to conform the request)</name>
+        <number>2</number>
+      </Assumption>
+      <Assumption>
+        <description>Suppliers can be considered as kinds of ESCOs. A supplier is the party selling energy, whereas an ESCO is a provider of different energy related services.</description>
+        <mRID>02df48b2-550b-45b7-944b-a1d16c6d0930</mRID>
+        <name>Suppliers and ESCOs</name>
+        <number>3</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>579b97e5-644a-424c-9ad6-4fac562f576c</mRID>
+        <name>Provide list of suppliers and ESCOs - overview</name>
+        <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image5.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>7e0301f7-993b-4dad-9776-d9f2f83002cb</mRID>
+        <name>Provide list of suppliers and ESCOs - scenarios flowchart</name>
+        <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image6.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>191a9cf5-1da6-41f7-9e01-df74962eab54</mRID>
+      <name>Provide list of suppliers and ESCOs</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>4ef92adb-263f-4153-b32a-276c8119095e</mRID>
+        <shortDescription>1) Set up and share the list of suppliers and service providers to be made available through a data exchange platform for the interested parties. The list is available for authorised parties who can get in contact with suppliers and service provider for any kind of business purpose. &lt;br/&gt;2) Set up and share the list of aggregators to be made available through a flexibility platform for the individual Flexibility Service Providers. Individual Flexibility Service Providers can contact the aggregators in the list and find a suitable one.</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>7f5e3a4d-888d-4aeb-84be-4a6eb3898a3a</mRID>
+        <name>The user has to authenticate in order to be able to see the list in the flexibility platform.</name>
+        <number>1</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description>through data exchange platform and list of aggregators through flexibility platform to make easier to get in contact for the interested parties.</description>
+        <mRID>64f6fc4a-35da-4adf-9ebd-e7c184a84f8a</mRID>
+        <name>To make available the list of suppliers and service providers</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4c6daeab-d76a-411a-b30e-b78cd5094b54</mRID>
+          </InformationProducer>
+          <mRID>938d277b-e589-46fe-a664-6c94daf23cab</mRID>
+          <name>Fill in a registration form</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>65fdb554-4b6f-4d8f-9034-e1c53eef2a88</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=ESCO information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4c6daeab-d76a-411a-b30e-b78cd5094b54</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>7ee4413e-b339-43c5-959c-dcf347c25a93</mRID>
+          <name>Upload necessary documents </name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <mRID>e88f8f98-1941-4cbe-96f7-90b4a39935a6</mRID>
+          <name>Generate user account with all details </name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>79077332-56bd-437e-8295-63b9a9dab5bd</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Authenticate Information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4c6daeab-d76a-411a-b30e-b78cd5094b54</mRID>
+          </InformationReceiver>
+          <mRID>8c85999c-c756-488a-b4ca-3cc5698a5f49</mRID>
+          <name>Send account, usage and authentication information</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <mRID>21a74381-d8e4-4cd6-8a1a-bdd7853f05d3</mRID>
+          <name>Send a notification of refusal to the ESCO</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <mRID>c1511363-b604-412d-9ac3-56785451e150</mRID>
+          <name>Send a notification of acceptance to the ESCO</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <mRID>e2bbdba8-53b5-4245-9996-a49f36d9b77b</mRID>
+          <name>Add the ESCO in the list in the DEP of its country</name>
+          <number>1.7</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <mRID>c49c9c84-efde-4992-a231-912c3a556bea</mRID>
+          <name>Add the ESCO in the list in the DEP of other countries too</name>
+          <number>1.8</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>f3850003-cd20-463b-891f-a2ab28c75bb1</mRID>
+          </InformationProducer>
+          <mRID>9863e251-018c-4f36-9002-d40d72c92ed0</mRID>
+          <name>Make the new Energy Service Provider accessible in the list of suppliers and ESCOs.</name>
+          <number>1.9</number>
+          <service />
+        </Activity>
+        <description>A supplier or service provider register to use data exchange platform&lt;br/&gt;</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>a28f5858-4575-4900-a410-8d1b3fac8f66</mRID>
+          <name>Registration on the Data Exchange Platform with verification - activities flowchart</name>
+          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>b8d27384-f6f5-4c45-9081-affbf11cff34</mRID>
+          <name>Registration on the Data Exchange Platform with verification - overview</name>
+          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image2.png</URI>
+        </Drawing>
+        <mRID>6785195b-e161-4b1c-ac01-0493663d3260</mRID>
+        <name>Registration on the Data Exchange Platform with verification</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>540a5c74-d66e-4dcf-95e0-d01d365a42d0</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>13fa3203-6c24-47ca-904c-34647b438bb4</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Aggregator information&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>b6fabe30-8a3f-459b-a964-c6bfd75fce83</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>486405f2-faf6-4ed7-948b-9abeb1e2f604</mRID>
+          <name>Request for being listed in the platform</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>b6fabe30-8a3f-459b-a964-c6bfd75fce83</mRID>
+          </InformationProducer>
+          <mRID>486405f2-faf6-4ed7-948b-9abeb1e2f604</mRID>
+          <name>Request for being listed in the platform</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>4aa0da23-1f7e-4025-b7b3-60263f274669</mRID>
+          <name>Review the request</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>ee9e6c17-5377-4032-9fe6-bf08ffdd3e87</mRID>
+          <name>Send a notification of refusal to the aggregator</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>d8a76e90-5c96-406f-8d74-be39b5136753</mRID>
+          <name>Include the aggregator in the list and send notification of acceptance</name>
+          <number>2.5</number>
+          <service />
+        </Activity>
+        <description />
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>c9685c92-860e-4c69-b4b2-10a4e0c9c1e0</mRID>
+          <name>Presenting the list of aggregators on flexibility platform - activities flowchart</name>
+          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image3.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>773efcaf-163a-4464-8247-8fea8f7dd8d3</mRID>
+          <name>Presenting the list of aggregators on flexibility platform - overview</name>
+          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image4.png</URI>
+        </Drawing>
+        <mRID>8b7a6481-905e-45c1-84f6-0c7734e46b1a</mRID>
+        <name>Presenting the list of aggregators on flexibility platform</name>
+        <number>2</number>
+        <Requirement>
+          <mRID>540a5c74-d66e-4dcf-95e0-d01d365a42d0</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Set up, store and share the list of suppliers and service providers.</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>70d58474-3df1-4459-8722-28f3bb28d19a</mRID>
+          <name>Richárd Balog (Mavir)</name>
+        </Author>
+        <changes />
+        <date>2018-04-12T00:00:00</date>
+        <mRID>f0bfc3d6-c552-4d96-b996-5769a30557b0</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>1835bf06-2d21-4eb0-86f6-cc93e400d515</mRID>
+          <name>Florentin Dam (AKKA)&#xD;
+&#xD;
+</name>
+        </Author>
+        <changes>UML modeling&lt;br/&gt;</changes>
+        <date>2018-07-11T00:00:00</date>
+        <mRID>07415d8d-b3d5-4db3-9900-a358242cec90</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>727a675f-5ae1-474a-81d2-d3cd3e7cfc50</mRID>
+          <name>Florentin Dam (AKKA)</name>
+        </Author>
+        <changes>Fusion of the two initial scenarios&lt;br/&gt;Added a new scenario</changes>
+        <date>2018-07-19T00:00:00</date>
+        <mRID>a64fa2fb-3e89-409d-9821-cb9fa067c067</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>5d24af4a-0581-4d8d-a898-103f9da9be96</mRID>
+          <name>Florentin Dam (AKKA)</name>
+        </Author>
+        <changes>Added the detailed activities for the second scenario&lt;br/&gt;</changes>
+        <date>2018-07-23T00:00:00</date>
+        <mRID>0c17bfc8-5f1d-4d74-b38a-374aef7a253a</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>e1674e7d-c496-40d2-95c5-8ee77bb52fa6</mRID>
+          <name>Florentin Dam (AKKA)</name>
+        </Author>
+        <changes>Added details on the two scenarios, scope and prerequisite&lt;br/&gt;&lt;br/&gt;</changes>
+        <date>2018-07-25T00:00:00</date>
+        <mRID>06ac4247-a897-40a9-b142-176767e9ad30</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>8ca65f3e-313e-44a7-94bc-1b9e70f33f0d</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>64be916f-26a1-4b55-8442-6d9efb563cff</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>be5aef61-a120-40bf-981a-b136c14bd765</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-09-21T00:00:00</date>
+        <mRID>d87d3149-6f3d-4a1e-88ee-919e694807b7</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>8314f83c-1089-42c8-9c75-c1849f23b0ff</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>88989adb-64a0-406d-ab0e-b201c99eaf93</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>63f5f080-28ac-482b-aa22-bd333df1452d</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>248c274f-974f-4e89-95a6-84a7e1c3d583</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>51acdcf1-8fe8-422d-b736-79541935a77f</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>f7170d53-0323-491e-9cc0-cfcabf2cc170</mRID>
+        <number>10</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>837e5f30-999c-43bf-a6c5-52882c820d48</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Elering review</changes>
+        <date>2019-06-13T00:00:00</date>
+        <mRID>ea88b097-b700-4fe1-a644-2dbf7cb783fd</mRID>
+        <number>11</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>4c78ae16-4817-4585-a7e2-68688a2ae582</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>cdee4f0a-b60d-4730-89fd-c821e2ca338c</mRID>
+        <number>12</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

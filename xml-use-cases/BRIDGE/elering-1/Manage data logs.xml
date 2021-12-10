@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Customer Portal for another country.&lt;br/&gt;Can also mean a separate portal in the same country.</description>
+      <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+      <name>Foreign Customer Portal</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Any person who owns data and can give authorization to other parties to access them. Can be, inter alia: &lt;br/&gt;&lt;ul&gt;&lt;li&gt;Flexibility Services Provider&lt;/li&gt;&lt;li&gt;Market Operator&lt;/li&gt;&lt;li&gt;Consumer&lt;/li&gt;&lt;li&gt;Generator&lt;/li&gt;&lt;/ul&gt;</description>
+      <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+      <name>Data Owner</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Customer Portal manages data users' authentication, access permissions and data logs. Customer Portals store data related to its services (e.g. authentication information, representation rights, access permissions, data logs).</description>
+      <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+      <name>Customer Portal</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      <name>Access to data</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      <name>Operational planning and forecasting</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      <name>Services related to end customers</name>
+    </Area>
+    <Area>
+      <description />
+      <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      <name>Balance management</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>1a7b9127-4b92-41e4-b4f4-7ad28add87a4</mRID>
+      </Area>
+      <description />
+      <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      <name>Access to data</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>3e841792-153c-4519-9498-b3a6cf954624</mRID>
+      </Area>
+      <description />
+      <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      <name>Operational planning and forecasting</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>eadfb427-bb3a-4d87-a88d-9f381a35bd1b</mRID>
+      </Area>
+      <description />
+      <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      <name>Services related to end customers</name>
+    </BusinessCase>
+    <BusinessCase>
+      <Area>
+        <mRID>37f5f691-9a45-453a-a495-aceac26898c3</mRID>
+      </Area>
+      <description />
+      <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      <name>Balance management</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description>Contains the type of the requested logs (data access logs or authorization request logs) and other criteria like dates, log level etc.</description>
+      <identifier>Info1</identifier>
+      <mRID>2d790f31-c87f-4133-88ea-1a014cd10d9d</mRID>
+      <name>Data log request</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description>Contains the selected log records.</description>
+      <identifier>Info2</identifier>
+      <mRID>b1d9b26e-8b21-4225-88c3-bc86a46a851e</mRID>
+      <name>Data log</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description />
+      <identifier>Cat1</identifier>
+      <mRID>bd1580a2-20b8-41fa-a8df-2ae6041bf604</mRID>
+      <name>Personal data</name>
+      <Requirement>
+        <description>Right to secure direct access of own personal data and to any processing, storage or sharing details</description>
+        <identifier>Req1</identifier>
+        <mRID>2af6ad64-c90f-4bc9-aebd-7c01060f85c4</mRID>
+        <name>Access Citizen Right</name>
+      </Requirement>
+      <Requirement>
+        <description>Right to be informed of any personal data held, of how it is used or processed, of any breach, and of any disclosure/usage to third parties</description>
+        <identifier>Req2</identifier>
+        <mRID>0b77ff6a-6c7b-4468-b248-a2a3be9b2916</mRID>
+        <name>Informed Citizen Right</name>
+      </Requirement>
+    </RequirementCategory>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat2</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Ability to share information related to data logs between data owners, concerned DEPs, applications and data sources</description>
+        <identifier>Req3</identifier>
+        <mRID>8288215b-981b-464a-b352-195b019edec8</mRID>
+        <name>LOGS-REQ1</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <description>The data exchange platform stores the security logs and makes them available upon request.</description>
+        </FurtherActorInformation>
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </Actor>
+          <Actor>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </Actor>
+          <Actor>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>b69d1dab-abf4-49c1-b853-272b6164c561</mRID>
+        <name>Private and/or commercially sensitive data needs to be exchanged.</name>
+        <number>1</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>9edec350-4e9d-45bb-bd73-d41711c221fe</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>fe092577-88c2-4e67-8f8d-84bae301df16</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>b3b1f160-0ff7-4cd8-8cdd-7cfbf834b5e9</mRID>
+      </BusinessCase>
+      <BusinessCase>
+        <mRID>58fdecd6-5bfe-4e1b-9c73-6f3644f1e2ee</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>0fb19852-87c5-4043-846c-527b925175ac</mRID>
+        <name>Manage data logs - overview</name>
+        <URI type="UMLDiagram">Manage data logs\Image3.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>551fda4f-3d91-4e16-86a7-3acafd26982b</mRID>
+        <name>Manage security logs - scenarios flowchart</name>
+        <URI type="UMLDiagram">Manage data logs\Image4.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>bd8d0ecc-e145-4006-af36-e2d25f3e9e5d</mRID>
+      <name>Manage data logs</name>
+      <Narrative>
+        <completeDescription>Via a Customer Portal, a Data Owner (e.g. electricity consumer is the owner of its consumption data) has access to data logs. They include two types of logs:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Data access logs: e.g. who has accessed data and when&lt;/li&gt;&lt;li&gt;Authorization logs: e.g. who has requested/received authorization to access data and when&lt;/li&gt;&lt;li&gt;Authentication logs: e.g. who has identified himself/herself in Customer Portal and when&lt;/li&gt;&lt;/ul&gt;The Customer Portal operator makes the data logs available in the Customer Portal. In addition, in case of cross border data exchange, the Customer Portal operators of the involved countries share information about data logs between them.</completeDescription>
+        <mRID>7a7f06c4-2d87-40a6-b48a-2e556d80e419</mRID>
+        <shortDescription>Data Owner&amp;#8217;s access to data logs contributes to personal data protection. The data logs include information about data access (e.g. who has accessed consumption data and when), authorizations (e.g. who has issued a new authorization and when) and authentication (e.g. who has identified himself/herself in Customer Portal and when).</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description />
+        <mRID>460acada-144e-468c-9c43-85feaa0c3af9</mRID>
+        <name>The data owner has successfully logged in the Customer Portal.</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>Data logs can be exchanged between Customer Portals from different countries.</description>
+        <mRID>50aea9ef-a66f-40b3-b1d6-72d7ab648729</mRID>
+        <name>Cross-border access to data logs.</name>
+        <number>2</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>34adfc82-3e33-40fb-b18c-d1ecb567a814</mRID>
+        <name>Ensure personal data protection.</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <BusinessObject>
+            <mRID>2d790f31-c87f-4133-88ea-1a014cd10d9d</mRID>
+          </BusinessObject>
+          <description>The Data Owner requests data logs to the Customer Portal. The request contains the desired log type:&lt;br/&gt;&lt;ul&gt;&lt;li&gt;Data access (e.g. who has accessed data and when)&lt;/li&gt;&lt;li&gt;Authorization (e.g. who has requested/received authorization to access data and when)&lt;/li&gt;&lt;li&gt;Authentication logs (e.g. who has identified himself/herself in Customer Portal and when)&lt;/li&gt;&lt;/ul&gt;It also contains selection criteria like dates, log level etc.&lt;br/&gt;Modsarus Use Case::InstanceName=Data log request&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationReceiver>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>4b8407e6-1ef0-415a-bc1b-f96a8816736c</mRID>
+          <name>Request data logs</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>b1d9b26e-8b21-4225-88c3-bc86a46a851e</mRID>
+          </BusinessObject>
+          <description>The Customer Portal retrieves data access logs corresponding to the received selection criteria.&lt;br/&gt;Modsarus Use Case::InstanceName=Data access log&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationReceiver>
+          <mRID>986a8c6b-ddcd-4a07-89e9-aed7c0191e7b</mRID>
+          <name>Retrieve data access logs</name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>b1d9b26e-8b21-4225-88c3-bc86a46a851e</mRID>
+          </BusinessObject>
+          <description>The Customer Portal retrieves authorization logs corresponding to the received selection criteria.&lt;br/&gt;Modsarus Use Case::InstanceName=Authorization request log&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationReceiver>
+          <mRID>abdce410-6552-4e79-9f37-cf16f35815ce</mRID>
+          <name>Retrieve authorization logs</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>b1d9b26e-8b21-4225-88c3-bc86a46a851e</mRID>
+          </BusinessObject>
+          <description>The foreign Customer Portal retrieves data access logs corresponding to the received selection criteria and hands them over to the original Customer Portal.&lt;br/&gt;Modsarus Use Case::InstanceName=Data access log&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>802e8ee7-440c-4b02-9d28-1d4c2a66678d</mRID>
+          <name>Retrieve data access logs</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>b1d9b26e-8b21-4225-88c3-bc86a46a851e</mRID>
+          </BusinessObject>
+          <description>The foreign Customer Portal retrieves authorization request logs corresponding to the received selection criteria and hands them over to the original Customer Portal.&lt;br/&gt;Modsarus Use Case::InstanceName=Authorization request log&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>5351ac19-9ec2-47b9-9ead-4a28907df045</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>baa61f8b-bde4-4008-820b-bfad5a7150f6</mRID>
+          </InformationReceiver>
+          <mRID>0c1b5c8f-9be7-45c1-8a5b-9a6d47bdba25</mRID>
+          <name>Retrieve authorization logs</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>The Data Owner receives the data log records he requested.</description>
+          <event />
+          <InformationProducer>
+            <mRID>a17749ef-fb35-4331-9275-eaadfad82b36</mRID>
+          </InformationProducer>
+          <mRID>fc3264f6-8dbd-45e7-ab08-1c3d945285c6</mRID>
+          <name>Consult data logs</name>
+          <number>1.6</number>
+          <service />
+        </Activity>
+        <description>The Data Owner requests access to its data logs from the Customer Portal. In case of cross border data exchange, the later retrieves the data logs from the corresponding foreign Customer Portal. Finally, the Data Owner consults the requested data logs.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>3705ddd7-d7d3-449a-8a5c-6079a78829a8</mRID>
+          <name>Activities flowchart</name>
+          <URI type="UMLDiagram">Manage data logs\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>ebc529bb-f366-4289-a226-99eb03147530</mRID>
+          <name>Overview</name>
+          <URI type="UMLDiagram">Manage data logs\Image2.png</URI>
+        </Drawing>
+        <mRID>de12d2ba-988d-4922-ab49-ed64d8e291ae</mRID>
+        <name>Data Owner accesses data logs</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>2af6ad64-c90f-4bc9-aebd-7c01060f85c4</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>0b77ff6a-6c7b-4468-b248-a2a3be9b2916</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>8288215b-981b-464a-b352-195b019edec8</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Making available security logs including data access logs and authorization logs.</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>0e4cfdbf-9438-41d8-8113-157326c00676</mRID>
+          <name>Kalle Kukk (Elering)</name>
+        </Author>
+        <changes />
+        <date>2018-06-01T00:00:00</date>
+        <mRID>7ee87f66-3c67-499f-a60c-985353407f2e</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>6eb30416-19e9-4655-a3ca-37bb84e0e761</mRID>
+          <name>Mandimby Ranaivo R. (AKKA)</name>
+        </Author>
+        <changes />
+        <date>2018-07-10T00:00:00</date>
+        <mRID>9a9c4e5f-c625-40e8-90b3-e0f1ba7db48c</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>7c6d095d-0792-41f6-901f-8fc8d5702155</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>e0ac4e29-c4c3-43f1-aef0-787ce8bc7bc1</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>37fafcd4-5267-4a2b-85a0-6d9223bae2b4</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-09-21T00:00:00</date>
+        <mRID>892873b1-0fcb-459a-809a-9765ac21a2a6</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>93f4d81c-8080-4407-b9ba-25e82d5b410d</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>d2af94ba-0b7e-482a-a4cb-6d54ab8987e8</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>79aef7a2-2df6-4948-a56e-21563d967101</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>f020ac26-b25c-4856-853f-485b89d7ae0f</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>a109e55e-9e84-420a-b224-53083e13812d</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>240eeb7e-ad93-4e7f-b668-bbba3a650721</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>b3c43bb1-6476-4601-b7b7-1fad332626a8</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>b2e8900e-2437-4804-85fa-82dcd2ef5603</mRID>
+        <number>8</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>

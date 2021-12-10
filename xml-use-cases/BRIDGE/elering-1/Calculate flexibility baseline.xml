@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Modsarus XML Interface based on IEC 62559-3, version 1-->
+<!--Based on IEC 62559-2 edition 1
+Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
+<UC:UseCaseRepository xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016 C:\EAAddIns\Modsarus\Transformation\IEC62559-3_UC.xsd" xmlns:UC="http://www.SYC.org/IEC62559/part3/UC/V01/Build08082016">
+  <ActorLibrary>
+    <Actor>
+      <description>Contains external data such as weather information.</description>
+      <mRID>6301ad5f-cd24-4592-ac22-fea6e5491704</mRID>
+      <name>External Data Sources</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Can be a Distribution Network Flexibility Provider or a Transmission Network Flexibility Provider (cf. definitions in T3.3 deliverable). &lt;br/&gt;Similar to Flexibility Aggregator. Can be both aggregator and individual consumer/generator. Type of Energy Service Provider.</description>
+      <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+      <name>Flexibility Service Provider</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>A market operator is a party that provides a service whereby the offers to sell electricity are matched with bids to buy electricity (cf. ENTSOE-EFET-ebIX harmonized role model 2019).&lt;br/&gt;In EU-SysFlex project, a market operator not only trades electricity but also flexibility services.&lt;br/&gt;Organize auctions (continuous auctions, discrete auctions, calls for tender) between buyers and sellers of electricity-related products in the markets, and more generally publish the corresponding prices, for assets connected to power grid.&lt;br/&gt;Manage/operate the platform for trading (where bids and offers are collected).&lt;br/&gt;Clear the market and communicate results.&lt;br/&gt;(cf. definition in T3.3 deliverable)&lt;br/&gt;</description>
+      <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+      <name>Market Operator</name>
+      <type>Business</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform (DEP) is a communication platform the basic functionality of which is to secure data transfer (routing) from data providers (e.g. data hubs, flexibility service providers, TSOs, DSOs) to the data users (e.g. TSOs, DSOs, consumers, suppliers, energy service providers). DEP stores data related to its services (e.g. cryptographic hash of the data requested). The DEP does not store core energy data (e.g. meter data, grid data, market data) while these data can be stored by data hubs. Several DEPs may exist in different countries and inside one country.</description>
+      <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+      <name>Data Exchange Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Meter Data Collection Tool is an information system which main functionality is to collect meter readings from electricity meters.</description>
+      <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+      <name>Meter Data Collection Tool</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Flexibility Platform (FP) for System Operators and Flexibility Service Providers that enables the trading of different flexibility products and services. A FP is operated by a Market Operator.&lt;br/&gt;&lt;br/&gt;Available to System Operators and Flexibility Services Providers. It is used to support the prequalification, the bidding, the activation and the verification processes, ensuring coordination between activities undertaken by several operators using the same flexible resources. Several national and regional FPs may exist.</description>
+      <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+      <name>Flexibility Platform</name>
+      <type>System</type>
+    </Actor>
+    <Actor>
+      <description>Data exchange platform operator owns and operates a communication system which basic functionality is data transfer.</description>
+      <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+      <name>DEP Operator</name>
+      <type>Business</type>
+    </Actor>
+    <name>Actor Library</name>
+  </ActorLibrary>
+  <AreaLibrary>
+    <Area>
+      <description />
+      <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      <name>Market for flexibilities</name>
+    </Area>
+  </AreaLibrary>
+  <BusinessCaseLibrary>
+    <BusinessCase>
+      <Area>
+        <mRID>b5bb4feb-157c-4fed-a7a8-5265837bcd05</mRID>
+      </Area>
+      <description />
+      <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      <name>Market for flexibilities</name>
+    </BusinessCase>
+  </BusinessCaseLibrary>
+  <BusinessObjectLibrary>
+    <BusinessObject>
+      <description />
+      <identifier>Info1</identifier>
+      <mRID>235f29ab-b809-45c2-83c6-f5710d3dd2f5</mRID>
+      <name>Baseline</name>
+    </BusinessObject>
+    <BusinessObject>
+      <description />
+      <identifier>Info2</identifier>
+      <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+      <name>Flexibility Bid</name>
+    </BusinessObject>
+  </BusinessObjectLibrary>
+  <CommonTermLibrary />
+  <name>Use Case Repository</name>
+  <RequirementLibrary>
+    <RequirementCategory>
+      <description>Requirements integrated from Task 5.3.</description>
+      <identifier>Cat1</identifier>
+      <mRID>1880e39c-7084-4785-8c02-297057abe312</mRID>
+      <name>Task 5.3</name>
+      <Requirement>
+        <description>Ability of flexibility platform to collect input for baseline calculation, incl. through DEP</description>
+        <identifier>Req1</identifier>
+        <mRID>81bbdaff-92e5-460c-9176-7f27e7aa4faf</mRID>
+        <name>FB-REQ1</name>
+      </Requirement>
+      <Requirement>
+        <description>Ability of flexibility platform to compute baseline</description>
+        <identifier>Req2</identifier>
+        <mRID>b3e149de-373c-47c1-97e9-9b8c48acd40e</mRID>
+        <name>FB-REQ2</name>
+      </Requirement>
+    </RequirementCategory>
+  </RequirementLibrary>
+  <UseCaseLibrary>
+    <UseCase>
+      <ActorGrouping>
+        <description />
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>6301ad5f-cd24-4592-ac22-fea6e5491704</mRID>
+          </Actor>
+          <Actor>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </Actor>
+          <Actor>
+            <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+          </Actor>
+          <Actor>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </Actor>
+          <Actor>
+            <mRID>5c3ee41f-e106-4f2f-8d00-24c5d5a339de</mRID>
+          </Actor>
+          <description />
+        </FurtherActorInformation>
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </Actor>
+          <description>In the scenario where MO calculates the baseline, it can be either the TSO, the DSO or the Flexibility Platform Operator</description>
+        </FurtherActorInformation>
+        <FurtherActorInformation>
+          <Actor>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </Actor>
+          <description>Data exchange platform to share meter data&lt;br/&gt;</description>
+        </FurtherActorInformation>
+        <name />
+      </ActorGrouping>
+      <Assumption>
+        <description />
+        <mRID>5c49ee34-2fc1-4525-af27-74ecb31ff10c</mRID>
+        <name>1. FSPs who are presenting their baseline as schedule before the activation must be able to declare (independently or with the help of any tools made available by the TSO) the baseline together with its bid. </name>
+        <number>1</number>
+      </Assumption>
+      <Assumption>
+        <description>The close to real time meter data (1 hour to 15 minutes data from &amp;#8216;certified&amp;#8217; meters, 1 second to 1 minute data from sub-meters) should be available for TSO and all other relevant parties by the time the baseline needs to be by calculated for the settlement.</description>
+        <mRID>225f26be-213f-4586-832f-e690e51e5415</mRID>
+        <name>2. For all other FSPs the baseline should be calculated after the activation in settlement phase based on metered data. </name>
+        <number>2</number>
+      </Assumption>
+      <BusinessCase>
+        <mRID>f677f05e-34bc-4dc2-a51d-f6ea9c41dcbc</mRID>
+      </BusinessCase>
+      <Drawing>
+        <drawingType>use case overview</drawingType>
+        <mRID>9dc02c06-b757-463a-9d79-a0a525323fc0</mRID>
+        <name>Calculate flexibility baseline - overview</name>
+        <URI type="UMLDiagram">Calculate flexibility baseline\Image5.png</URI>
+      </Drawing>
+      <Drawing>
+        <drawingType>scenarios flowchart</drawingType>
+        <mRID>cbee1067-7cc9-48e5-8b26-38f64ca4222c</mRID>
+        <name>Calculate flexibility baseline - scenarios flowchart</name>
+        <URI type="UMLDiagram">Calculate flexibility baseline\Image6.png</URI>
+      </Drawing>
+      <identifier />
+      <mRID>c482250b-c6bf-4f73-bb68-ba246e61049d</mRID>
+      <name>Calculate flexibility baseline</name>
+      <Narrative>
+        <completeDescription />
+        <mRID>f360e410-8668-42a1-a42b-1e245201b1b8</mRID>
+        <shortDescription>&lt;font color="#000d00"&gt;If a market participant bids flexibility in the flexibility market, the baseline consumption/generation of such market participant needs to be identified for the verification and settlement processes (see SUC &amp;#8216;Verify and settle activated flexibilities&amp;#8217;). There are two options for this: &lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color="#000d00"&gt;1. Market participant has to declare its power schedule (baseline) &lt;i&gt;ex ante&lt;/i&gt; in such a way to permit the System Operator (SO) to implement the settlement processes. Such player (FSP) usually declares directly the baseline, but the SO could provide specific tools to help market participants in the baseline definition, promoting market participation.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color="#000d00"&gt;2. Market operator (TSO or DSO or Flexibility Platform Operator) itself calculates the baseline &lt;i&gt;ex post&lt;/i&gt; based on meter data. The methodology to calculate baseline is transparent and public.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color="#000d00"&gt;The baseline cannot be measured directly, so it must be calculated based on other available measured data, using an agreed, robust methodology. When choosing the suitable baseline methodology it is crucial to understand the most important baseline characteristics: these are accuracy, simplicity, integrity and alignment, meaning that additionally to the accuracy of the methodology it is important at the same time that it would be simple enough for all stakeholders to calculate and understand. Additionally to that, suitable methodology should minimize the availability of data manipulation as well as minimize unintended consequences. &lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color="#000d00"&gt;Several types of baseline can exist and may be needed, depending on the type of service/product provided, depending on the reserve origin (consumption, production, storage) and depending on the consumer&amp;#8217;s group who offered the flexibility (residential, offices, industrial consumers, etc). &lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color="#000d00"&gt;Data from sub-meters could be used besides data from &amp;#8216;certified&amp;#8217; meters when calculating the baseline. &lt;/font&gt;</shortDescription>
+      </Narrative>
+      <nature>SUC</nature>
+      <Prerequisite>
+        <description>The historical and statistical data used for calculation come from metered data.</description>
+        <mRID>09736794-0578-4b4f-9d22-03591a7182be</mRID>
+        <name>Data used for baseline calculation</name>
+        <number>1</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description>This assumes access by energy service provider of one country to sub-meter devices in another country.</description>
+        <mRID>e459c192-4ffd-48a0-8a64-5388efde34bb</mRID>
+        <name>Clear definition of baseline is in place</name>
+        <number>2</number>
+      </Prerequisite>
+      <Prerequisite>
+        <description />
+        <mRID>83a29638-ff37-4183-b0bb-eb4684898744</mRID>
+        <name>The FSP and TSO (maybe also BRP, depends how transparent solution we want) must have access (either directly or through third-party archives) to historical and statistical data of each aggregated sources to calculate the baseline</name>
+        <number>3</number>
+      </Prerequisite>
+      <RelatedObjective>
+        <description />
+        <mRID>c5075e2b-f93e-4ae4-8d91-4020cd7c03f5</mRID>
+        <name>Encourage the participation in the flexibility market of new resources, including Demand Side Resources (DSR) and variable (intermittent) Renewable Energy Sources (RES).</name>
+      </RelatedObjective>
+      <Scenario>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <mRID>66206bad-d634-4eb7-8e30-ae06f5402983</mRID>
+          <name>Choose the services/products for which it intends to make a bid</name>
+          <number>1.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description>definition of the baseline, through specific &amp;#8216;baseline tool&amp;#8217; (owned by the FSP or provided by the TSO or DSO or flexibility platform operator) depending on the services/products chosen and the topology of the resources aggregated&lt;br/&gt;&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <mRID>fac8a1c0-f890-4c8f-a3aa-cd0e4709626f</mRID>
+          <name>Define the baseline </name>
+          <number>1.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>235f29ab-b809-45c2-83c6-f5710d3dd2f5</mRID>
+          </BusinessObject>
+          <description>Declaration of the baseline (for a single consumer/producer or aggregator bid/portfolio, or BRP&amp;#8217;s portfolio) for settlement purposes.&lt;br/&gt;&lt;br/&gt;An upload is then done to 'baseline tool'.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Modsarus Use Case::InstanceName=Baseline&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>2b8f28a5-4b5a-49fb-92fa-1728b089ce00</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationReceiver>
+          <mRID>f365a979-17a7-4f61-80b2-d7df5d599c6e</mRID>
+          <name>Submit the baseline (schedule) and declare it for settlement purpose</name>
+          <number>1.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>235f29ab-b809-45c2-83c6-f5710d3dd2f5</mRID>
+          </BusinessObject>
+          <description>&lt;br/&gt;Modsarus Use Case::InstanceName=Baseline&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>977ac68b-fd91-45bf-9b50-ac70f28e7f9e</mRID>
+          <name>Forward the baseline</name>
+          <number>1.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>66e09db7-8da3-4a30-a7d3-dd5c2ecfee4c</mRID>
+          <name>Record the baseline</name>
+          <number>1.5</number>
+          <service />
+        </Activity>
+        <description>Generates a schedule in front and presented with the bid to the market operator.</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>09c9a394-76b2-4dcf-889c-80fbb11a0c0f</mRID>
+          <name>FSP calculates the baseline</name>
+          <URI type="UMLDiagram">Calculate flexibility baseline\Image1.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>0f7535eb-14a4-439a-99a2-9ddab1d241f6</mRID>
+          <name>Scenario1 - overview</name>
+          <URI type="UMLDiagram">Calculate flexibility baseline\Image2.png</URI>
+        </Drawing>
+        <mRID>89d75260-a4a1-493a-808e-576f361f863f</mRID>
+        <name>FSP calculates the baseline</name>
+        <number>1</number>
+        <Requirement>
+          <mRID>81bbdaff-92e5-460c-9176-7f27e7aa4faf</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>b3e149de-373c-47c1-97e9-9b8c48acd40e</mRID>
+        </Requirement>
+      </Scenario>
+      <Scenario>
+        <Activity>
+          <description>the type of service/product of activated bids is reviewed to calculate the baseline after the activation.</description>
+          <event />
+          <InformationProducer>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </InformationProducer>
+          <mRID>0f646c81-f49f-4a6d-b162-6b5f9348927d</mRID>
+          <name>Select bid for calculation</name>
+          <number>2.1</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>6301ad5f-cd24-4592-ac22-fea6e5491704</mRID>
+          </InformationProducer>
+          <mRID>630c401f-11d4-4bd6-ae27-610f497fa48f</mRID>
+          <name>Send external data</name>
+          <number>2.2</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>45af65d4-921b-419b-b824-dfb4bf1bb4de</mRID>
+          </InformationProducer>
+          <mRID>4452b1d1-2288-4a1d-a961-cd66d68cc68c</mRID>
+          <name>Send meter data</name>
+          <number>2.3</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>4e694b8b-e0eb-4b2a-ae7a-1bcb6f656385</mRID>
+          </InformationProducer>
+          <mRID>5de0b5f7-1e1d-4af2-8aac-ec76c6b34082</mRID>
+          <name>Facilitate secure data exchange</name>
+          <number>2.4</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>b45d6713-65a0-4a05-ba0b-34f574cc95ca</mRID>
+          <name>Calculate the baseline</name>
+          <number>2.5</number>
+          <service />
+        </Activity>
+        <Activity>
+          <BusinessObject>
+            <mRID>bb2896bc-89a8-400e-99c4-c560a72ebe7f</mRID>
+          </BusinessObject>
+          <description>Declaration of the baseline (for a single consumer/producer or aggregator bid/portfolio, or BRP&amp;#8217;s portfolio) for settlement purposes.&lt;br/&gt;&lt;br/&gt;Real-time data are used for the calculation.&lt;br/&gt;&lt;br/&gt;&lt;font color="#ff0000"&gt;&lt;b&gt;&lt;br/&gt;&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;Modsarus Use Case::InstanceName=Flexibility Bid&lt;br/&gt;Modsarus Use Case::InstanceDescription=&lt;br/&gt;</description>
+          <event />
+          <InformationProducer>
+            <mRID>d2779077-a80f-43af-b09b-5a1fab340aed</mRID>
+          </InformationProducer>
+          <InformationReceiver>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationReceiver>
+          <mRID>e02a7be8-d192-4346-ba46-4c913fecae55</mRID>
+          <name>Calculate the baseline (in the settlement process)</name>
+          <number>2.6</number>
+          <service />
+        </Activity>
+        <Activity>
+          <description />
+          <event />
+          <InformationProducer>
+            <mRID>908bfa7a-c616-4b2b-a712-04aac115429b</mRID>
+          </InformationProducer>
+          <mRID>4f119fab-987d-49dd-a139-22925332b5d8</mRID>
+          <name>Record the baseline</name>
+          <number>2.7</number>
+          <service />
+        </Activity>
+        <description>Calculated after the activation in settlement phase by market operator.&lt;br/&gt;</description>
+        <Drawing>
+          <drawingType>activities flowchart</drawingType>
+          <mRID>8e1fe507-5ce5-4a38-8dca-21c54a994b46</mRID>
+          <name>Market Operator calculates the baseline</name>
+          <URI type="UMLDiagram">Calculate flexibility baseline\Image3.png</URI>
+        </Drawing>
+        <Drawing>
+          <drawingType>scenario overview</drawingType>
+          <mRID>21cdc9ab-6c7d-4259-bb4a-4ab13c7b2a7f</mRID>
+          <name>Market Operator calculates the baseline</name>
+          <URI type="UMLDiagram">Calculate flexibility baseline\Image4.png</URI>
+        </Drawing>
+        <mRID>517aeafc-996c-4f09-84aa-aa1b4d67e25a</mRID>
+        <name>Market Operator calculates the baseline</name>
+        <number>2</number>
+        <Requirement>
+          <mRID>81bbdaff-92e5-460c-9176-7f27e7aa4faf</mRID>
+        </Requirement>
+        <Requirement>
+          <mRID>b3e149de-373c-47c1-97e9-9b8c48acd40e</mRID>
+        </Requirement>
+      </Scenario>
+      <scope>Define the power schedule/baseline of a given Flexibility Service Provider (FSP), which participates in the flexibility market</scope>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>16942c78-60c2-4078-b9ad-d70c0ca288cf</mRID>
+          <name>Marco Pietrucci (Terna)</name>
+        </Author>
+        <Author>
+          <mRID>f23dacac-8462-4a3f-a6f8-41a7973a95a5</mRID>
+          <name> &#xD;
+Karin Lehtmets (Elering) </name>
+        </Author>
+        <changes />
+        <date>2018-04-10T00:00:00</date>
+        <mRID>3bdd9716-3ae0-4ebd-a947-880235327e06</mRID>
+        <number>1</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>75e5c749-e506-4db9-900f-4e9f266ba8f4</mRID>
+          <name>Karin Lehtmets (Elering)</name>
+        </Author>
+        <Author>
+          <mRID>9d2e0eba-2445-48a4-b43f-a6d9540a3bd8</mRID>
+          <name> &#xD;
+Kalle Kukk (Elering)</name>
+        </Author>
+        <changes />
+        <date>2018-05-28T00:00:00</date>
+        <mRID>f463eebe-e67c-4bf3-9523-0fd3542f459d</mRID>
+        <number>2</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>664ab9a1-64c4-44c9-88bb-5048db11963a</mRID>
+          <name>Florentin Dam (AKKA)&#xD;
+</name>
+        </Author>
+        <changes>UML Modeling&lt;br/&gt;&lt;br/&gt;</changes>
+        <date>2018-06-28T00:00:00</date>
+        <mRID>d12e33c2-a22a-4a92-aabf-9dcf922f93fb</mRID>
+        <number>3</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>1b1fd958-fa52-413b-bb92-b36f87f7f409</mRID>
+          <name>Florentin Dam (AKKA)</name>
+        </Author>
+        <changes>Modification on diagrams</changes>
+        <date>2018-07-09T00:00:00</date>
+        <mRID>ac23f74a-ab46-497c-b1aa-1e754f13f0ef</mRID>
+        <number>4</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>52efa3db-10f9-4f43-9621-939c4118bdc2</mRID>
+          <name>Florentin Dam (AKKA)&#xD;
+</name>
+        </Author>
+        <changes>Added some systems, &lt;br/&gt;Major changes in option 2&lt;br/&gt;</changes>
+        <date>2018-07-20T00:00:00</date>
+        <mRID>83ac17ec-2d5c-479b-af90-bbf58f34d3bb</mRID>
+        <number>5</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>3de2f7dc-37d7-41a6-8d0a-eae467390c53</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes />
+        <date>2018-08-02T00:00:00</date>
+        <mRID>4988db9c-aa28-4283-9bac-5774ef6011a3</mRID>
+        <number>6</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>58268ecf-79be-4be2-84e8-7ab1c2c053ec</mRID>
+          <name>Florentin Dam (AKKA)&#xD;
+</name>
+        </Author>
+        <changes>T5.2 partners&amp;#8217; remarks.</changes>
+        <date>2018-09-21T00:00:00</date>
+        <mRID>bffdb14c-a70d-442a-abdb-65f28ef22bdd</mRID>
+        <number>7</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>3f511f91-3f03-4c5f-86b6-a71187da421b</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version post WP5&amp;amp;9 physical meeting in Tallinn</changes>
+        <date>2018-10-04T00:00:00</date>
+        <mRID>3a0d4c8c-c423-4227-a046-9266ebdf2f7b</mRID>
+        <number>8</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>7350a628-4cf3-42b1-913e-52ff6d4c28c9</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Version reviewed by WP5&amp;amp;9 partners</changes>
+        <date>2018-10-17T00:00:00</date>
+        <mRID>1b62fcb6-18b5-4e3a-8e28-5bf74ce0c4e9</mRID>
+        <number>9</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>3bea0361-b066-4237-828a-2041f9b291bd</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>WP6-7-8 demos alignment and miscellaneous changes</changes>
+        <date>2019-05-07T00:00:00</date>
+        <mRID>06b3e45e-ee00-48b3-8cab-28dc04e3f51a</mRID>
+        <number>10</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>ae29eb9b-7d15-45c0-a824-41a225f7afbf</mRID>
+          <name>Ricardo Jover (EDF)</name>
+        </Author>
+        <Author>
+          <mRID>e14d7b34-3901-4abe-b822-52e2346e73d6</mRID>
+          <name> &#xD;
+Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Changes following WP5&amp;amp;9 workshop in Chatou</changes>
+        <date>2019-06-05T00:00:00</date>
+        <mRID>c79ef2f3-c9a4-4952-8bbf-6062fdcb7355</mRID>
+        <number>11</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>3c87b593-b6a5-4dde-aaef-6f624e6d9768</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Elering review</changes>
+        <date>2019-06-13T00:00:00</date>
+        <mRID>4e69a0db-02c0-49ca-be22-c200bf0f0952</mRID>
+        <number>12</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>024671b0-5fdd-47cc-9d4f-4259f711c36f</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>Elering review</changes>
+        <date>2019-07-26T00:00:00</date>
+        <mRID>7b11f289-43fe-404c-840f-25405322627a</mRID>
+        <number>13</number>
+      </Version>
+      <Version>
+        <approvalStatus />
+        <Author>
+          <mRID>21283308-5d0f-4f47-9415-2aa3c074bfa2</mRID>
+          <name>Eric Suignard (EDF)</name>
+        </Author>
+        <changes>innogy&amp;#8217;s and Elering&amp;#8217;s review</changes>
+        <date>2020-06-16T00:00:00</date>
+        <mRID>3db2a680-3bc6-4476-be29-0f94a90ea207</mRID>
+        <number>14</number>
+      </Version>
+    </UseCase>
+  </UseCaseLibrary>
+</UC:UseCaseRepository>
