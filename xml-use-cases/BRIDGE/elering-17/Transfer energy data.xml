@@ -250,13 +250,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>5bc32b29-aa05-4aba-871b-eff0d6782d42</mRID>
         <name>Transfer energy data - overview</name>
-        <URI type="UMLDiagram">Transfer energy data\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>8794b564-3828-4d4b-b436-0aefd9c786a9</mRID>
         <name>Transfer energy data - scenarios flowchart</name>
-        <URI type="UMLDiagram">Transfer energy data\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>bdd979a5-53c0-4051-b94e-358b770dbfc1</mRID>
@@ -446,13 +446,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>1b79e6a2-df77-4fe5-99d5-d8863250de5a</mRID>
           <name>Applications getting data </name>
-          <URI type="UMLDiagram">Transfer energy data\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>72d87722-2a50-4655-8127-8c129a50c19a</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Transfer energy data\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>27eb3e85-cdeb-405a-b424-0143bfd19799</mRID>
         <name>Request data through DEP API and publish data to subscribed applications</name>
@@ -587,13 +587,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>c195b392-80eb-423a-8e79-a6a8b7900988</mRID>
           <name>Individuals getting data</name>
-          <URI type="UMLDiagram">Transfer energy data\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>6979c4b2-0e78-4e35-8956-39df2412820f</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Transfer energy data\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>a4488882-ed27-4e83-8d08-7ef9896950b8</mRID>
         <name>Download data through DEP customer portal</name>

@@ -223,13 +223,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>f8d9910f-901d-4634-ad0e-0fd187a647dc</mRID>
         <name>Erase and rectify personal data - overview</name>
-        <URI type="UMLDiagram">Erase and rectify personal data\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>89dbce06-488b-4996-8964-583624b2c8ca</mRID>
         <name>Erase and rectify personal data - scenarios flowchart</name>
-        <URI type="UMLDiagram">Erase and rectify personal data\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>a8cc9b8b-69e2-4250-9c3c-f3cdeccca734</mRID>
@@ -357,13 +357,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>0e29b7f7-e223-4b49-9991-487a51dc27f2</mRID>
           <name>Activities flowchart</name>
-          <URI type="UMLDiagram">Erase and rectify personal data\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>a3c26350-3bd7-484c-a386-fa8d56302c70</mRID>
           <name>Overview</name>
-          <URI type="UMLDiagram">Erase and rectify personal data\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>1f01c306-474d-45d4-a24f-2211972c5520</mRID>
         <name>An Individual data owner deletes their personal data</name>
@@ -478,13 +478,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>a3e1f0f3-d6f9-4ae3-b870-0e78a9f1f9fa</mRID>
           <name>Activities flowchart</name>
-          <URI type="UMLDiagram">Erase and rectify personal data\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>b67991c6-813b-4091-a51c-99239891ce8a</mRID>
           <name>Overview</name>
-          <URI type="UMLDiagram">Erase and rectify personal data\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>4adb3946-bad4-4cdf-8f8c-31747313fcb4</mRID>
         <name>An individual data owner rectifies their personal data</name>

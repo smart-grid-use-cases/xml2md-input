@@ -259,13 +259,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>00fbbb2c-c15c-47b8-8eb4-1934f1bff340</mRID>
         <name>Authenticate data users - overview</name>
-        <URI type="UMLDiagram">Authenticate data users\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>cbc6d527-0ca9-42e8-86ca-3045c0d62136</mRID>
         <name>Authenticate data users - scenarios flowchart</name>
-        <URI type="UMLDiagram">Authenticate data users\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>70ddd78e-22a6-4642-87c0-ea314198c288</mRID>
@@ -309,7 +309,7 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
             <drawingType>activity overview</drawingType>
             <mRID>{B7A60C82-A1DF-4683-BEC9-CE1BA03B83D2}</mRID>
             <name>Activity1 - overview</name>
-            <URI type="UMLDiagram">Authenticate data users\Image3.png</URI>
+            <URI type="UMLDiagram">Image3.png</URI>
           </Drawing>
           <event />
           <InformationProducer>
@@ -485,7 +485,7 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
             <drawingType>activity overview</drawingType>
             <mRID>{98E627CE-CFA1-4df7-866B-F70FB0D09F36}</mRID>
             <name>Activity1 - overview</name>
-            <URI type="UMLDiagram">Authenticate data users\Image4.png</URI>
+            <URI type="UMLDiagram">Image4.png</URI>
           </Drawing>
           <event />
           <InformationProducer>
@@ -518,13 +518,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>a9056f33-9d50-4f5b-9d49-beab453c1611</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Authenticate data users\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>253c8c6d-f3f5-4c67-b17f-18f1e8bbebcd</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Authenticate data users\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>768c3906-7890-4035-84ad-914554f0f5dc</mRID>
         <name>Authentication process and representation rights delegation</name>

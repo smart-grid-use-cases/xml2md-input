@@ -279,13 +279,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>307f0a25-550e-4abe-8c62-85453e8a6f6d</mRID>
         <name>Manage flexibility bids - overview</name>
-        <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>9bf40ee8-f7ea-4456-ac10-9486be919b59</mRID>
         <name>Manage flexibility bids - scenarios flowchart</name>
-        <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>5fb70767-0f55-46d8-b7d7-f6c79bdb753a</mRID>
@@ -612,13 +612,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>8926963c-6dd2-4ad0-bab6-f5e95f34866e</mRID>
           <name>Prequalification process</name>
-          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>3e5fcfef-5c8f-44ee-a43d-c467879aa75f</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>21a6e3f7-eee9-4558-bed5-57cbc9af8dc1</mRID>
         <name>Prequalification of the Flexibility Service Providers and their flexibilities</name>
@@ -883,13 +883,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>9a84bbb8-e7b0-4fe7-afc9-6bb790728470</mRID>
           <name>Bidding process</name>
-          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>131e5912-9622-4fc9-b7e9-d339a0e0f124</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage flexibility bids - Alternative 2\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>df46b412-4600-4b83-bf70-cc0818cde35f</mRID>
         <name>Bidding process</name>

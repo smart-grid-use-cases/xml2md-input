@@ -333,13 +333,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>7236dced-3594-4864-a2e7-b72b60c2a248</mRID>
         <name>Manage sub-meter data - overview</name>
-        <URI type="UMLDiagram">Manage sub-meter data\Image7.png</URI>
+        <URI type="UMLDiagram">Image7.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>1d22feb0-a7ce-46cc-8f0f-ee00637ad8b8</mRID>
         <name>Manage sub-meter data - scenarios flowchart</name>
-        <URI type="UMLDiagram">Manage sub-meter data\Image8.png</URI>
+        <URI type="UMLDiagram">Image8.png</URI>
       </Drawing>
       <identifier />
       <mRID>448262b7-933a-405d-b941-3ec4eff0fb9d</mRID>
@@ -424,13 +424,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>07d02354-42aa-44f4-ab30-da431cd00da8</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Manage sub-meter data\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>edcb6774-3e86-4381-b3fb-2ccf90039818</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage sub-meter data\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>c37c9d22-16f4-4197-97f3-fbfc30992e17</mRID>
         <name>Collect sub-meter data</name>
@@ -589,13 +589,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>71235399-d3a7-43f0-9c8a-f3e22a655163</mRID>
           <name>Ensure data collection from sub-meter level devices to be made available over DEP</name>
-          <URI type="UMLDiagram">Manage sub-meter data\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>5118a582-6b65-459b-af4f-81e3efe04496</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage sub-meter data\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>5e0d2a8a-97c0-4dd0-9482-8eaa6fdd6992</mRID>
         <name>Ensure data collection from sub-meter level devices to be made available over DEP</name>
@@ -743,13 +743,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>0d0960d0-7eae-4332-a2a5-719ef91877da</mRID>
           <name>Enable sending control signals to devices over DEP</name>
-          <URI type="UMLDiagram">Manage sub-meter data\Image5.png</URI>
+          <URI type="UMLDiagram">Image5.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>cdc99632-fd28-4ab0-b9a6-44dc57bc4b7e</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage sub-meter data\Image6.png</URI>
+          <URI type="UMLDiagram">Image6.png</URI>
         </Drawing>
         <mRID>fff26187-28c5-4cfa-93b0-b7654f5057ea</mRID>
         <name>Enable sending control signals to devices over DEP</name>

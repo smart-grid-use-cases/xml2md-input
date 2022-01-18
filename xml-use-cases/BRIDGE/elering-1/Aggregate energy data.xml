@@ -217,13 +217,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>f0ead98e-bcdd-4c4d-a652-e748682f6d79</mRID>
         <name>Aggregate energy data - overview</name>
-        <URI type="UMLDiagram">Aggregate energy data\Image3.png</URI>
+        <URI type="UMLDiagram">Image3.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>e308f4e3-9a18-4105-a424-e652d4c547ed</mRID>
         <name>Aggregate energy data - scenarios flowchart</name>
-        <URI type="UMLDiagram">Aggregate energy data\Image4.png</URI>
+        <URI type="UMLDiagram">Image4.png</URI>
       </Drawing>
       <identifier />
       <mRID>06825ddb-b523-47e8-b72c-bbe23a810306</mRID>
@@ -361,13 +361,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>fa34af1f-666e-4a5a-8a85-676c82f01000</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Aggregate energy data\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>cc958831-b7d7-42f6-93b7-0c872182e309</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Aggregate energy data\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>89ba05e4-ca74-4b98-ae0a-2da8615f4de5</mRID>
         <name>Request aggregated data</name>

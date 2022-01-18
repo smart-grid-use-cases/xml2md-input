@@ -156,13 +156,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>9dc02c06-b757-463a-9d79-a0a525323fc0</mRID>
         <name>Calculate flexibility baseline - overview</name>
-        <URI type="UMLDiagram">Calculate flexibility baseline\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>cbee1067-7cc9-48e5-8b26-38f64ca4222c</mRID>
         <name>Calculate flexibility baseline - scenarios flowchart</name>
-        <URI type="UMLDiagram">Calculate flexibility baseline\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>c482250b-c6bf-4f73-bb68-ba246e61049d</mRID>
@@ -269,13 +269,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>09c9a394-76b2-4dcf-889c-80fbb11a0c0f</mRID>
           <name>FSP calculates the baseline</name>
-          <URI type="UMLDiagram">Calculate flexibility baseline\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>0f7535eb-14a4-439a-99a2-9ddab1d241f6</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Calculate flexibility baseline\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>89d75260-a4a1-493a-808e-576f361f863f</mRID>
         <name>FSP calculates the baseline</name>
@@ -376,13 +376,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>8e1fe507-5ce5-4a38-8dca-21c54a994b46</mRID>
           <name>Market Operator calculates the baseline</name>
-          <URI type="UMLDiagram">Calculate flexibility baseline\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>21cdc9ab-6c7d-4259-bb4a-4ab13c7b2a7f</mRID>
           <name>Market Operator calculates the baseline</name>
-          <URI type="UMLDiagram">Calculate flexibility baseline\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>517aeafc-996c-4f09-84aa-aa1b4d67e25a</mRID>
         <name>Market Operator calculates the baseline</name>

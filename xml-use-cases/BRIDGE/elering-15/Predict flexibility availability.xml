@@ -180,13 +180,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>70c33f5d-6874-42d4-966b-f2390f45d454</mRID>
         <name>Predict flexibility availability - overview</name>
-        <URI type="UMLDiagram">Predict flexibility availability\Image9.png</URI>
+        <URI type="UMLDiagram">Image9.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>aaf6a99e-55ce-451c-bd27-da3638026e3d</mRID>
         <name>Predict flexibility availability - scenarios flowchart</name>
-        <URI type="UMLDiagram">Predict flexibility availability\Image10.png</URI>
+        <URI type="UMLDiagram">Image10.png</URI>
       </Drawing>
       <identifier />
       <mRID>aabb135c-3c75-44d7-95b3-b711162f19bc</mRID>
@@ -322,13 +322,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>fbb0c257-5e3c-4ced-94f5-2836d0fcafae</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>311eee1f-f88d-400a-8cab-98b9f8c087c0</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>4ef5c62b-c523-4cb0-b486-a0506bc92224</mRID>
         <name>TSO Predicting Flexibility Availability for Investment Planning </name>
@@ -432,13 +432,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>2aa4bf65-280a-4301-b152-7ae3d11188e1</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>b8635602-a211-4d28-bb05-f2871f64dac7</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>1e4422f1-e226-4660-9de4-e706b05b6b13</mRID>
         <name>DSO Predicting Flexibility Availability for Investment Planning </name>
@@ -578,13 +578,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>e99fc899-8976-4b91-986b-c4495d02dfcd</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image5.png</URI>
+          <URI type="UMLDiagram">Image5.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>010b83df-2fb6-4216-8cf8-334acdd7d5d2</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image6.png</URI>
+          <URI type="UMLDiagram">Image6.png</URI>
         </Drawing>
         <mRID>fb58386a-3e2c-4e46-9c67-843167bc4ea7</mRID>
         <name>System Operator Predicting Flexibility Availability for Operational Planning </name>
@@ -691,13 +691,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>e46b74b6-447a-4cff-a0bd-f59c4dd7ef71</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image7.png</URI>
+          <URI type="UMLDiagram">Image7.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>c141c7b9-e0ef-4874-a25e-06df97623bb8</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Predict flexibility availability\Image8.png</URI>
+          <URI type="UMLDiagram">Image8.png</URI>
         </Drawing>
         <mRID>db2724cf-36dc-47f7-88f8-60124c1c8b72</mRID>
         <name>System Operator Predicting Flexibility Availability for Real Time Planning</name>

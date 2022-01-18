@@ -223,13 +223,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>b945eb07-6da2-4e9f-add9-1313ae76e0e6</mRID>
         <name>Exchange data between DERs and Network Operators - overview</name>
-        <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image3.png</URI>
+        <URI type="UMLDiagram">Image3.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>40fcbc8b-2e7e-4fbf-812f-418faa361fb7</mRID>
         <name>Exchange data between DERs and Network Operators - scenarios flowchart</name>
-        <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image4.png</URI>
+        <URI type="UMLDiagram">Image4.png</URI>
       </Drawing>
       <identifier />
       <mRID>37ffc866-efa1-46c6-8046-2244bb18e77d</mRID>
@@ -388,13 +388,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>7bad6582-c3b6-46a4-a5cf-d1cee49776a5</mRID>
           <name>Exchange data from DERs to Network Operators - activities flowchart</name>
-          <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>eb8d11c2-9b14-4b67-9201-ef7ea756ceaf</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Exchange data between DERs and System Operators\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>d750d5cb-09e7-4c67-ba03-6ed7b6fc2294</mRID>
         <name>Exchange data from DERs to System Operators</name>

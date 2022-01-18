@@ -209,13 +209,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>b6014c8d-3793-40d3-aace-16f495c65c77</mRID>
         <name>Verify and settle activated flexibilities - overview</name>
-        <URI type="UMLDiagram">Verify and settle activated flexibilities\Image3.png</URI>
+        <URI type="UMLDiagram">Image3.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>d78c648c-5f89-4a25-be53-70f462e4e7db</mRID>
         <name>Verify and settle activated flexibilities - scenarios flowchart</name>
-        <URI type="UMLDiagram">Verify and settle activated flexibilities\Image4.png</URI>
+        <URI type="UMLDiagram">Image4.png</URI>
       </Drawing>
       <identifier />
       <mRID>5687b2d0-7bcb-4545-a185-5768e0f5db56</mRID>
@@ -359,13 +359,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>4674e2e5-73d1-46cd-8dce-3bace0937a72</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Verify and settle activated flexibilities\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>45002866-9f21-46d6-8096-991d11cb5087</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Verify and settle activated flexibilities\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>8f374277-eb15-48e8-88ea-359c04df53ef</mRID>
         <name>Flexibility verification and settlement</name>
