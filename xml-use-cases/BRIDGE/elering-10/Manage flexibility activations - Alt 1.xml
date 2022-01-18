@@ -233,13 +233,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>8934d43b-f4e4-4599-92ae-4e8f24ad0c1c</mRID>
         <name>Manage flexibility activations - overview</name>
-        <URI type="UMLDiagram">Manage flexibility activations\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>ad7f53a6-98c3-4490-a9fc-7fa0c512cf27</mRID>
         <name>Manage flexibility activations - scenarios flowchart</name>
-        <URI type="UMLDiagram">Manage flexibility activations\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>90811646-1e71-451e-aa87-594010a8fe70</mRID>
@@ -437,7 +437,7 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
             <drawingType>activity overview</drawingType>
             <mRID>{23B8DEDB-52E2-4d42-96BD-E765EA473276}</mRID>
             <name>Activity1 - overview</name>
-            <URI type="UMLDiagram">Manage flexibility activations\Image3.png</URI>
+            <URI type="UMLDiagram">Image3.png</URI>
           </Drawing>
           <event />
           <InformationProducer>
@@ -460,7 +460,7 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
             <drawingType>activity overview</drawingType>
             <mRID>{73E2E934-ABB9-41d5-A89C-A6E3D3C1D48E}</mRID>
             <name>Activity1 - overview</name>
-            <URI type="UMLDiagram">Manage flexibility activations\Image4.png</URI>
+            <URI type="UMLDiagram">Image4.png</URI>
           </Drawing>
           <event />
           <InformationProducer>
@@ -618,13 +618,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>2c4022d7-cceb-458c-8fe6-45e186ff58d4</mRID>
           <name>Manage flexibility activation</name>
-          <URI type="UMLDiagram">Manage flexibility activations\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>ed6f5334-436d-4aa5-9e71-3e53eb15b680</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage flexibility activations\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>e9021952-cfc5-4548-b971-fd687a892517</mRID>
         <name>Manage flexibility activation</name>

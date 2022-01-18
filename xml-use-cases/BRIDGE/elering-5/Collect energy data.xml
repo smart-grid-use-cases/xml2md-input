@@ -295,13 +295,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>98bf0c05-3f0f-4ff5-8225-1ba5c88cf63c</mRID>
         <name>Collect energy data - overview</name>
-        <URI type="UMLDiagram">Collect energy data\Image7.png</URI>
+        <URI type="UMLDiagram">Image7.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>3b53e903-56fb-4310-96d5-d8f90598dc34</mRID>
         <name>Collect energy data - scenarios flowchart</name>
-        <URI type="UMLDiagram">Collect energy data\Image8.png</URI>
+        <URI type="UMLDiagram">Image8.png</URI>
       </Drawing>
       <identifier />
       <mRID>0a6fe1a6-7ef9-4100-873b-0701b8ca492b</mRID>
@@ -408,13 +408,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>9510194c-95c5-4bf9-a489-d7498fd72758</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Collect energy data\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>49db3aca-780d-4b4b-bc2b-795b8cece37f</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Collect energy data\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>38d347ba-c0b7-44e8-9021-470d3851d430</mRID>
         <name>Collect data from certified meters </name>
@@ -497,13 +497,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>fa02a2c1-ee4d-46d0-b55d-143f4972dc46</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Collect energy data\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>b47e78ef-48b8-41fe-b91c-0271dc3229a4</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Collect energy data\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>a1fb6ae4-1ec0-4d8a-99df-b24060cc956d</mRID>
         <name>Collect market data </name>
@@ -563,13 +563,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>34ae12be-1319-421f-b384-320eb0873300</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Collect energy data\Image5.png</URI>
+          <URI type="UMLDiagram">Image5.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>4955e230-9b29-4783-a96b-4dfdbc478220</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Collect energy data\Image6.png</URI>
+          <URI type="UMLDiagram">Image6.png</URI>
         </Drawing>
         <mRID>0b7e9511-61b8-4932-844f-d9e1d7b5fdf5</mRID>
         <name>Collect grid data </name>

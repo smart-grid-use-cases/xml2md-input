@@ -247,13 +247,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>c09b7259-1a8c-40ab-9466-5869f46790f6</mRID>
         <name>Manage authorizations - overview</name>
-        <URI type="UMLDiagram">Manage access permissions\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>a5a09f50-2002-4744-b960-4cddc47ec71c</mRID>
         <name>Manage authorizations - scenarios flowchart</name>
-        <URI type="UMLDiagram">Manage access permissions\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>455a7db3-78b0-4890-96cb-c0bd4dfb1013</mRID>
@@ -485,13 +485,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>scenario overview</drawingType>
           <mRID>457b1af7-ab87-4f14-92ab-aeedcc02e05d</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage access permissions\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>activities flowchart</drawingType>
           <mRID>0133dd55-41ff-4f0b-89de-d9a60e50e69c</mRID>
           <name>The Data Owner gives authorization directly - activities flowchart</name>
-          <URI type="UMLDiagram">Manage access permissions\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>09b1601a-e5cc-4fcd-a422-eb7e804480ad</mRID>
         <name>The Data Owner gives authorization directly</name>
@@ -701,13 +701,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>scenario overview</drawingType>
           <mRID>e9fbffea-d0a9-4df2-8fe9-a46e639f4611</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Manage access permissions\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>activities flowchart</drawingType>
           <mRID>d674f759-4cbd-4c1b-b713-70ef349a6fa1</mRID>
           <name>The application requests for authorization - activities flowchart</name>
-          <URI type="UMLDiagram">Manage access permissions\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>2fe989f9-06b7-447e-8786-113ed2778425</mRID>
         <name>The application requests for authorization</name>

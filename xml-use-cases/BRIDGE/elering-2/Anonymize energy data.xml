@@ -185,13 +185,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>2bed4a7c-252a-449d-bb2a-64b624ca5efe</mRID>
         <name>Anonymize energy data - overview</name>
-        <URI type="UMLDiagram">Anonymize energy data\Image3.png</URI>
+        <URI type="UMLDiagram">Image3.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>bce6dfc1-edd4-4206-9255-6c4a4111dd04</mRID>
         <name>Anonymize energy data - scenarios flowchart</name>
-        <URI type="UMLDiagram">Anonymize energy data\Image4.png</URI>
+        <URI type="UMLDiagram">Image4.png</URI>
       </Drawing>
       <identifier />
       <mRID>138e19ea-8ae8-49c8-9d45-d8d26cf0b025</mRID>
@@ -335,13 +335,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>0a12ab6d-4162-445d-9509-9f3d74ca4a9a</mRID>
           <name>Scenario1 - activities flowchart</name>
-          <URI type="UMLDiagram">Anonymize energy data\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>0f10bb40-0b4a-45ca-855c-fe76699e7ad5</mRID>
           <name>Scenario1 - overview</name>
-          <URI type="UMLDiagram">Anonymize energy data\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>7c896f7a-14a7-41bb-9a30-2bfc42a35f88</mRID>
         <name>Anonymize private data</name>

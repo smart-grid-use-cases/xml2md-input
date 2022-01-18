@@ -182,13 +182,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>579b97e5-644a-424c-9ad6-4fac562f576c</mRID>
         <name>Provide list of suppliers and ESCOs - overview</name>
-        <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image5.png</URI>
+        <URI type="UMLDiagram">Image5.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>7e0301f7-993b-4dad-9776-d9f2f83002cb</mRID>
         <name>Provide list of suppliers and ESCOs - scenarios flowchart</name>
-        <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image6.png</URI>
+        <URI type="UMLDiagram">Image6.png</URI>
       </Drawing>
       <identifier />
       <mRID>191a9cf5-1da6-41f7-9e01-df74962eab54</mRID>
@@ -327,13 +327,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>a28f5858-4575-4900-a410-8d1b3fac8f66</mRID>
           <name>Registration on the Data Exchange Platform with verification - activities flowchart</name>
-          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>b8d27384-f6f5-4c45-9081-affbf11cff34</mRID>
           <name>Registration on the Data Exchange Platform with verification - overview</name>
-          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>6785195b-e161-4b1c-ac01-0493663d3260</mRID>
         <name>Registration on the Data Exchange Platform with verification</name>
@@ -409,13 +409,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>c9685c92-860e-4c69-b4b2-10a4e0c9c1e0</mRID>
           <name>Presenting the list of aggregators on flexibility platform - activities flowchart</name>
-          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image3.png</URI>
+          <URI type="UMLDiagram">Image3.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>773efcaf-163a-4464-8247-8fea8f7dd8d3</mRID>
           <name>Presenting the list of aggregators on flexibility platform - overview</name>
-          <URI type="UMLDiagram">Provide list of suppliers and ESCOs\Image4.png</URI>
+          <URI type="UMLDiagram">Image4.png</URI>
         </Drawing>
         <mRID>8b7a6481-905e-45c1-84f6-0c7734e46b1a</mRID>
         <name>Presenting the list of aggregators on flexibility platform</name>

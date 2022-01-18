@@ -205,13 +205,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
         <drawingType>use case overview</drawingType>
         <mRID>0fb19852-87c5-4043-846c-527b925175ac</mRID>
         <name>Manage data logs - overview</name>
-        <URI type="UMLDiagram">Manage data logs\Image3.png</URI>
+        <URI type="UMLDiagram">Image3.png</URI>
       </Drawing>
       <Drawing>
         <drawingType>scenarios flowchart</drawingType>
         <mRID>551fda4f-3d91-4e16-86a7-3acafd26982b</mRID>
         <name>Manage security logs - scenarios flowchart</name>
-        <URI type="UMLDiagram">Manage data logs\Image4.png</URI>
+        <URI type="UMLDiagram">Image4.png</URI>
       </Drawing>
       <identifier />
       <mRID>bd8d0ecc-e145-4006-af36-e2d25f3e9e5d</mRID>
@@ -350,13 +350,13 @@ Generated from UML Use Case Repository with Modsarus® (EDF R&D Tool)-->
           <drawingType>activities flowchart</drawingType>
           <mRID>3705ddd7-d7d3-449a-8a5c-6079a78829a8</mRID>
           <name>Activities flowchart</name>
-          <URI type="UMLDiagram">Manage data logs\Image1.png</URI>
+          <URI type="UMLDiagram">Image1.png</URI>
         </Drawing>
         <Drawing>
           <drawingType>scenario overview</drawingType>
           <mRID>ebc529bb-f366-4289-a226-99eb03147530</mRID>
           <name>Overview</name>
-          <URI type="UMLDiagram">Manage data logs\Image2.png</URI>
+          <URI type="UMLDiagram">Image2.png</URI>
         </Drawing>
         <mRID>de12d2ba-988d-4922-ab49-ed64d8e291ae</mRID>
         <name>Data Owner accesses data logs</name>
